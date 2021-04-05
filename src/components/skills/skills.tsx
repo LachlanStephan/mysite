@@ -18,6 +18,14 @@ interface Props {
   icon9?: IconBaseProps;
   icon10?: IconBaseProps;
   icon11?: IconBaseProps;
+  icon12?: IconBaseProps;
+  icon13?: IconBaseProps;
+  icon14?: IconBaseProps;
+  icon15?: IconBaseProps;
+  icon16?: IconBaseProps;
+  icon17?: IconBaseProps;
+  icon18?: IconBaseProps;
+  icon19?: IconBaseProps;
 }
 
 // CSS for container
@@ -46,9 +54,18 @@ const Skills: React.FC<Props> = ({
   icon11,
   title1,
   title2,
+  icon12,
+  icon13,
+  icon14,
+  icon15,
+  icon16,
+  icon17,
+  icon18,
+  icon19,
 }) => {
   return (
-    <Container style={skillsStyle}>
+    <Container id="skills" style={skillsStyle}>
+      {/* current skills */}
       <h6>{title1}</h6>
       <Row>
         <Col style={iconStyle}>{icon1}</Col>
@@ -68,16 +85,22 @@ const Skills: React.FC<Props> = ({
       <Row>
         <Col style={iconStyle}>{icon10}</Col>
         <Col style={iconStyle}>{icon11}</Col>
-        <Col style={iconStyle}>{}</Col>
+        <Col style={iconStyle}>{icon12}</Col>
       </Row>
+      <Row>
+        <Col style={iconStyle}>{icon13}</Col>
+        <Col style={iconStyle}>{icon14}</Col>
+        <Col style={iconStyle}>{icon15}</Col>
+      </Row>
+      {/* desired skills */}
       <h6 style={{ paddingTop: "2em" }}>{title2}</h6>
       <Row>
-        <Col style={iconStyle}>{}</Col>
-        <Col style={iconStyle}>{}</Col>
-        <Col style={iconStyle}>{}</Col>
+        <Col style={iconStyle}>{icon16}</Col>
+        <Col style={iconStyle}>{icon17}</Col>
+        <Col style={iconStyle}>{icon18}</Col>
       </Row>
       <Row>
-        <Col style={iconStyle}>{}</Col>
+        <Col style={iconStyle}>{icon19}</Col>
         <Col style={iconStyle}>{}</Col>
         <Col style={iconStyle}>{}</Col>
       </Row>

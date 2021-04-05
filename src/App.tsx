@@ -16,6 +16,14 @@ import {
   SiGit,
   SiNeovim,
   SiMysql,
+  SiJava,
+  SiPython,
+  SiDocker,
+  SiNpm,
+  SiWebpack,
+  SiJest,
+  SiBootstrap,
+  SiTailwindcss,
 } from "react-icons/si";
 
 // Current skill icons
@@ -30,13 +38,27 @@ const nextJS = <SiNextDotJs />;
 const git = <SiGit />;
 const nvim = <SiNeovim />;
 const mysql = <SiMysql />;
+const npm = <SiNpm />;
+const jest = <SiJest />;
+const bootstrap = <SiBootstrap />;
+const tailwind = <SiTailwindcss />;
 
 // Desired skill icons
+const java = <SiJava />;
+const python = <SiPython />;
+const docker = <SiDocker />;
+const webpack = <SiWebpack />;
 
 const App: React.FC = () => {
   return (
     <>
-      <Header title="Welcome" link1="About" link2="Works" link3="Contact" />
+      <Header
+        title="Welcome"
+        link1="About"
+        link2="Works"
+        link3="Skills"
+        link4="Contact"
+      />
       <About aboutText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sapien iaculis, congue lectus et, egestas orci. Nunc nisl metus, vulputate a eros id, laoreet auctor ante. Sed quis justo vitae diam facilisis finibus." />
       <Works />
       <Skills
@@ -52,7 +74,15 @@ const App: React.FC = () => {
         icon9={git}
         icon10={nvim}
         icon11={mysql}
+        icon12={npm}
+        icon13={jest}
+        icon14={bootstrap}
+        icon15={tailwind}
         title2="Desired skills"
+        icon16={java}
+        icon17={python}
+        icon18={docker}
+        icon19={webpack}
       />
       <Footer />
     </>

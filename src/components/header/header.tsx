@@ -8,6 +8,7 @@ interface Props {
   link1: string;
   link2: string;
   link3: string;
+  link4: string;
 }
 
 // CSS for container
@@ -21,7 +22,7 @@ const navStyle: CSS.Properties = {
   paddingTop: "1.5em",
 };
 
-const Header: React.FC<Props> = ({ title, link1, link2, link3 }) => {
+const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
   return (
     <Container id="header" style={headerStyle}>
       <Row>
@@ -31,21 +32,22 @@ const Header: React.FC<Props> = ({ title, link1, link2, link3 }) => {
       </Row>
       <Row style={navStyle}>
         <Col>
-          <h6>
-            <a className="navLinks" href="#header">
-              {link1}
-            </a>
-          </h6>
+          <a className="navLinks" href="#header">
+            {link1}
+          </a>
         </Col>
         <Col>
-          <h6 className="navLinks">
-            <a className="navLinks" href="#works">
-              {link2}
-            </a>
-          </h6>
+          <a className="navLinks" href="#works">
+            {link2}
+          </a>
         </Col>
         <Col>
-          <h6 className="navLinks">{link3}</h6>
+          <a className="navLinks" href="#skills">
+            {link3}
+          </a>
+        </Col>
+        <Col>
+          <h6 className="navLinks">{link4}</h6>
         </Col>
       </Row>
       <Row>
