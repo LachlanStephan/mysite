@@ -47,7 +47,9 @@ const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
           </a>
         </Col>
         <Col>
-          <h6 className="navLinks">{link4}</h6>
+          <a className="navLinks" href="#contact">
+            {link4}
+          </a>
         </Col>
       </Row>
       <Row>

@@ -28,7 +28,7 @@ html {
 .navLinks:hover,
 .navLinks:focus {
   color: rgb(240, 118, 118);
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   cursor: pointer;
 }
 

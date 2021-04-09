@@ -1,9 +1,11 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
+import Contact from "./components/contact/contact";
 import { FaNode } from "react-icons/fa";
 import {
   SiTypescript,
@@ -51,41 +53,46 @@ const webpack = <SiWebpack />;
 
 const App: React.FC = () => {
   return (
-    <>
-      <Header
-        title="Welcome"
-        link1="About"
-        link2="Works"
-        link3="Skills"
-        link4="Contact"
-      />
-      <About aboutText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sapien iaculis, congue lectus et, egestas orci. Nunc nisl metus, vulputate a eros id, laoreet auctor ante. Sed quis justo vitae diam facilisis finibus." />
-      <Works />
-      <Skills
-        title1="Current skills"
-        icon1={JS}
-        icon2={TS}
-        icon3={node}
-        icon4={html5}
-        icon5={css3}
-        icon6={ReactIcon}
-        icon7={nextJS}
-        icon8={PHP}
-        icon9={git}
-        icon10={nvim}
-        icon11={mysql}
-        icon12={npm}
-        icon13={jest}
-        icon14={bootstrap}
-        icon15={tailwind}
-        title2="Desired skills"
-        icon16={java}
-        icon17={python}
-        icon18={docker}
-        icon19={webpack}
-      />
-      <Footer />
-    </>
+    <Container>
+      <Row className="justify-content-center">
+        <Col lg="9" sm="12">
+          <Header
+            title="Welcome"
+            link1="About"
+            link2="Works"
+            link3="Skills"
+            link4="Contact"
+          />
+          <About aboutText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sapien iaculis, congue lectus et, egestas orci. Nunc nisl metus, vulputate a eros id, laoreet auctor ante. Sed quis justo vitae diam facilisis finibus." />
+          <Works />
+          <Skills
+            title1="Current skills"
+            icon1={JS}
+            icon2={TS}
+            icon3={node}
+            icon4={html5}
+            icon5={css3}
+            icon6={ReactIcon}
+            icon7={nextJS}
+            icon8={PHP}
+            icon9={git}
+            icon10={nvim}
+            icon11={mysql}
+            icon12={npm}
+            icon13={jest}
+            icon14={bootstrap}
+            icon15={tailwind}
+            title2="Desired skills"
+            icon16={java}
+            icon17={python}
+            icon18={docker}
+            icon19={webpack}
+          />
+          <Contact />
+          <Footer />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
