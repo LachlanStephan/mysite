@@ -31,7 +31,6 @@ interface Props {
 // CSS for container
 const skillsStyle: CSS.Properties = {
   padding: "1.5em",
-  textAlign: "left",
 };
 
 // CSS for icon size
@@ -67,42 +66,35 @@ const Skills: React.FC<Props> = ({
     <Container id="skills" style={skillsStyle}>
       {/* current skills */}
       <h6>{title1}</h6>
-      <Row>
-        <Col style={iconStyle}>{icon1}</Col>
-        <Col style={iconStyle}>{icon2}</Col>
-        <Col style={iconStyle}>{icon3}</Col>
+      <Row style={iconStyle}>
+        <Col>{icon1}</Col>
+        <Col>{icon2}</Col>
+        <Col>{icon3}</Col>
+        <Col>{icon4}</Col>
+        <Col>{icon5}</Col>
       </Row>
-      <Row>
-        <Col style={iconStyle}>{icon4}</Col>
-        <Col style={iconStyle}>{icon5}</Col>
-        <Col style={iconStyle}>{icon6}</Col>
+      <Row style={iconStyle}>
+        <Col>{icon6}</Col>
+        <Col>{icon7}</Col>
+        <Col>{icon8}</Col>
+        <Col>{icon9}</Col>
+        <Col>{icon10}</Col>
       </Row>
-      <Row>
-        <Col style={iconStyle}>{icon7}</Col>
-        <Col style={iconStyle}>{icon8}</Col>
-        <Col style={iconStyle}>{icon9}</Col>
-      </Row>
-      <Row>
-        <Col style={iconStyle}>{icon10}</Col>
-        <Col style={iconStyle}>{icon11}</Col>
-        <Col style={iconStyle}>{icon12}</Col>
-      </Row>
-      <Row>
-        <Col style={iconStyle}>{icon13}</Col>
-        <Col style={iconStyle}>{icon14}</Col>
-        <Col style={iconStyle}>{icon15}</Col>
+      <Row style={iconStyle}>
+        <Col>{icon11}</Col>
+        <Col>{icon12}</Col>
+        <Col>{icon13}</Col>
+        <Col>{icon14}</Col>
+        <Col>{icon15}</Col>
       </Row>
       {/* desired skills */}
       <h6 style={{ paddingTop: "2em" }}>{title2}</h6>
-      <Row>
-        <Col style={iconStyle}>{icon16}</Col>
-        <Col style={iconStyle}>{icon17}</Col>
-        <Col style={iconStyle}>{icon18}</Col>
-      </Row>
-      <Row>
-        <Col style={iconStyle}>{icon19}</Col>
-        <Col style={iconStyle}>{}</Col>
-        <Col style={iconStyle}>{}</Col>
+      <Row style={iconStyle}>
+        <Col>{icon16}</Col>
+        <Col>{icon17}</Col>
+        <Col>{icon18}</Col>
+        <Col>{icon19}</Col>
+        <Col>{""}</Col>
       </Row>
     </Container>
   );

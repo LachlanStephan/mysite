@@ -5,6 +5,8 @@ import CSS from "csstype";
 // Declare props
 interface Props {
   aboutText: string;
+  aboutText2: string;
+  aboutText3: string;
 }
 
 // CSS for container
@@ -13,11 +15,17 @@ const aboutTextStyle: CSS.Properties = {
   textAlign: "left",
 };
 
-const About: React.FC<Props> = ({ aboutText }) => {
+const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
   return (
     <Container id="about" style={aboutTextStyle}>
       <Row>
         <Col>{aboutText}</Col>
+      </Row>
+      <Row style={{ paddingTop: "1em" }}>
+        <Col>{aboutText2}</Col>
+      </Row>
+      <Row style={{ paddingTop: "1em" }}>
+        <Col>{aboutText3}</Col>
       </Row>
     </Container>
   );

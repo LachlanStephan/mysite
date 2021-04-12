@@ -52,9 +52,6 @@ const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
           </a>
         </Col>
       </Row>
-      <Row>
-        <Col></Col>
-      </Row>
     </Container>
   );
 };

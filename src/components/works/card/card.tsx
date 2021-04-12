@@ -4,9 +4,15 @@ import { IconBaseProps } from "react-icons";
 
 // Declare props
 interface Props {
-  cardImg?: string | undefined;
+  cardImg?: HTMLImageElement | HTMLElement | any;
   cardTitle?: string;
   cardText?: string;
+  tech?: IconBaseProps;
+  tech1?: IconBaseProps;
+  tech2?: IconBaseProps;
+  tech3?: IconBaseProps;
+  tech4?: IconBaseProps;
+  tech5?: IconBaseProps;
   hrefText?: string;
   icon?: IconBaseProps;
 }
@@ -16,24 +22,38 @@ const CardProp: React.FC<Props> = ({
   cardImg,
   cardTitle,
   cardText,
+  tech,
+  tech1,
+  tech2,
+  tech3,
+  tech4,
+  tech5,
   hrefText,
   icon,
 }) => {
   return (
     <Card
       style={{
-        width: "18rem",
+        width: "auto",
         border: "none",
-        borderLeft: "4px solid rgb(240, 118, 118)",
+        borderLeft: "2px solid rgb(240, 118, 118)",
         marginBottom: "1em",
       }}
     >
-      <Card.Img variant="top" src={cardImg} />
+      <Card.Img src={cardImg} />
       <Card.Body>
         <Card.Title>{cardTitle}</Card.Title>
         <Card.Text>{cardText}</Card.Text>
+        <p style={{ fontSize: "1.5em", padding: "0.2em" }}>
+          {tech}
+          {tech1}
+          {tech2}
+          {tech3}
+          {tech4}
+          {tech5}
+        </p>
         <div style={{ fontSize: "1.5em" }}>
-          <a className="iconLinks" href={hrefText}>
+          <a target="blank" className="iconLinks" href={hrefText}>
             {icon}
           </a>
         </div>
