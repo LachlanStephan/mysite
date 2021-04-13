@@ -28,7 +28,7 @@ const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
             opacity: 1,
           }}
           transition={{
-            duration: 1,
+            duration: 2,
           }}
         >
           <Col>{aboutText}</Col>
@@ -43,7 +43,7 @@ const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
             opacity: 1,
           }}
           transition={{
-            duration: 2,
+            duration: 3,
           }}
         >
           <Col>{aboutText2}</Col>
@@ -58,7 +58,7 @@ const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
             opacity: 1,
           }}
           transition={{
-            duration: 3,
+            duration: 4,
           }}
         >
           <Col>{aboutText3}</Col>

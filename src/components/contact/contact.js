@@ -127,7 +127,7 @@ const Contact = () => {
                     setEmail(e.target.value);
                   }}
                   onBlur={validateEmail}
-                  placeholder="email"
+                  placeholder="Email"
                   name="email"
                   required={true}
                 />
@@ -143,7 +143,7 @@ const Contact = () => {
                     setMessage(e.target.value);
                   }}
                   onBlur={validateMessage}
-                  placeholder="message"
+                  placeholder="Message"
                   name="message"
                   required={true}
                 />

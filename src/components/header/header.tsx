@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
-  title: string;
   link1: string;
   link2: string;
   link3: string;
@@ -20,10 +19,10 @@ const headerStyle: CSS.Properties = {
 
 // CSS for links
 const navStyle: CSS.Properties = {
-  paddingTop: "1.5em",
+  paddingTop: "1em",
 };
 
-const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
+const Header: React.FC<Props> = ({ link1, link2, link3, link4 }) => {
   return (
     <Container id="header" style={headerStyle}>
       <motion.div
@@ -34,16 +33,11 @@ const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
           opacity: 1,
         }}
         transition={{
-          duration: 0.5,
+          duration: 1,
         }}
       >
-        <Row>
-          <Col>
-            <h3>{title}</h3>
-          </Col>
-        </Row>
         <Row style={navStyle}>
-          <Col>
+          {/* <Col>
             <motion.div
               initial={{
                 scale: 1,
@@ -62,63 +56,21 @@ const Header: React.FC<Props> = ({ title, link1, link2, link3, link4 }) => {
                 {link1}
               </a>
             </motion.div>
+          </Col> */}
+          <Col>
+            <a className="navLinks" href="#works">
+              {link2}
+            </a>
           </Col>
           <Col>
-            <motion.div
-              initial={{
-                scale: 1,
-              }}
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-            >
-              <a className="navLinks" href="#works">
-                {link2}
-              </a>
-            </motion.div>
+            <a className="navLinks" href="#skills">
+              {link3}
+            </a>
           </Col>
           <Col>
-            <motion.div
-              initial={{
-                scale: 1,
-                x: 0,
-                y: 0,
-                z: 0,
-              }}
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-            >
-              <a className="navLinks" href="#skills">
-                {link3}
-              </a>
-            </motion.div>
-          </Col>
-          <Col>
-            <motion.div
-              initial={{
-                scale: 1,
-                x: 0,
-                y: 0,
-                z: 0,
-              }}
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-            >
-              <a className="navLinks" href="#contact">
-                {link4}
-              </a>
-            </motion.div>
+            <a className="navLinks" href="#contact">
+              {link4}
+            </a>
           </Col>
         </Row>
       </motion.div>

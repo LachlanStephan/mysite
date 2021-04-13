@@ -26,11 +26,13 @@ interface Props {
   icon17?: IconBaseProps;
   icon18?: IconBaseProps;
   icon19?: IconBaseProps;
+  icon20?: IconBaseProps;
 }
 
 // CSS for container
 const skillsStyle: CSS.Properties = {
   padding: "1.5em",
+  marginBottom: "2em",
 };
 
 // CSS for icon size
@@ -61,6 +63,7 @@ const Skills: React.FC<Props> = ({
   icon17,
   icon18,
   icon19,
+  icon20,
 }) => {
   return (
     <Container id="skills" style={skillsStyle}>
@@ -94,7 +97,7 @@ const Skills: React.FC<Props> = ({
         <Col>{icon17}</Col>
         <Col>{icon18}</Col>
         <Col>{icon19}</Col>
-        <Col>{""}</Col>
+        <Col>{icon20}</Col>
       </Row>
     </Container>
   );

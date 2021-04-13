@@ -26,7 +26,7 @@ const ScrollToTop: React.FC<Props> = ({ upArrow }) => {
       onClick={scrollTop}
       className="scrollTop"
       id="btn"
-      style={{ display: showScroll ? "flex" : "none" }}
+      style={{ display: showScroll ? "flex" : "none", fontSize: "1.5em" }}
     >
       {upArrow}
     </Button>

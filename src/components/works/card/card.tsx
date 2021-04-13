@@ -39,11 +39,13 @@ const CardProp: React.FC<Props> = ({
   return (
     <Card
       style={{
+        backgroundColor: "#f8f8ff",
         width: "auto",
         height: "auto",
         border: "none",
         borderLeft: "1px solid rgb(240, 118, 118)",
         paddingBottom: "2em",
+        marginBottom: "2em",
       }}
     >
       <Card.Img src={cardImg} alt={alt} />

@@ -63,10 +63,9 @@ const Works: React.FC = () => {
         }}
         animate={{
           opacity: 1,
-          x: 0,
         }}
         transition={{
-          duration: 4,
+          duration: 5,
         }}
       >
         <Row style={cardStyle}>
@@ -109,7 +108,7 @@ const Works: React.FC = () => {
               cardImg={fs}
               alt="Screenshot of Facility site"
               cardTitle="Facility Site"
-              cardText="This Facility site was made for a small company and allows users to print a pdf and contact the company"
+              cardText="This Facility site was made for a small company and allows users to print a pdf and contact the company."
               tech={reactIcon}
               tech1={bootstrap}
               tech2={css3}
