@@ -29,6 +29,7 @@ import {
   SiTailwindcss,
   SiGarmin,
   SiGithub,
+  SiMailDotRu,
 } from "react-icons/si";
 
 // Up arrow for btn
@@ -59,12 +60,13 @@ const webpack = <SiWebpack />;
 
 // Footer icon
 const ghub = <SiGithub />;
+const mail = <SiMailDotRu />;
 
 const App: React.FC = () => {
   return (
     <Container>
       <Row className="justify-content-center">
-        <Col lg="9" sm="12">
+        <Col>
           <Header
             title="Welcome"
             link1="About"
@@ -103,7 +105,7 @@ const App: React.FC = () => {
             icon19={webpack}
           />
           <Contact />
-          <Footer footerLink1={ghub} />
+          <Footer footerLink1={ghub} footerLink2={mail} />
         </Col>
       </Row>
     </Container>

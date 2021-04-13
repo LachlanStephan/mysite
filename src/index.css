@@ -36,7 +36,9 @@ html {
 .iconLinks:hover,
 .iconLinks:focus,
 .footerLink:hover,
-.footerLink:focus {
+.footerLink:focus,
+#btn:hover,
+#btn.focus {
   color: rgb(240, 118, 118);
   transition: 0.4s ease;
 }

@@ -35,7 +35,7 @@ const skillsStyle: CSS.Properties = {
 
 // CSS for icon size
 const iconStyle: CSS.Properties = {
-  fontSize: "2.2em",
+  fontSize: "2em",
 };
 
 // Parse props
@@ -65,7 +65,7 @@ const Skills: React.FC<Props> = ({
   return (
     <Container id="skills" style={skillsStyle}>
       {/* current skills */}
-      <h6>{title1}</h6>
+      <h5>{title1}</h5>
       <Row style={iconStyle}>
         <Col>{icon1}</Col>
         <Col>{icon2}</Col>
@@ -88,7 +88,7 @@ const Skills: React.FC<Props> = ({
         <Col>{icon15}</Col>
       </Row>
       {/* desired skills */}
-      <h6 style={{ paddingTop: "2em" }}>{title2}</h6>
+      <h5 style={{ paddingTop: "2em" }}>{title2}</h5>
       <Row style={iconStyle}>
         <Col>{icon16}</Col>
         <Col>{icon17}</Col>

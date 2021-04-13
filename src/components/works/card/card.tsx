@@ -1,10 +1,12 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { IconBaseProps } from "react-icons";
+import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
   cardImg?: HTMLImageElement | HTMLElement | any;
+  alt: string;
   cardTitle?: string;
   cardText?: string;
   tech?: IconBaseProps;
@@ -13,6 +15,7 @@ interface Props {
   tech3?: IconBaseProps;
   tech4?: IconBaseProps;
   tech5?: IconBaseProps;
+  tech6?: IconBaseProps;
   hrefText?: string;
   icon?: IconBaseProps;
 }
@@ -20,6 +23,7 @@ interface Props {
 // Parse props
 const CardProp: React.FC<Props> = ({
   cardImg,
+  alt,
   cardTitle,
   cardText,
   tech,
@@ -28,6 +32,7 @@ const CardProp: React.FC<Props> = ({
   tech3,
   tech4,
   tech5,
+  tech6,
   hrefText,
   icon,
 }) => {
@@ -35,16 +40,17 @@ const CardProp: React.FC<Props> = ({
     <Card
       style={{
         width: "auto",
+        height: "auto",
         border: "none",
-        borderLeft: "2px solid rgb(240, 118, 118)",
-        marginBottom: "1em",
+        borderLeft: "1px solid rgb(240, 118, 118)",
+        paddingBottom: "2em",
       }}
     >
-      <Card.Img src={cardImg} />
+      <Card.Img src={cardImg} alt={alt} />
       <Card.Body>
         <Card.Title>{cardTitle}</Card.Title>
         <Card.Text>{cardText}</Card.Text>
-        <p style={{ fontSize: "1.5em", padding: "0.2em" }}>
+        <p style={{ fontSize: "2em", padding: "0.2em" }}>
           {tech}
           {tech1}
           {tech2}
@@ -52,11 +58,26 @@ const CardProp: React.FC<Props> = ({
           {tech4}
           {tech5}
         </p>
-        <div style={{ fontSize: "1.5em" }}>
+        <motion.div
+          initial={{
+            scale: 1,
+            x: 0,
+            y: 0,
+            z: 0,
+          }}
+          whileHover={{
+            rotate: -10,
+            scale: 1.1,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          style={{ fontSize: "2em", height: "0", width: "0" }}
+        >
           <a target="blank" className="iconLinks" href={hrefText}>
             {icon}
           </a>
-        </div>
+        </motion.div>
       </Card.Body>
     </Card>
   );

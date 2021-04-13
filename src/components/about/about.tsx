@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CSS from "csstype";
+import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
@@ -19,13 +20,49 @@ const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
   return (
     <Container id="about" style={aboutTextStyle}>
       <Row>
-        <Col>{aboutText}</Col>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+        >
+          <Col>{aboutText}</Col>
+        </motion.div>
       </Row>
       <Row style={{ paddingTop: "1em" }}>
-        <Col>{aboutText2}</Col>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 2,
+          }}
+        >
+          <Col>{aboutText2}</Col>
+        </motion.div>
       </Row>
       <Row style={{ paddingTop: "1em" }}>
-        <Col>{aboutText3}</Col>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 3,
+          }}
+        >
+          <Col>{aboutText3}</Col>
+        </motion.div>
       </Row>
     </Container>
   );

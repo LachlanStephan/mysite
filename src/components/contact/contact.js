@@ -96,13 +96,10 @@ const Contact = () => {
 
   return (
     <Container style={contactStyle}>
-      <h4 id="contact" style={{ paddingBottom: "0.5em" }}>
-        Contact
-      </h4>
+      <h5 id="contact" style={{ paddingBottom: "0.5em" }}>
+        Say hi
+      </h5>
       <form onSubmit={sendEmail}>
-        <Row>
-          <Col>Some text</Col>
-        </Row>
         <Row>
           <Col>
             <Row style={inputSpacing}>
