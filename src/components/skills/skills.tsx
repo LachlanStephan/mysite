@@ -1,6 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import CSS from "csstype";
 import { IconBaseProps } from "react-icons";
 
 // Declare props
@@ -29,17 +27,6 @@ interface Props {
   icon20?: IconBaseProps;
 }
 
-// CSS for container
-const skillsStyle: CSS.Properties = {
-  padding: "1.5em",
-  marginBottom: "2em",
-};
-
-// CSS for icon size
-const iconStyle: CSS.Properties = {
-  fontSize: "2em",
-};
-
 // Parse props
 const Skills: React.FC<Props> = ({
   icon1,
@@ -66,40 +53,40 @@ const Skills: React.FC<Props> = ({
   icon20,
 }) => {
   return (
-    <Container id="skills" style={skillsStyle}>
+    <div id="skills">
       {/* current skills */}
       <h5>{title1}</h5>
-      <Row style={iconStyle}>
-        <Col>{icon1}</Col>
-        <Col>{icon2}</Col>
-        <Col>{icon3}</Col>
-        <Col>{icon4}</Col>
-        <Col>{icon5}</Col>
-      </Row>
-      <Row style={iconStyle}>
-        <Col>{icon6}</Col>
-        <Col>{icon7}</Col>
-        <Col>{icon8}</Col>
-        <Col>{icon9}</Col>
-        <Col>{icon10}</Col>
-      </Row>
-      <Row style={iconStyle}>
-        <Col>{icon11}</Col>
-        <Col>{icon12}</Col>
-        <Col>{icon13}</Col>
-        <Col>{icon14}</Col>
-        <Col>{icon15}</Col>
-      </Row>
+      <div>
+        <div>{icon1}</div>
+        <div>{icon2}</div>
+        <div>{icon3}</div>
+        <div>{icon4}</div>
+        <div>{icon5}</div>
+      </div>
+      <div>
+        <div>{icon6}</div>
+        <div>{icon7}</div>
+        <div>{icon8}</div>
+        <div>{icon9}</div>
+        <div>{icon10}</div>
+      </div>
+      <div>
+        <div>{icon11}</div>
+        <div>{icon12}</div>
+        <div>{icon13}</div>
+        <div>{icon14}</div>
+        <div>{icon15}</div>
+      </div>
       {/* desired skills */}
-      <h5 style={{ paddingTop: "2em" }}>{title2}</h5>
-      <Row style={iconStyle}>
-        <Col>{icon16}</Col>
-        <Col>{icon17}</Col>
-        <Col>{icon18}</Col>
-        <Col>{icon19}</Col>
-        <Col>{icon20}</Col>
-      </Row>
-    </Container>
+      <h5>{title2}</h5>
+      <div>
+        <div>{icon16}</div>
+        <div>{icon17}</div>
+        <div>{icon18}</div>
+        <div>{icon19}</div>
+        <div>{icon20}</div>
+      </div>
+    </div>
   );
 };
 

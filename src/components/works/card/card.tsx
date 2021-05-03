@@ -1,7 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { IconBaseProps } from "react-icons";
-import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
@@ -37,51 +35,30 @@ const CardProp: React.FC<Props> = ({
   icon,
 }) => {
   return (
-    <Card
-      style={{
-        backgroundColor: "#f8f8ff",
-        width: "auto",
-        height: "auto",
-        border: "none",
-        borderLeft: "1px solid rgb(240, 118, 118)",
-        paddingBottom: "2em",
-        marginBottom: "2em",
-      }}
-    >
-      <Card.Img src={cardImg} alt={alt} />
-      <Card.Body>
-        <Card.Title>{cardTitle}</Card.Title>
-        <Card.Text>{cardText}</Card.Text>
-        <p style={{ fontSize: "2em", padding: "0.2em" }}>
-          {tech}
-          {tech1}
-          {tech2}
-          {tech3}
-          {tech4}
-          {tech5}
-        </p>
-        <motion.div
-          initial={{
-            scale: 1,
-            x: 0,
-            y: 0,
-            z: 0,
-          }}
-          whileHover={{
-            rotate: -10,
-            scale: 1.1,
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-          style={{ fontSize: "2em", height: "0", width: "0" }}
-        >
-          <a target="blank" className="iconLinks" href={hrefText}>
-            {icon}
-          </a>
-        </motion.div>
-      </Card.Body>
-    </Card>
+    <div className="py-5 flex flex-wrap justify-center">
+      <div className="w-full md:w-1/2 lg:w-1/2 px-5 py-2">
+        <img
+          className="w-full md:w-4/5 lg:w-4/5 h-full"
+          src={cardImg}
+          alt={alt}
+        />
+      </div>
+      <div className="w-full md:w-1/2 lg:w-1/2 px-5">
+        <div className="py-2">{cardTitle}</div>
+        <div className="py-2">{cardText}</div>
+        <div className="flex justify-start text-2xl">
+          <p className="">{tech}</p>
+          <p className="px-2">{tech1}</p>
+          <p className="px-2">{tech2}</p>
+          <p className="px-2">{tech3}</p>
+          <p className="px-2">{tech4}</p>
+          <p className="px-2">{tech5}</p>
+        </div>
+        <a target="blank" className="p-2 text-2xl" href={hrefText}>
+          {icon}
+        </a>
+      </div>
+    </div>
   );
 };
 

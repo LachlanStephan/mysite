@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import { IconBaseProps } from "react-icons";
 
 interface Props {
@@ -21,15 +20,14 @@ const ScrollToTop: React.FC<Props> = ({ upArrow }) => {
   };
   window.addEventListener("scroll", checkScrollTop);
   return (
-    <Button
-      variant="light"
+    <button
       onClick={scrollTop}
       className="scrollTop"
       id="btn"
       style={{ display: showScroll ? "flex" : "none", fontSize: "1.5em" }}
     >
       {upArrow}
-    </Button>
+    </button>
   );
 };
 export default ScrollToTop;

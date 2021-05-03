@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
@@ -8,7 +7,7 @@ import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
 import { FaNode, FaArrowAltCircleUp } from "react-icons/fa";
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
-import LandingPage from "./components/landingPage/landingPage";
+// import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
   SiJavascript,
@@ -32,6 +31,7 @@ import {
   SiMailDotRu,
   SiLinux,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 // Up arrow for btn
 const up = <FaArrowAltCircleUp />;
@@ -65,20 +65,31 @@ const ghub = <SiGithub />;
 const mail = <SiMailDotRu />;
 
 const App: React.FC = () => {
-  const [showSite, setShowSite] = useState(false);
+  // const [showSite, setShowSite] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowSite(true);
-    }, 2500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowSite(true);
+  //   }, 2500);
+  // }, []);
 
   return (
     <>
-      {showSite ? (
-        <Container>
-          <Row className="justify-content-center">
-            <Col>
+      {/* {showSite ? ( */}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 2,
+        }}
+      >
+        <div className="bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 transition duration-400 p-5">
+          <div className="justify-content-center">
+            <div>
               <Header
                 link1="About"
                 link2="Works"
@@ -87,7 +98,7 @@ const App: React.FC = () => {
               />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am also hoping in my spare time to go further with software development and learn languages such as Python and Java."
+                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. In my spare time I am enjoying learning Typescript along with trying to improve my UX and design skills."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
@@ -118,12 +129,13 @@ const App: React.FC = () => {
               />
               <Contact />
               <Footer footerLink1={ghub} footerLink2={mail} />
-            </Col>
-          </Row>
-        </Container>
-      ) : (
+            </div>
+          </div>
+        </div>
+      </motion.div>
+      {/* ) : (
         <LandingPage />
-      )}
+      )} */}
     </>
   );
 };

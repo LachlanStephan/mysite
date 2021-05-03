@@ -1,7 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import CSS from "csstype";
-import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
@@ -10,61 +7,22 @@ interface Props {
   aboutText3: string;
 }
 
-// CSS for container
-const aboutTextStyle: CSS.Properties = {
-  padding: "1.5em",
-  textAlign: "left",
-};
-
 const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
   return (
-    <Container id="about" style={aboutTextStyle}>
-      <Row>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-          }}
-        >
-          <Col>{aboutText}</Col>
-        </motion.div>
-      </Row>
-      <Row style={{ paddingTop: "1em" }}>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 3,
-          }}
-        >
-          <Col>{aboutText2}</Col>
-        </motion.div>
-      </Row>
-      <Row style={{ paddingTop: "1em" }}>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 4,
-          }}
-        >
-          <Col>{aboutText3}</Col>
-        </motion.div>
-      </Row>
-    </Container>
+    <div id="about" className="h-auto lg:h-screen py-5 flex flex-wrap">
+      <div className="w-screen md:w-1/2 lg:w-1/2">
+        <div className="py2">
+          <div>{aboutText}</div>
+        </div>
+        <div className="py-2">
+          <div>{aboutText2}</div>
+        </div>
+        <div className="py-2">
+          <div>{aboutText3}</div>
+        </div>
+      </div>
+      <div className="w-screen md:w-1/2 lg:w-1/2 flex"></div>
+    </div>
   );
 };
 

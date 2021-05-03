@@ -1,24 +1,7 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 
 const Contact = () => {
-  const contactStyle = {
-    padding: "1.5em",
-  };
-
-  const inputSpacing = {
-    marginTop: "0.5em",
-  };
-
-  const inputStyle = {
-    border: "1px solid gray",
-    boxShadow: "1px gray",
-    borderRadius: "5px",
-    padding: "5px",
-    width: "100%",
-  };
-
   // Email message error
   const [emailMsg, setEmailMsg] = useState("");
 
@@ -95,17 +78,14 @@ const Contact = () => {
   }
 
   return (
-    <Container style={contactStyle}>
-      <h5 id="contact" style={{ paddingBottom: "0.5em" }}>
-        Say hi
-      </h5>
+    <div>
+      <h5 id="contact">Say hi</h5>
       <form onSubmit={sendEmail}>
-        <Row>
-          <Col>
-            <Row style={inputSpacing}>
-              <Col>
+        <div>
+          <div>
+            <div>
+              <div>
                 <input
-                  style={inputStyle}
                   value={fName}
                   onChange={(e) => {
                     setfName(e.target.value);
@@ -116,12 +96,11 @@ const Contact = () => {
                   required={true}
                 />
                 {fNameErr}
-              </Col>
-            </Row>
-            <Row style={inputSpacing}>
-              <Col>
+              </div>
+            </div>
+            <div>
+              <div>
                 <input
-                  style={inputStyle}
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -132,12 +111,11 @@ const Contact = () => {
                   required={true}
                 />
                 {emailErr}
-              </Col>
-            </Row>
-            <Row style={inputSpacing}>
-              <Col>
+              </div>
+            </div>
+            <div>
+              <div>
                 <textarea
-                  style={inputStyle}
                   value={message}
                   onChange={(e) => {
                     setMessage(e.target.value);
@@ -148,25 +126,20 @@ const Contact = () => {
                   required={true}
                 />
                 {messageErr}
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row style={inputSpacing}>
-          <Col>
-            <Button
-              disabled={statusCheck}
-              style={inputStyle}
-              type="submit"
-              variant="dark"
-            >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <button disabled={statusCheck} type="submit" variant="dark">
               Submit
-            </Button>
-            <p style={{ marginTop: "0.5em" }}>{emailMsg}</p>
-          </Col>
-        </Row>
+            </button>
+            <p> {emailMsg}</p>
+          </div>
+        </div>
       </form>
-    </Container>
+    </div>
   );
 };
 

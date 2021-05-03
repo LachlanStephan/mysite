@@ -2,17 +2,7 @@ import { motion } from "framer-motion";
 
 const LandingPage: React.FC = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100vw",
-        fontSize: "2em",
-        color: "#888888",
-      }}
-    >
+    <div className="w-screen h-screen bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 justify-items-center align-items-center">
       <motion.div
         initial={{
           x: 1000,
