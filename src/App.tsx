@@ -5,8 +5,8 @@ import About from "./components/about/about";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
-import { FaNode, FaArrowAltCircleUp } from "react-icons/fa";
-import ScrollToTop from "./components/scrollToTop/scrollToTop";
+import { FaNode } from "react-icons/fa";
+// import ScrollToTop from "./components/scrollToTop/scrollToTop";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
@@ -34,7 +34,7 @@ import {
 import { motion } from "framer-motion";
 
 // Up arrow for btn
-const up = <FaArrowAltCircleUp />;
+// const up = <FaArrowAltCircleUp />;
 
 // Current skill icons
 const JS = <SiJavascript />;
@@ -88,7 +88,7 @@ const App: React.FC = () => {
         }}
       >
         <div className="bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 transition duration-400 p-5">
-          <div className="justify-content-center">
+          <div className="justify-content-center w-3/5 m-auto">
             <div>
               <Header
                 link1="About"
@@ -98,11 +98,11 @@ const App: React.FC = () => {
               />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. In my spare time I am enjoying learning Typescript along with trying to improve my UX and design skills."
+                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. In my spare time I am enjoying learning Typescript and am excited to try new technologies such as Svelte."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
-              <ScrollToTop upArrow={up} />
+              {/* <ScrollToTop upArrow={up} /> */}
               <Skills
                 title1="Current skills"
                 icon1={JS}

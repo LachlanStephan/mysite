@@ -53,24 +53,24 @@ const Skills: React.FC<Props> = ({
   icon20,
 }) => {
   return (
-    <div id="skills">
+    <div id="skills" className="py-4">
       {/* current skills */}
-      <h5>{title1}</h5>
-      <div>
-        <div>{icon1}</div>
+      <h5 className="">{title1}</h5>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-yellow-200">{icon1}</div>
         <div>{icon2}</div>
         <div>{icon3}</div>
         <div>{icon4}</div>
         <div>{icon5}</div>
       </div>
-      <div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
         <div>{icon6}</div>
         <div>{icon7}</div>
         <div>{icon8}</div>
         <div>{icon9}</div>
         <div>{icon10}</div>
       </div>
-      <div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
         <div>{icon11}</div>
         <div>{icon12}</div>
         <div>{icon13}</div>
@@ -79,7 +79,7 @@ const Skills: React.FC<Props> = ({
       </div>
       {/* desired skills */}
       <h5>{title2}</h5>
-      <div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
         <div>{icon16}</div>
         <div>{icon17}</div>
         <div>{icon18}</div>

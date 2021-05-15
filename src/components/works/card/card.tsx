@@ -36,12 +36,8 @@ const CardProp: React.FC<Props> = ({
 }) => {
   return (
     <div className="py-5 flex flex-wrap justify-center">
-      <div className="w-full md:w-1/2 lg:w-1/2 px-5 py-2">
-        <img
-          className="w-full md:w-4/5 lg:w-4/5 h-full"
-          src={cardImg}
-          alt={alt}
-        />
+      <div className="w-full md:w-1/2 lg:w-1/2 px-2 py-2">
+        <img className="w-full h-full m-auto" src={cardImg} alt={alt} />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/2 px-5">
         <div className="py-2">{cardTitle}</div>
