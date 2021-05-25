@@ -40,7 +40,7 @@ const CardProp: React.FC<Props> = ({
         <img className="w-full h-full m-auto" src={cardImg} alt={alt} />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/2 px-5">
-        <div className="py-2">{cardTitle}</div>
+        <div className="py-2 font-bold text-lg">{cardTitle}</div>
         <div className="py-2">{cardText}</div>
         <div className="flex justify-start text-2xl">
           <p className="">{tech}</p>
@@ -50,7 +50,11 @@ const CardProp: React.FC<Props> = ({
           <p className="px-2">{tech4}</p>
           <p className="px-2">{tech5}</p>
         </div>
-        <a target="blank" className="p-2 text-2xl" href={hrefText}>
+        <a
+          target="blank"
+          className="p-2 text-2xl hover:text-pink-200 transition 0.5s"
+          href={hrefText}
+        >
           {icon}
         </a>
       </div>

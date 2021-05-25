@@ -78,14 +78,17 @@ const Contact = () => {
   }
 
   return (
-    <div>
-      <h5 id="contact">Say hi</h5>
+    <div className="py-4">
+      <h5 className="py-4 text-lg font-bold" id="contact">
+        Say hi
+      </h5>
       <form onSubmit={sendEmail}>
         <div>
           <div>
             <div>
               <div>
                 <input
+                  className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
                   value={fName}
                   onChange={(e) => {
                     setfName(e.target.value);
@@ -101,6 +104,7 @@ const Contact = () => {
             <div>
               <div>
                 <input
+                  className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -116,6 +120,7 @@ const Contact = () => {
             <div>
               <div>
                 <textarea
+                  className="w-full h-14 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
                   value={message}
                   onChange={(e) => {
                     setMessage(e.target.value);
@@ -132,7 +137,12 @@ const Contact = () => {
         </div>
         <div>
           <div>
-            <button disabled={statusCheck} type="submit" variant="dark">
+            <button
+              className="w-auto h-auto rounded-md p-2 my-2 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400"
+              disabled={statusCheck}
+              type="submit"
+              variant="dark"
+            >
               Submit
             </button>
             <p> {emailMsg}</p>

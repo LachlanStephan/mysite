@@ -88,7 +88,7 @@ const App: React.FC = () => {
         }}
       >
         <div className="bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 transition duration-400 p-5">
-          <div className="justify-content-center w-3/5 m-auto">
+          <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
             <div>
               <Header
                 link1="About"

@@ -55,36 +55,36 @@ const Skills: React.FC<Props> = ({
   return (
     <div id="skills" className="py-4">
       {/* current skills */}
-      <h5 className="">{title1}</h5>
+      <h5 className="font-bold text-lg">{title1}</h5>
       <div className="p-9 text-5xl justify-around flex w-auto h-auto">
-        <div className="hover:text-yellow-200">{icon1}</div>
-        <div>{icon2}</div>
-        <div>{icon3}</div>
-        <div>{icon4}</div>
-        <div>{icon5}</div>
+        <div className="hover:text-yellow-300">{icon1}</div>
+        <div className="hover:text-blue-400">{icon2}</div>
+        <div className="hover:text-green-400">{icon3}</div>
+        <div className="hover:text-red-500">{icon4}</div>
+        <div className="hover:text-blue-700">{icon5}</div>
       </div>
       <div className="p-9 text-5xl justify-around flex w-auto h-auto">
-        <div>{icon6}</div>
-        <div>{icon7}</div>
-        <div>{icon8}</div>
-        <div>{icon9}</div>
-        <div>{icon10}</div>
+        <div className="hover:text-blue-200">{icon6}</div>
+        <div className="hover:text-gray-500">{icon7}</div>
+        <div className="hover:text-indigo-300">{icon8}</div>
+        <div className="hover:text-red-400">{icon9}</div>
+        <div className="hover:text-green-400">{icon10}</div>
       </div>
       <div className="p-9 text-5xl justify-around flex w-auto h-auto">
-        <div>{icon11}</div>
-        <div>{icon12}</div>
-        <div>{icon13}</div>
-        <div>{icon14}</div>
-        <div>{icon15}</div>
+        <div className="hover:text-indigo-500">{icon11}</div>
+        <div className="hover:text-red-500">{icon12}</div>
+        <div className="hover:text-red-300">{icon13}</div>
+        <div className="hover:text-purple-500">{icon14}</div>
+        <div className="hover:text-blue-400">{icon15}</div>
       </div>
       {/* desired skills */}
-      <h5>{title2}</h5>
+      <h5 className="font-bold text-lg">{title2}</h5>
       <div className="p-9 text-5xl justify-around flex w-auto h-auto">
-        <div>{icon16}</div>
-        <div>{icon17}</div>
-        <div>{icon18}</div>
-        <div>{icon19}</div>
-        <div>{icon20}</div>
+        <div className="hover:text-red-300">{icon16}</div>
+        <div className="hover:text-yellow-400">{icon17}</div>
+        <div className="hover:text-blue-400">{icon18}</div>
+        <div className="hover:text-blue-300">{icon19}</div>
+        <div className="hover:text-yellow-300">{icon20}</div>
       </div>
     </div>
   );

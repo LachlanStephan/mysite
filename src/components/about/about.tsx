@@ -11,24 +11,24 @@ interface Props {
 
 const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
   return (
-    <div id="about" className="min-h-screen py-5 flex flex-wrap">
-      <div className="py-5">
-        <img className="h-4/5" src={person} alt="cartoon person" />
-      </div>
+    <div id="about" className="min-h-screen py-2 flex flex-wrap">
       <div className="">
-        <div className="py2">
+        <img className="3/5" src={person} alt="cartoon person" />
+      </div>
+      <div className="pb-1">
+        <div>
           <div>{aboutText}</div>
         </div>
-        <div className="py-2">
+        <div className="pb-1">
           <div>{aboutText2}</div>
         </div>
-        <div className="py-2">
+        <div className="">
           <div>{aboutText3}</div>
         </div>
       </div>
-      <div className="py-12 m-auto h-full">
+      <div className="m-auto p-0 mt-0">
         <a href="#works">
-          <img className="h-4/5" src={arrow} alt="arrow down" />
+          <img className="h-auto" src={arrow} alt="arrow down" />
         </a>
       </div>
     </div>

@@ -12,7 +12,7 @@ interface Props {
 const Header: React.FC<Props> = ({ link2, link3, link4 }) => {
   const [colourTheme, setTheme] = useDarkMode();
   return (
-    <div className="top-0 flex flex-wrap p-4">
+    <div className="top-0 flex flex-wrap py-1">
       <button className="" onClick={() => setTheme(colourTheme)}>
         {colourTheme === "dark" ? (
           <svg
@@ -46,18 +46,18 @@ const Header: React.FC<Props> = ({ link2, link3, link4 }) => {
           </svg>
         )}
       </button>
-      <div className="p-4">
-        <a className="navLinks" href="#works">
+      <div className="px-2">
+        <a className="hover:text-pink-200" href="#works">
           {link2}
         </a>
       </div>
-      <div className="p-4">
-        <a className="navLinks" href="#skills">
+      <div className="px-2">
+        <a className="hover:text-pink-200" href="#skills">
           {link3}
         </a>
       </div>
-      <div className="p-4">
-        <a className="navLinks" href="#contact">
+      <div className="px-2">
+        <a className="hover:text-pink-200" href="#contact">
           {link4}
         </a>
       </div>
