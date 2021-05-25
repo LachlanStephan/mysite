@@ -37,7 +37,11 @@ const CardProp: React.FC<Props> = ({
   return (
     <div className="py-5 flex flex-wrap justify-center">
       <div className="w-full md:w-1/2 lg:w-1/2 px-2 py-2">
-        <img className="w-full h-full m-auto" src={cardImg} alt={alt} />
+        <img
+          className="w-full h-full m-auto shadow-md rounded-lg"
+          src={cardImg}
+          alt={alt}
+        />
       </div>
       <div className="w-full md:w-1/2 lg:w-1/2 px-5">
         <div className="py-2 font-bold text-lg">{cardTitle}</div>
@@ -52,7 +56,7 @@ const CardProp: React.FC<Props> = ({
         </div>
         <a
           target="blank"
-          className="p-2 text-2xl hover:text-pink-200 transition 0.5s"
+          className="p-2 text-2xl w-auto hover:text-pink-200 transition 0.2s"
           href={hrefText}
         >
           {icon}

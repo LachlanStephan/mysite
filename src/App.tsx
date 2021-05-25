@@ -6,7 +6,6 @@ import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
 import { FaNode } from "react-icons/fa";
-// import ScrollToTop from "./components/scrollToTop/scrollToTop";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
@@ -32,9 +31,6 @@ import {
   SiLinux,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-
-// Up arrow for btn
-// const up = <FaArrowAltCircleUp />;
 
 // Current skill icons
 const JS = <SiJavascript />;
@@ -87,7 +83,7 @@ const App: React.FC = () => {
           duration: 2,
         }}
       >
-        <div className="bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-300 transition duration-400 p-5">
+        <div className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
           <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
             <div>
               <Header
@@ -98,11 +94,10 @@ const App: React.FC = () => {
               />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. In my spare time I am enjoying learning Typescript and am excited to try new technologies such as Svelte."
+                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go further with langauges such as Java and Python."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
-              {/* <ScrollToTop upArrow={up} /> */}
               <Skills
                 title1="Current skills"
                 icon1={JS}
