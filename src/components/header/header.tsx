@@ -1,5 +1,6 @@
 import React from "react";
 import useDarkMode from "../../hooks/useDarkMode";
+import person from "../../images/cartoonMeTransparent.png";
 
 // Declare props
 interface Props {
@@ -11,9 +12,35 @@ interface Props {
 
 const Header: React.FC<Props> = ({ link2, link3, link4 }) => {
   const [colourTheme, setTheme] = useDarkMode();
+
   return (
     <div className="top-0 flex flex-wrap py-1">
-      <button className="" onClick={() => setTheme(colourTheme)}>
+      {" "}
+      <div className="">
+        <a href="https://github.com/LachlanStephan" className="">
+          <img
+            className="w-20 md:w-auto lg:w-auto"
+            src={person}
+            alt="cartoon version of person"
+          />
+        </a>
+      </div>
+      <div className="px-2">
+        <a className="hover:text-pink-400" href="#works">
+          {link2}
+        </a>
+      </div>
+      <div className="px-2">
+        <a className="hover:text-pink-400" href="#skills">
+          {link3}
+        </a>
+      </div>
+      <div className="px-2">
+        <a className="hover:text-pink-400" href="#contact">
+          {link4}
+        </a>
+      </div>{" "}
+      <button className="h-2 w-2" onClick={() => setTheme(colourTheme)}>
         {colourTheme === "dark" ? (
           <svg
             className="w-6 h-6"
@@ -46,21 +73,6 @@ const Header: React.FC<Props> = ({ link2, link3, link4 }) => {
           </svg>
         )}
       </button>
-      <div className="px-2">
-        <a className="hover:text-pink-200" href="#works">
-          {link2}
-        </a>
-      </div>
-      <div className="px-2">
-        <a className="hover:text-pink-200" href="#skills">
-          {link3}
-        </a>
-      </div>
-      <div className="px-2">
-        <a className="hover:text-pink-200" href="#contact">
-          {link4}
-        </a>
-      </div>
     </div>
   );
 };

@@ -29,6 +29,8 @@ import {
   SiGithub,
   SiMailDotRu,
   SiLinux,
+  SiCsharp,
+  SiSvelte,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -48,6 +50,7 @@ const npm = <SiNpm />;
 const jest = <SiJest />;
 const bootstrap = <SiBootstrap />;
 const tailwind = <SiTailwindcss />;
+const svelte = <SiSvelte />;
 
 // Desired skill icons
 const java = <SiJava />;
@@ -55,6 +58,7 @@ const python = <SiPython />;
 const docker = <SiDocker />;
 const webpack = <SiWebpack />;
 const linux = <SiLinux />;
+const cSharp = <SiCsharp />;
 
 // Footer icon
 const ghub = <SiGithub />;
@@ -80,10 +84,10 @@ const App: React.FC = () => {
           opacity: 1,
         }}
         transition={{
-          duration: 2,
+          duration: 1,
         }}
       >
-        <div className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
+        <div className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
           <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
             <div>
               <Header
@@ -94,7 +98,7 @@ const App: React.FC = () => {
               />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go further with langauges such as Java and Python."
+                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
@@ -115,12 +119,14 @@ const App: React.FC = () => {
                 icon13={jest}
                 icon14={bootstrap}
                 icon15={tailwind}
+                icon22={svelte}
                 title2="Desired skills"
                 icon16={java}
                 icon17={python}
                 icon18={docker}
                 icon19={webpack}
                 icon20={linux}
+                icon21={cSharp}
               />
               <Contact />
               <Footer footerLink1={ghub} footerLink2={mail} />

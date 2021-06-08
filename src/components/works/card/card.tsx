@@ -16,6 +16,8 @@ interface Props {
   tech6?: IconBaseProps;
   hrefText?: string;
   icon?: IconBaseProps;
+  liveSiteIcon?: IconBaseProps;
+  liveSiteLink?: string;
 }
 
 // Parse props
@@ -33,17 +35,19 @@ const CardProp: React.FC<Props> = ({
   tech6,
   hrefText,
   icon,
+  liveSiteIcon,
+  liveSiteLink,
 }) => {
   return (
     <div className="py-5 flex flex-wrap justify-center">
-      <div className="w-full md:w-1/2 lg:w-1/2 px-2 py-2">
+      <div className="w-full md:w-3/5 lg:w-3/5 px-2 py-2">
         <img
-          className="w-full h-full m-auto shadow-md rounded-lg"
+          className="w-full h-full m-auto shadow-lg box rounded-lg"
           src={cardImg}
           alt={alt}
         />
       </div>
-      <div className="w-full md:w-1/2 lg:w-1/2 px-5">
+      <div className="w-full md:w-2/5 lg:w-2/5 px-5">
         <div className="py-2 font-bold text-lg">{cardTitle}</div>
         <div className="py-2">{cardText}</div>
         <div className="flex justify-start text-2xl">
@@ -54,13 +58,22 @@ const CardProp: React.FC<Props> = ({
           <p className="px-2">{tech4}</p>
           <p className="px-2">{tech5}</p>
         </div>
-        <a
-          target="blank"
-          className="p-2 text-2xl w-auto hover:text-pink-200 transition 0.2s"
-          href={hrefText}
-        >
-          {icon}
-        </a>
+        <div className="flex pl-0 ml-0 justify-start text-2xl">
+          <a
+            target="blank"
+            className="py-4 text-2xl hover:text-pink-400 transition 0.2s"
+            href={hrefText}
+          >
+            {icon}
+          </a>
+          <a
+            target="blank"
+            className="p-4 text-2xl w-auto hover:text-pink-400 transition 0.2s"
+            href={liveSiteLink}
+          >
+            {liveSiteIcon}
+          </a>
+        </div>
       </div>
     </div>
   );

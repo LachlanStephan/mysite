@@ -7,6 +7,7 @@ import {
   FaCss3,
   FaHtml5,
   FaPhp,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -15,6 +16,7 @@ import {
   SiJest,
   SiTypescript,
   SiMysql,
+  SiSvelte,
 } from "react-icons/si";
 
 // Images for works page
@@ -23,9 +25,13 @@ import ss from "../../images/scheduleStuff.png";
 import marvel from "../../images/Marvel.png";
 import fs from "../../images/FacilitySite.png";
 import mysite from "../../images/mysite.png";
+import crypto from "../../images/cryptoTracker.png";
 
 // GitHub icon
 const ghub = <FaGithub />;
+
+// External link for live site
+const externalLink = <FaExternalLinkAlt />;
 
 // Icons for tech stack - foreach proj
 const reactIcon = <FaReact />;
@@ -39,17 +45,34 @@ const node = <SiNodeDotJs />;
 const jest = <SiJest />;
 const typescript = <SiTypescript />;
 const mysql = <SiMysql />;
+const svelte = <SiSvelte />;
 
 const Works: React.FC = () => {
   return (
     <div id="works">
       <div>
+        {" "}
+        <div>
+          <CardProp
+            cardImg={crypto}
+            alt="screenshot of crypto coin tracker"
+            cardTitle="CryptoTracker"
+            cardText="This site was built for fun to learn Svelte"
+            tech={svelte}
+            tech1={html5}
+            tech2={css3}
+            hrefText="https://github.com/LachlanStephan/CryptoTracker"
+            icon={ghub}
+            liveSiteIcon={externalLink}
+            liveSiteLink="https://crypto-tracker-livid.vercel.app/"
+          />
+        </div>
         <div>
           <CardProp
             cardImg={ss}
             alt="Screenshot of scedule stuff"
             cardTitle="Schedule stuff"
-            cardText="This is my current project and first full stack web application. The link to the web service is in the repo below. The intention going forward is to make this a pwa and build an admin panel."
+            cardText="This is my current project and first full stack web application. The link to the web service is in the repo below. The intention going forward is to make this a pwa and build an admin panel. Currently strictly for mobile view - updates to desktop view in the future"
             tech={next}
             tech1={tailwind}
             tech2={css3}
@@ -58,6 +81,8 @@ const Works: React.FC = () => {
             tech5={mysql}
             hrefText="https://github.com/LachlanStephan/scheduleStuff"
             icon={ghub}
+            liveSiteIcon={externalLink}
+            liveSiteLink="https://schedule-stuff.vercel.app/"
           />
         </div>
       </div>
