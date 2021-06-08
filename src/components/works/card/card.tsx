@@ -1,7 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { IconBaseProps } from "react-icons";
-import { motion } from "framer-motion";
 
 // Declare props
 interface Props {
@@ -18,6 +16,8 @@ interface Props {
   tech6?: IconBaseProps;
   hrefText?: string;
   icon?: IconBaseProps;
+  liveSiteIcon?: IconBaseProps;
+  liveSiteLink?: string;
 }
 
 // Parse props
@@ -35,53 +35,47 @@ const CardProp: React.FC<Props> = ({
   tech6,
   hrefText,
   icon,
+  liveSiteIcon,
+  liveSiteLink,
 }) => {
   return (
-    <Card
-      style={{
-        backgroundColor: "#f8f8ff",
-        width: "auto",
-        height: "auto",
-        border: "none",
-        borderLeft: "1px solid rgb(240, 118, 118)",
-        paddingBottom: "2em",
-        marginBottom: "2em",
-      }}
-    >
-      <Card.Img src={cardImg} alt={alt} />
-      <Card.Body>
-        <Card.Title>{cardTitle}</Card.Title>
-        <Card.Text>{cardText}</Card.Text>
-        <p style={{ fontSize: "2em", padding: "0.2em" }}>
-          {tech}
-          {tech1}
-          {tech2}
-          {tech3}
-          {tech4}
-          {tech5}
-        </p>
-        <motion.div
-          initial={{
-            scale: 1,
-            x: 0,
-            y: 0,
-            z: 0,
-          }}
-          whileHover={{
-            rotate: -10,
-            scale: 1.1,
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-          style={{ fontSize: "2em", height: "0", width: "0" }}
-        >
-          <a target="blank" className="iconLinks" href={hrefText}>
+    <div className="py-5 flex flex-wrap justify-center">
+      <div className="w-full md:w-3/5 lg:w-3/5 px-2 py-2">
+        <img
+          className="w-full h-full m-auto shadow-lg box rounded-lg"
+          src={cardImg}
+          alt={alt}
+        />
+      </div>
+      <div className="w-full md:w-2/5 lg:w-2/5 px-5">
+        <div className="py-2 font-bold text-lg">{cardTitle}</div>
+        <div className="py-2">{cardText}</div>
+        <div className="flex justify-start text-2xl">
+          <p className="">{tech}</p>
+          <p className="px-2">{tech1}</p>
+          <p className="px-2">{tech2}</p>
+          <p className="px-2">{tech3}</p>
+          <p className="px-2">{tech4}</p>
+          <p className="px-2">{tech5}</p>
+        </div>
+        <div className="flex pl-0 ml-0 justify-start text-2xl">
+          <a
+            target="blank"
+            className="py-4 text-2xl hover:text-pink-400 transition 0.2s"
+            href={hrefText}
+          >
             {icon}
           </a>
-        </motion.div>
-      </Card.Body>
-    </Card>
+          <a
+            target="blank"
+            className="p-4 text-2xl w-auto hover:text-pink-400 transition 0.2s"
+            href={liveSiteLink}
+          >
+            {liveSiteIcon}
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 

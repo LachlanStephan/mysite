@@ -1,6 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import CSS from "csstype";
 import { IconBaseProps } from "react-icons";
 
 // Declare props
@@ -27,18 +25,9 @@ interface Props {
   icon18?: IconBaseProps;
   icon19?: IconBaseProps;
   icon20?: IconBaseProps;
+  icon21?: IconBaseProps;
+  icon22?: IconBaseProps;
 }
-
-// CSS for container
-const skillsStyle: CSS.Properties = {
-  padding: "1.5em",
-  marginBottom: "2em",
-};
-
-// CSS for icon size
-const iconStyle: CSS.Properties = {
-  fontSize: "2em",
-};
 
 // Parse props
 const Skills: React.FC<Props> = ({
@@ -64,42 +53,50 @@ const Skills: React.FC<Props> = ({
   icon18,
   icon19,
   icon20,
+  icon21,
+  icon22,
 }) => {
   return (
-    <Container id="skills" style={skillsStyle}>
+    <div id="skills" className="py-4">
       {/* current skills */}
-      <h5>{title1}</h5>
-      <Row style={iconStyle}>
-        <Col>{icon1}</Col>
-        <Col>{icon2}</Col>
-        <Col>{icon3}</Col>
-        <Col>{icon4}</Col>
-        <Col>{icon5}</Col>
-      </Row>
-      <Row style={iconStyle}>
-        <Col>{icon6}</Col>
-        <Col>{icon7}</Col>
-        <Col>{icon8}</Col>
-        <Col>{icon9}</Col>
-        <Col>{icon10}</Col>
-      </Row>
-      <Row style={iconStyle}>
-        <Col>{icon11}</Col>
-        <Col>{icon12}</Col>
-        <Col>{icon13}</Col>
-        <Col>{icon14}</Col>
-        <Col>{icon15}</Col>
-      </Row>
+      <h5 className="font-bold text-lg">{title1}</h5>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-yellow-300">{icon1}</div>
+        <div className="hover:text-blue-400">{icon2}</div>
+        <div className="hover:text-green-400">{icon3}</div>
+        <div className="hover:text-red-500">{icon4}</div>
+        <div className="hover:text-blue-700">{icon5}</div>
+      </div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-blue-200">{icon6}</div>
+        <div className="hover:text-gray-500">{icon7}</div>
+        <div className="hover:text-indigo-300">{icon8}</div>
+        <div className="hover:text-red-400">{icon9}</div>
+        <div className="hover:text-green-400">{icon10}</div>
+      </div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-indigo-500">{icon11}</div>
+        <div className="hover:text-red-500">{icon12}</div>
+        <div className="hover:text-red-300">{icon13}</div>
+        <div className="hover:text-purple-500">{icon14}</div>
+        <div className="hover:text-blue-400">{icon15}</div>
+      </div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-red-400">{icon22}</div>
+      </div>
       {/* desired skills */}
-      <h5 style={{ paddingTop: "2em" }}>{title2}</h5>
-      <Row style={iconStyle}>
-        <Col>{icon16}</Col>
-        <Col>{icon17}</Col>
-        <Col>{icon18}</Col>
-        <Col>{icon19}</Col>
-        <Col>{icon20}</Col>
-      </Row>
-    </Container>
+      <h5 className="font-bold text-lg">{title2}</h5>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-red-300">{icon16}</div>
+        <div className="hover:text-yellow-400">{icon17}</div>
+        <div className="hover:text-blue-400">{icon18}</div>
+        <div className="hover:text-blue-300">{icon19}</div>
+        <div className="hover:text-yellow-300">{icon20}</div>
+      </div>
+      <div className="p-9 text-5xl justify-around flex w-auto h-auto">
+        <div className="hover:text-purple-500">{icon21}</div>
+      </div>
+    </div>
   );
 };
 

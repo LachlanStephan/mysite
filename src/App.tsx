@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
-import { FaNode, FaArrowAltCircleUp } from "react-icons/fa";
-import ScrollToTop from "./components/scrollToTop/scrollToTop";
-import LandingPage from "./components/landingPage/landingPage";
+import { FaNode } from "react-icons/fa";
+// import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
   SiJavascript,
@@ -31,10 +29,10 @@ import {
   SiGithub,
   SiMailDotRu,
   SiLinux,
+  SiCsharp,
+  SiSvelte,
 } from "react-icons/si";
-
-// Up arrow for btn
-const up = <FaArrowAltCircleUp />;
+import { motion } from "framer-motion";
 
 // Current skill icons
 const JS = <SiJavascript />;
@@ -52,6 +50,7 @@ const npm = <SiNpm />;
 const jest = <SiJest />;
 const bootstrap = <SiBootstrap />;
 const tailwind = <SiTailwindcss />;
+const svelte = <SiSvelte />;
 
 // Desired skill icons
 const java = <SiJava />;
@@ -59,26 +58,38 @@ const python = <SiPython />;
 const docker = <SiDocker />;
 const webpack = <SiWebpack />;
 const linux = <SiLinux />;
+const cSharp = <SiCsharp />;
 
 // Footer icon
 const ghub = <SiGithub />;
 const mail = <SiMailDotRu />;
 
 const App: React.FC = () => {
-  const [showSite, setShowSite] = useState(false);
+  // const [showSite, setShowSite] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowSite(true);
-    }, 2500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowSite(true);
+  //   }, 2500);
+  // }, []);
 
   return (
     <>
-      {showSite ? (
-        <Container>
-          <Row className="justify-content-center">
-            <Col>
+      {/* {showSite ? ( */}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+      >
+        <div className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
+          <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
+            <div>
               <Header
                 link1="About"
                 link2="Works"
@@ -87,11 +98,10 @@ const App: React.FC = () => {
               />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am also hoping in my spare time to go further with software development and learn languages such as Python and Java."
+                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
-              <ScrollToTop upArrow={up} />
               <Skills
                 title1="Current skills"
                 icon1={JS}
@@ -109,21 +119,24 @@ const App: React.FC = () => {
                 icon13={jest}
                 icon14={bootstrap}
                 icon15={tailwind}
+                icon22={svelte}
                 title2="Desired skills"
                 icon16={java}
                 icon17={python}
                 icon18={docker}
                 icon19={webpack}
                 icon20={linux}
+                icon21={cSharp}
               />
               <Contact />
               <Footer footerLink1={ghub} footerLink2={mail} />
-            </Col>
-          </Row>
-        </Container>
-      ) : (
+            </div>
+          </div>
+        </div>
+      </motion.div>
+      {/* ) : (
         <LandingPage />
-      )}
+      )} */}
     </>
   );
 };
