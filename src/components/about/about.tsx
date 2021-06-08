@@ -1,5 +1,4 @@
 import React from "react";
-import person from "../../images/cartoonMeTransparent.png";
 import arrow from "../../images/downArrow.png";
 
 // Declare props
