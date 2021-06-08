@@ -138,7 +138,7 @@ const Contact = () => {
         <div>
           <div>
             <button
-              className="w-auto h-auto rounded-md p-2 my-2 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400"
+              className="w-auto h-auto rounded-md p-2 my-2 bg-gray-200 border-2 border-gray-800 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400"
               disabled={statusCheck}
               type="submit"
               variant="dark"

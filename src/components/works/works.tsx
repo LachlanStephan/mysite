@@ -57,7 +57,7 @@ const Works: React.FC = () => {
             cardImg={crypto}
             alt="screenshot of crypto coin tracker"
             cardTitle="CryptoTracker"
-            cardText="This site was built for fun to learn Svelte"
+            cardText="This site was built for fun and to learn Svelte (svelte-kit)"
             tech={svelte}
             tech1={html5}
             tech2={css3}
@@ -94,10 +94,11 @@ const Works: React.FC = () => {
           cardText="This is my personal site to show and keep track of some my works. It will be used as a portfolio and a place for me to try new technologies and techniques."
           tech={reactIcon}
           tech1={typescript}
-          tech2={bootstrap}
-          tech3={css3}
+          tech2={tailwind}
           hrefText="https://github.com/LachlanStephan/mysite"
           icon={ghub}
+          liveSiteIcon={externalLink}
+          liveSiteLink="https://ljstephan.dev"
         />
       </div>
       <div>
