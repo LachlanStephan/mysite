@@ -8,9 +8,6 @@
 # testing
 /coverage
 
-# secrets
-/.env
-
 # production
 /build
 
