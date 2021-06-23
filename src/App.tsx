@@ -2,10 +2,11 @@ import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
+import Github from "./components/about/github";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
-import { FaNode } from "react-icons/fa";
+import { FaNode, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
@@ -26,8 +27,6 @@ import {
   SiJest,
   SiBootstrap,
   SiTailwindcss,
-  SiGithub,
-  SiMailDotRu,
   SiLinux,
   SiCsharp,
   SiSvelte,
@@ -61,8 +60,9 @@ const linux = <SiLinux />;
 const cSharp = <SiCsharp />;
 
 // Footer icon
-const ghub = <SiGithub />;
-const mail = <SiMailDotRu />;
+const ghub = <FaGithub />;
+const mail = <FaEnvelope />;
+const linkedIn = <FaLinkedin />;
 
 const App: React.FC = () => {
   // const [showSite, setShowSite] = useState(false);
@@ -88,7 +88,7 @@ const App: React.FC = () => {
         }}
       >
         <div className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
-          <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
+          <div className="justify-content-center w-full md:w-4/5 lg:w-4/5 xl:w-3/5 m-auto">
             <div>
               <Header
                 link1="About"
@@ -96,6 +96,7 @@ const App: React.FC = () => {
                 link3="Skills"
                 link4="Contact"
               />
+              <Github />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
                 aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."
@@ -129,7 +130,11 @@ const App: React.FC = () => {
                 icon21={cSharp}
               />
               <Contact />
-              <Footer footerLink1={ghub} footerLink2={mail} />
+              <Footer
+                footerLink1={ghub}
+                footerLink2={mail}
+                footerLink3={linkedIn}
+              />
             </div>
           </div>
         </div>

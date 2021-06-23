@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@octokit/core": "^3.5.1",
     "autoprefixer": "9"
   }
 }
