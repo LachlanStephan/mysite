@@ -6,7 +6,13 @@ import Github from "./components/about/github";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
-import { FaNode, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaNode,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaStar,
+} from "react-icons/fa";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
@@ -64,6 +70,9 @@ const ghub = <FaGithub />;
 const mail = <FaEnvelope />;
 const linkedIn = <FaLinkedin />;
 
+// Star icon
+const star = <FaStar />;
+
 const App: React.FC = () => {
   // const [showSite, setShowSite] = useState(false);
 
@@ -96,7 +105,12 @@ const App: React.FC = () => {
                 link3="Skills"
                 link4="Contact"
               />
-              <Github />
+              <Github
+                title="Current project"
+                owner="LachlanStephan"
+                repo="CryptoTracker"
+                star={star}
+              />
               <About
                 aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
                 aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."

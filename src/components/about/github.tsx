@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Octokit } from "@octokit/core";
+import { IconBaseProps } from "react-icons/lib";
 
-// Wrote this thinking there was an endpoint for all commits
-const Commits = () => {
-  const title = "Current project:";
-  const owner = "LachlanStephan";
-  const repo = "CryptoTracker";
+interface Props {
+  title: string;
+  owner: string;
+  repo: string;
+  star: IconBaseProps;
+}
 
+const Commits: React.FC<Props> = ({ title, owner, repo, star }) => {
   const ghubkey = process.env.REACT_APP_GHUB_KEY;
 
-  const [curProject, setCurProject] = useState([]);
+  const [curProject, setCurProject] = useState<any>([]);
 
   const octokit = new Octokit({
     auth: ghubkey,
@@ -33,9 +36,9 @@ const Commits = () => {
       <h1 className="font-bold text-lg">{title}</h1>
       <p>{curProject.name}</p>
       <p>Primary language: {curProject.language}</p>
-      <a className="hover:text-pink-400" href={curProject.homepage}>
-        View site
-      </a>
+      <p className="flex">
+        {star}: {curProject.stargazers_count}
+      </p>
     </div>
   );
 };
