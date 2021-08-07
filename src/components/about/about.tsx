@@ -10,10 +10,7 @@ interface Props {
 
 const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
   return (
-    <div id="about" className="min-h-screen py-2 flex flex-wrap">
-      {/* <div className="">
-        <img className="3/5" src={person} alt="cartoon person" />
-      </div> */}
+    <div id="about" className="py-2 flex flex-wrap">
       <div className="py-4">
         <div>
           <div>{aboutText}</div>
@@ -27,7 +24,11 @@ const About: React.FC<Props> = ({ aboutText, aboutText2, aboutText3 }) => {
       </div>
       <div className="m-auto p-0 mt-0">
         <a href="#works">
-          <img className="h-20 md:h-44 lg:h-52" src={arrow} alt="arrow down" />
+          <img
+            className="h-32 md:h-44 lg:h-52 my-16"
+            src={arrow}
+            alt="arrow down"
+          />
         </a>
       </div>
     </div>

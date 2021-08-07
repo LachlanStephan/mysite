@@ -9,7 +9,7 @@ interface Props {
   star: IconBaseProps;
 }
 
-const Commits: React.FC<Props> = ({ title, owner, repo, star }) => {
+const CurrProject: React.FC<Props> = ({ title, owner, repo, star }) => {
   const ghubkey = process.env.REACT_APP_GHUB_KEY;
 
   const [curProject, setCurProject] = useState<any>([]);
@@ -43,4 +43,4 @@ const Commits: React.FC<Props> = ({ title, owner, repo, star }) => {
   );
 };
 
-export default Commits;
+export default CurrProject;

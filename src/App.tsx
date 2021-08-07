@@ -112,8 +112,8 @@ const App: React.FC = () => {
                 star={star}
               />
               <About
-                aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."
+                aboutText="My name is Lachlan. I am a junior software engineer who loves Javascript and web apps."
+                aboutText2="My main goal is to work with web apps as this is what I enjoy and what gets me excited to code. I am currently learning Typescript && Svelte and want to go deep with langauges such as Python and Rust."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
