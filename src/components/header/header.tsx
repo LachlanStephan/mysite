@@ -17,7 +17,7 @@ const Header: React.FC<Props> = ({ link2, link3, link4 }) => {
     <div className="top-0 flex flex-wrap py-1">
       {" "}
       <div className="">
-        <a href="https://github.com/LachlanStephan" className="">
+        <a target="blank" href="https://github.com/LachlanStephan" className="">
           <img
             className="w-20 md:w-auto lg:w-auto"
             src={person}

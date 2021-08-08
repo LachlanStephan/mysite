@@ -2,10 +2,19 @@ import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
+import Github from "./components/about/github";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
-import { FaNode } from "react-icons/fa";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
+import {
+  FaNode,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaStar,
+  FaArrowAltCircleUp,
+} from "react-icons/fa";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
   SiTypescript,
@@ -26,13 +35,15 @@ import {
   SiJest,
   SiBootstrap,
   SiTailwindcss,
-  SiGithub,
-  SiMailDotRu,
   SiLinux,
   SiCsharp,
   SiSvelte,
+  SiRust,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+
+// Up arrow
+const upArrow = <FaArrowAltCircleUp />;
 
 // Current skill icons
 const JS = <SiJavascript />;
@@ -59,10 +70,15 @@ const docker = <SiDocker />;
 const webpack = <SiWebpack />;
 const linux = <SiLinux />;
 const cSharp = <SiCsharp />;
+const rust = <SiRust />;
 
 // Footer icon
-const ghub = <SiGithub />;
-const mail = <SiMailDotRu />;
+const ghub = <FaGithub />;
+const mail = <FaEnvelope />;
+const linkedIn = <FaLinkedin />;
+
+// Star icon
+const star = <FaStar />;
 
 const App: React.FC = () => {
   // const [showSite, setShowSite] = useState(false);
@@ -88,7 +104,7 @@ const App: React.FC = () => {
         }}
       >
         <div className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300 transition duration-400 p-5">
-          <div className="justify-content-center w-full md:w-4/5 lg:w-3/5 m-auto">
+          <div className="justify-content-center w-full md:w-4/5 lg:w-4/5 xl:w-3/5 m-auto">
             <div>
               <Header
                 link1="About"
@@ -96,12 +112,19 @@ const App: React.FC = () => {
                 link3="Skills"
                 link4="Contact"
               />
+              <Github
+                title="Current project"
+                owner="LachlanStephan"
+                repo="CryptoTracker"
+                star={star}
+              />
               <About
-                aboutText="My name is Lachlan. I have been studying web development for the last 10 months, I am an aspiring full stack developer who is currently enjoying Javascript in the form of Next.js and Express.js."
-                aboutText2="My main goal is to work within the web application space as I find this to be interesting and challenging. I am currently learning Typescript && Svelte and want to go deep with langauges such as Java, Python and C#."
+                aboutText="My name is Lachlan. I am a junior software engineer who loves Javascript and web apps."
+                aboutText2="My main goal is to work with web apps as this is what I enjoy and what gets me excited to code. I am currently learning Typescript && Svelte and want to go deep with langauges such as Python and Rust."
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
+              <ScrollToTop upArrow={upArrow} />
               <Skills
                 title1="Current skills"
                 icon1={JS}
@@ -127,9 +150,14 @@ const App: React.FC = () => {
                 icon19={webpack}
                 icon20={linux}
                 icon21={cSharp}
+                icon23={rust}
               />
               <Contact />
-              <Footer footerLink1={ghub} footerLink2={mail} />
+              <Footer
+                footerLink1={ghub}
+                footerLink2={mail}
+                footerLink3={linkedIn}
+              />
             </div>
           </div>
         </div>
