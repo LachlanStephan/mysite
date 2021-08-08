@@ -27,6 +27,7 @@ interface Props {
   icon20?: IconBaseProps;
   icon21?: IconBaseProps;
   icon22?: IconBaseProps;
+  icon23?: IconBaseProps;
 }
 
 // Parse props
@@ -55,6 +56,7 @@ const Skills: React.FC<Props> = ({
   icon20,
   icon21,
   icon22,
+  icon23,
 }) => {
   return (
     <div id="skills" className="py-4">
@@ -95,6 +97,7 @@ const Skills: React.FC<Props> = ({
       </div>
       <div className="p-9 text-5xl justify-around flex w-auto h-auto">
         <div className="hover:text-purple-500">{icon21}</div>
+        <div className="hover:text-black">{icon23}</div>
       </div>
     </div>
   );

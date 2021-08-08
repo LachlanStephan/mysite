@@ -6,12 +6,14 @@ import Github from "./components/about/github";
 import Works from "./components/works/works";
 import Skills from "./components/skills/skills";
 import Contact from "./components/contact/contact";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import {
   FaNode,
   FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaStar,
+  FaArrowAltCircleUp,
 } from "react-icons/fa";
 // import LandingPage from "./components/landingPage/landingPage";
 import {
@@ -36,8 +38,12 @@ import {
   SiLinux,
   SiCsharp,
   SiSvelte,
+  SiRust,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+
+// Up arrow
+const upArrow = <FaArrowAltCircleUp />;
 
 // Current skill icons
 const JS = <SiJavascript />;
@@ -64,6 +70,7 @@ const docker = <SiDocker />;
 const webpack = <SiWebpack />;
 const linux = <SiLinux />;
 const cSharp = <SiCsharp />;
+const rust = <SiRust />;
 
 // Footer icon
 const ghub = <FaGithub />;
@@ -117,6 +124,7 @@ const App: React.FC = () => {
                 aboutText3="My projects are below, starting with the most recent."
               />
               <Works />
+              <ScrollToTop upArrow={upArrow} />
               <Skills
                 title1="Current skills"
                 icon1={JS}
@@ -142,6 +150,7 @@ const App: React.FC = () => {
                 icon19={webpack}
                 icon20={linux}
                 icon21={cSharp}
+                icon23={rust}
               />
               <Contact />
               <Footer
