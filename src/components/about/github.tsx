@@ -19,7 +19,7 @@ const CurrProject: React.FC<Props> = ({title, owner, repo, star}) => {
 	});
 
 	const ghubData = async () => {
-		let response = await octokit.request("GET /repos/{owner}/{repo}", {
+		const response = await octokit.request("GET /repos/{owner}/{repo}", {
 			owner: owner,
 			repo: repo,
 		});
