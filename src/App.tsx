@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import About from "./components/about/about";
@@ -106,7 +106,7 @@ const App: React.FC = () => {
 					duration: 0.5,
 				}}
 			>
-				<div className="bg-white text-black dark:bg-black dark:text-green-500 transition duration-400 p-5">
+				<div className="bg-white text-blue-800 dark:bg-black dark:text-gray-300 transition duration-400 p-5">
 					<div className="justify-content-center w-full md:w-4/5 lg:w-4/5 xl:w-3/5 m-auto">
 						<div>
 							<Header

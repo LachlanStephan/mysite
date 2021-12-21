@@ -1,6 +1,6 @@
 import React from "react";
 import useDarkMode from "../../hooks/useDarkMode";
-import person from "../../images/cartoonMeTransparent.png";
+// import person from "../../images/cartoonMeTransparent.png";
 
 // Declare props
 interface Props {
@@ -15,7 +15,7 @@ const Header: React.FC<Props> = ({link2, link3, link4}) => {
 
 	return (
 		<div className="top-0 flex text-lg flex-wrap py-1">
-			{" "}
+			{/* {" "}
 			<div className="">
 				<a
 					target="blank"
@@ -28,8 +28,8 @@ const Header: React.FC<Props> = ({link2, link3, link4}) => {
 						alt="cartoon version of person"
 					/>
 				</a>
-			</div>
-			<div className="px-2">
+			</div> */}
+			<div className="">
 				<a className="hover:text-pink-400" href="#works">
 					{link2}
 				</a>

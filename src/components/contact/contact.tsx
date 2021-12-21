@@ -17,7 +17,11 @@ const Contact = () => {
 
 	// Validation functions
 	const validatefName = (): void => {
-		if (fName.length < 1) {
+		if (fName.length === 0) {
+			setfNameErr("");
+			return;
+		}
+		if (fName.length < 2) {
 			setfNameErr("Please provide a name");
 			setTimeout(() => {
 				setfNameErr("");
@@ -27,6 +31,10 @@ const Contact = () => {
 		}
 	};
 	const validateEmail = (): void => {
+		if (email.length === 0) {
+			setEmailErr("");
+			return;
+		}
 		if (!email.includes("@") || !email.includes(".com")) {
 			setEmailErr("Please provide a valid email");
 			setTimeout(() => {
@@ -37,7 +45,11 @@ const Contact = () => {
 		}
 	};
 	const validateMessage = (): void => {
-		if (message.length < 1) {
+		if (message.length === 0) {
+			setMessageErr("");
+			return;
+		}
+		if (message.length < 2) {
 			setMessageErr("Please provide a message");
 			setTimeout(() => {
 				setMessageErr("");
@@ -50,10 +62,10 @@ const Contact = () => {
 	// Conditionally set status of button
 	const allowPost = (): boolean => {
 		if (
-			fName.length < 1 ||
+			fName.length < 2 ||
 			!email.includes("@") ||
 			!email.includes(".com") ||
-			message.length < 1
+			message.length < 2
 		) {
 			return true;
 		} else {
@@ -92,70 +104,50 @@ const Contact = () => {
 				Say hi
 			</h5>
 			<form onSubmit={sendEmail}>
-				<div>
-					<div>
-						<div>
-							<div>
-								<input
-									className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
-									value={fName}
-									onChange={(e) => {
-										setfName(e.target.value);
-									}}
-									onBlur={validatefName}
-									placeholder="Name"
-									name="fName"
-									required={true}
-								/>
-								{fNameErr}
-							</div>
-						</div>
-						<div>
-							<div>
-								<input
-									className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
-									value={email}
-									onChange={(e) => {
-										setEmail(e.target.value);
-									}}
-									onBlur={validateEmail}
-									placeholder="Email"
-									name="email"
-									required={true}
-								/>
-								{emailErr}
-							</div>
-						</div>
-						<div>
-							<div>
-								<textarea
-									className="w-full h-14 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
-									value={message}
-									onChange={(e) => {
-										setMessage(e.target.value);
-									}}
-									onBlur={validateMessage}
-									placeholder="Message"
-									name="message"
-									required={true}
-								/>
-								{messageErr}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div>
-						<button
-							className="w-auto h-auto rounded-md p-2 my-2 bg-gray-200 border-2 border-gray-800 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400"
-							disabled={allowPost()}
-							type="submit"
-						>
-							Submit
-						</button>
-						<p> {emailMsg}</p>
-					</div>
-				</div>
+				<input
+					className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
+					value={fName}
+					onChange={(e) => {
+						setfName(e.target.value);
+					}}
+					onBlur={validatefName}
+					placeholder="Name"
+					name="fName"
+					required={true}
+				/>
+				{fNameErr}
+				<input
+					className="w-full h-9 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
+					value={email}
+					onChange={(e) => {
+						setEmail(e.target.value);
+					}}
+					onBlur={validateEmail}
+					placeholder="Email"
+					name="email"
+					required={true}
+				/>
+				{emailErr}
+				<textarea
+					className="w-full h-14 p-2 mb-2 border-2 border-gray-800 rounded-md text-gray-600"
+					value={message}
+					onChange={(e) => {
+						setMessage(e.target.value);
+					}}
+					onBlur={validateMessage}
+					placeholder="Message"
+					name="message"
+					required={true}
+				/>
+				{messageErr}
+				<button
+					className="w-auto h-auto rounded-md p-2 my-2 bg-gray-200 border-2 border-gray-800 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-400"
+					disabled={allowPost()}
+					type="submit"
+				>
+					Submit
+				</button>
+				<p> {emailMsg}</p>
 			</form>
 		</div>
 	);

@@ -23,7 +23,6 @@ const CurrProject: React.FC<Props> = ({title, owner, repo, star}) => {
 			owner: owner,
 			repo: repo,
 		});
-		console.log(response);
 		setCurProject(response.data);
 	};
 
@@ -34,7 +33,15 @@ const CurrProject: React.FC<Props> = ({title, owner, repo, star}) => {
 	return (
 		<div className="text-xl">
 			<h1 className="font-bold">{title}</h1>
-			<p> {curProject.name}</p>
+			<p>
+				<a
+					className="hover:underline"
+					target="_blank"
+					href={curProject.html_url}
+				>
+					{curProject.name}
+				</a>
+			</p>
 			<p> Primary language: {curProject.language}</p>
 			<p className="flex">
 				{star}: {curProject.stargazers_count}
