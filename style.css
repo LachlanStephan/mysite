@@ -1,0 +1,28 @@
+body {
+	padding: 0.5rem;
+	margin: 0.5rem;
+	background-color: rgb(20, 20, 20);
+	color: rgb(226, 222, 222);
+	width: 100vw;
+}
+
+h4 {
+	font-weight: 1000;
+}
+
+p {
+	color: #ccc;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+/* Media query stuffs */
+@media (max-width: 600px) {
+	form {
+		width: 70%;
+	}
+}
