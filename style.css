@@ -8,16 +8,31 @@ body {
 
 h4 {
 	font-weight: 1000;
+	margin-right: 0.5rem;
 }
 
 p {
 	color: #ccc;
+	margin-right: 0.5rem;
 }
 
 form {
+	margin-top: 1rem;
+	padding: 0.2rem;
+	border-radius: 2px;
+	border: 1px solid white;
 	display: flex;
 	flex-direction: column;
 	width: 30%;
+}
+
+.projContainer {
+	display: flex;
+	align-items: center;
+	border: 1px solid white;
+	width: 90%;
+	padding: 0.2rem;
+	border-radius: 2px;
 }
 
 /* Media query stuffs */
