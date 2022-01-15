@@ -4,30 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>A website</title>
 		<link rel="stylesheet" href="./style.css" />
 		<script src="./main.js" defer></script>
-		<script type="module" src="./githubData.js"></script>
-        <!-- ADD FONT -->
+		<title>Document</title>
+	</head>
 	<body>
-		<!-- Header -->
 		<header>
-			<h1>Website</h1>
+			<div id="hamburger">
+				<button onclick="toggleNav()">X</button>
+			</div>
+			<aside id="navContainer">
+				<h5>Nav</h5>
+			</aside>
+			<h5>My site</h5>
 		</header>
-		<!-- Fetched proj data from github -->
-		<main>
-			<h3>Projects</h3>
-            <section id="sect"></section>
-		</main>
-        <!-- Contact form-->
-        <aside class="form">
-            <form action="">
-                <label for="message">
-                    Message
-                </label>
-                <input type="textarea" name="message" id="">
-                <input type="submit">
-            </form>
-        </aside>
 	</body>
 </html>
