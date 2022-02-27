@@ -7,27 +7,64 @@
 		<title>A website</title>
 		<link rel="stylesheet" href="./style.css" />
 		<script src="./main.js" defer></script>
-		<script type="module" src="./githubData.js"></script>
-        <!-- ADD FONT -->
-	<body>
+		<script src="./darkMode.js" defer></script>
+		<script
+			src="https://kit.fontawesome.com/9aba6f04e1.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- <script type="module" src="./githubData.js"></script> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Other font I may want to use at some point -->
+
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+			rel="stylesheet"
+		/> -->
+	</head>
+	<!-- ADD FONT -->
+	<body id="body">
 		<!-- Header -->
 		<header>
-			<h1>Website</h1>
+			<h1>A simple site for testing new stuff and thoughts ...</h1>
+			<div class="toggle" onclick="toggleColour()">
+				<i id="toggleIcon" class=""></i>
+			</div>
 		</header>
-		<!-- Fetched proj data from github -->
 		<main>
-			<h3>Projects</h3>
-            <section id="sect"></section>
+			<!-- Interests - programming related -->
+			<section id="interests">
+				<h3>Here's what I'm currently interested in</h3>
+				<p id="int_text"></p>
+			</section>
+
+			<!-- Current direction -->
+			<section id="direction">
+				<h3>Where I'm currently headed</h3>
+				<p id="direct_text"></p>
+			</section>
+
+			<!-- Work I want to do -->
+			<section id="idealWork">
+				<h3>Where I want to be headed</h3>
+				<p id="ideal_text"></p>
+			</section>
+
+			<!-- Contact form-->
+			<form action="" preventDefault>
+				<label for="subject">Subject</label>
+				<input type="text" name="subject" />
+				<label for="message"> Message </label>
+				<textarea type="textarea" name="message" id=""> </textarea>
+				<button type="submit" class="submitBtn">Go</button>
+			</form>
 		</main>
-        <!-- Contact form-->
-        <aside class="form">
-            <form action="">
-                <label for="message">
-                    Message
-                </label>
-                <input type="textarea" name="message" id="">
-                <input type="submit">
-            </form>
-        </aside>
 	</body>
 </html>
