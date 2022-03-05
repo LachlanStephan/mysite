@@ -26,5 +26,5 @@ const doVal = () => {
 };
 
 const doSubmit = (d) => {
-	console.warn(d);
+	console.warn(d); // post to api once built
 };
