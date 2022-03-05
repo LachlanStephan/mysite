@@ -19,39 +19,24 @@ main,
 header {
 	width: 33.3%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	display: block;
 }
-/* Override above */
-header {
-	align-items: flex-start;
-}
-
-main {
-	margin-bottom: 2rem;
-}
-/* Override above */
 
 p {
 	font-size: 18px;
 }
 
-section {
-	margin: 2rem 0rem;
-}
-
 form {
 	width: 100%;
 	display: flex;
-	justify-content: flex-start;
+	/* justify-content: flex-start; */
 	flex-direction: column;
 }
 
 input,
 textarea {
-	border-radius: 2.5px;
+	border-radius: 5px;
+	min-height: 1rem;
 }
 
 label {
@@ -63,6 +48,15 @@ textarea {
 }
 
 .toggle:hover {
+	cursor: pointer;
+}
+
+#blog_main {
+	display: none;
+}
+
+#blog_link:hover {
+	text-decoration: underline;
 	cursor: pointer;
 }
 

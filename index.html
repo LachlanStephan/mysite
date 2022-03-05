@@ -5,8 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
-		<script src="./main.js" defer></script>
-		<script src="./darkMode.js" defer></script>
+		<script src="./scripts/text.js" defer></script>
+		<script src="./scripts/darkMode.js" defer></script>
+		<script src="./scripts/toggleContent.js" defer></script>
+		<script src="./scripts/submit.js" defer></script>
 		<script
 			src="https://kit.fontawesome.com/9aba6f04e1.js"
 			crossorigin="anonymous"
@@ -28,42 +30,54 @@
 			rel="stylesheet"
 		/> -->
 	</head>
-	<!-- ADD FONT -->
 	<body id="body">
 		<!-- Header -->
 		<header>
-			<h1>A simple site for testing new stuff and thoughts ...</h1>
+			<h1 id="site_header"></h1>
 			<div class="toggle" onclick="toggleColour()">
 				<i id="toggleIcon" class=""></i>
 			</div>
-		</header>
-		<main>
-			<!-- Interests - programming related -->
-			<section id="interests">
-				<h3>Here's what I'm currently interested in</h3>
-				<p id="int_text"></p>
+			<br />
+			<div onclick="toggleBlog()" id="blog_link">Blog
+            </header>
+		<main id="landing_main">
+			<!-- Text section 1 -->
+			<section>
+				<h3 id="heading_1"></h3>
+				<p id="text_1"></p>
 			</section>
-
-			<!-- Current direction -->
-			<section id="direction">
-				<h3>Where I'm currently headed</h3>
-				<p id="direct_text"></p>
+			<br />
+			<!-- Text section 2 -->
+			<section>
+				<h3 id="heading_2"></h3>
+				<p id="text_2"></p>
 			</section>
-
-			<!-- Work I want to do -->
-			<section id="idealWork">
-				<h3>Where I want to be headed</h3>
-				<p id="ideal_text"></p>
+			<br />
+			<!-- Text section 3 -->
+			<section>
+				<h3 id="heading_3"></h3>
+				<p id="text_3"></p>
 			</section>
-
+			<br />
 			<!-- Contact form-->
-			<form action="" preventDefault>
+			<form id="c_form" action="" onsubmit="submitForm(event)">
 				<label for="subject">Subject</label>
 				<input type="text" name="subject" />
 				<label for="message"> Message </label>
 				<textarea type="textarea" name="message" id=""> </textarea>
 				<button type="submit" class="submitBtn">Go</button>
 			</form>
+            <br/>
+		</main>
+
+		<!-- Blog page -->
+		<main id="blog_main">
+			<!-- Blog section 1 -->
+			<section>
+				<h3>Blog 1</h3>
+				<p>some stuff</p>
+			</section>
+			<br />
 		</main>
 	</body>
 </html>
