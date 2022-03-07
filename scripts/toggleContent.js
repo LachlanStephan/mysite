@@ -1,27 +1,30 @@
 const landing = document.getElementById("landing_main");
 const blog = document.getElementById("blog_main");
 const linkText = document.getElementById("blog_link");
+const formEle = document.getElementById("form_main");
 
-let main_1 = true;
+let landing_page = true;
 
 const checkWhichContent = () => {
 	if (landing.style.display !== "none") {
-		main_1 = true;
+		landing_page = true;
 	} else {
-		main_1 = false;
+		landing_page = false;
 	}
 };
 
 const toggleBlog = () => {
 	checkWhichContent();
-	if (main_1) {
+	if (landing_page) {
 		toggleLinkText("Home");
 		toggleDisplay(landing, "none");
+		toggleDisplay(formEle, "none");
 		toggleDisplay(blog, "block");
 	}
-	if (!main_1) {
+	if (!landing_page) {
 		toggleLinkText("Blog");
 		toggleDisplay(landing, "block");
+		toggleDisplay(formEle, "block");
 		toggleDisplay(blog, "none");
 	}
 };

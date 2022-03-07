@@ -9,6 +9,8 @@
 		<script src="./scripts/darkMode.js" defer></script>
 		<script src="./scripts/toggleContent.js" defer></script>
 		<script src="./scripts/submit.js" defer></script>
+		<script src="./scripts/handleBlogs.js" defer></script>
+
 		<script
 			src="https://kit.fontawesome.com/9aba6f04e1.js"
 			crossorigin="anonymous"
@@ -33,33 +35,24 @@
 	<body id="body">
 		<!-- Header -->
 		<header>
-			<h1 id="site_header"></h1>
+			<h1 id="site_header">
+				A simple site where I write and test new stuff ...
+			</h1>
 			<div class="toggle" onclick="toggleColour()">
 				<i id="toggleIcon" class=""></i>
 			</div>
 			<br />
-			<div onclick="toggleBlog()" id="blog_link">Blog
-            </header>
-		<main id="landing_main">
-			<!-- Text section 1 -->
-			<section>
-				<h3 id="heading_1"></h3>
-				<p id="text_1"></p>
-			</section>
-			<br />
-			<!-- Text section 2 -->
-			<section>
-				<h3 id="heading_2"></h3>
-				<p id="text_2"></p>
-			</section>
-			<br />
-			<!-- Text section 3 -->
-			<section>
-				<h3 id="heading_3"></h3>
-				<p id="text_3"></p>
-			</section>
-			<br />
-			<!-- Contact form-->
+			<div onclick="toggleBlog()" id="blog_link">Blog</div>
+		</header>
+
+		<!-- Landing page -->
+		<main id="landing_main"></main>
+
+		<!-- Blog page -->
+		<main id="blog_main"></main>
+
+		<!-- Contact form-->
+		<main id="form_main">
 			<form id="c_form" action="" onsubmit="submitForm(event)">
 				<label for="subject">Subject</label>
 				<input type="text" name="subject" />
@@ -67,17 +60,6 @@
 				<textarea type="textarea" name="message" id=""> </textarea>
 				<button type="submit" class="submitBtn">Go</button>
 			</form>
-            <br/>
-		</main>
-
-		<!-- Blog page -->
-		<main id="blog_main">
-			<!-- Blog section 1 -->
-			<section>
-				<h3>Blog 1</h3>
-				<p>some stuff</p>
-			</section>
-			<br />
 		</main>
 	</body>
 </html>
