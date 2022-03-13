@@ -19,8 +19,8 @@ const texts = {
 const setTexts = (obj) => {
 	Object.keys(obj).forEach((key) => {
 		const sect = document.createElement("section");
-		let h3 = document.createElement("h3");
-		let p = document.createElement("p");
+		const h3 = document.createElement("h3");
+		const p = document.createElement("p");
 		const br = document.createElement("br");
 
 		h3.innerHTML = obj[key].heading;
@@ -29,6 +29,7 @@ const setTexts = (obj) => {
 		main_1.appendChild(sect);
 		sect.appendChild(h3);
 		sect.appendChild(p);
+
 		sect.after(br);
 	});
 };

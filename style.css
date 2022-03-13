@@ -47,8 +47,13 @@ textarea {
 	min-height: 3rem;
 }
 
-.toggle:hover {
+.fa-solid:hover {
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 #blog_main {

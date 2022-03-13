@@ -17,8 +17,9 @@ const blogs = {
 const setBlogs = (obj) => {
 	Object.keys(obj).forEach((key) => {
 		const sect = document.createElement("section");
-		let h3 = document.createElement("h3");
-		let p = document.createElement("p");
+
+		const h3 = document.createElement("h3");
+		const p = document.createElement("p");
 		const br = document.createElement("br");
 
 		h3.innerHTML = obj[key].name;
@@ -27,6 +28,7 @@ const setBlogs = (obj) => {
 		main_2.appendChild(sect);
 		sect.appendChild(h3);
 		sect.appendChild(p);
+
 		sect.appendChild(br);
 	});
 };

@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
+
 		<script src="./scripts/text.js" defer></script>
 		<script src="./scripts/darkMode.js" defer></script>
 		<script src="./scripts/toggleContent.js" defer></script>
@@ -34,15 +35,16 @@
 	</head>
 	<body id="body">
 		<!-- Header -->
-		<header>
+		<header id="header">
 			<h1 id="site_header">
 				A simple site where I write and test new stuff ...
 			</h1>
-			<div class="toggle" onclick="toggleColour()">
-				<i id="toggleIcon" class=""></i>
-			</div>
+			<i onclick="toggleColour()" id="toggleIcon" class=""></i>
 			<br />
-			<div onclick="toggleBlog()" id="blog_link">Blog</div>
+			<br />
+			<a href="javascript:;" onclick="toggleBlog()" id="blog_link"
+				>Blog</a
+			>
 		</header>
 
 		<!-- Landing page -->
