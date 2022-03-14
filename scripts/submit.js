@@ -8,23 +8,29 @@ const submitForm = (event) => {
 const doVal = () => {
 	const f = document.getElementById("c_form");
 	const formData = new FormData(f);
-	const subject = formData.get("subject");
-	const message = formData.get("message");
-
-	if (
-		typeof subject === "string" &&
-		subject.length < 50 &&
-		typeof message === "string" &&
-		message.length < 100
-	) {
-		const data = {
-			subject: subject,
-			message: message,
-		};
-		doSubmit(data);
-	}
+	// do some validation here
+	doSubmit(formData);
 };
 
-const doSubmit = (d) => {
-	console.warn(d); // post to api once built
+const doSubmit = async (d) => {
+	const res = await fetch(
+		"http://localhost:8888/mysite/api/contact/contact.php",
+		{
+			method: "POST",
+			body: d,
+		}
+	);
+	handleRes(res.status);
+	console.warn(res);
+};
+
+// update alerts to something not terrible
+const handleRes = (status) => {
+	switch (status) {
+		case 200:
+			alert(":')");
+			break;
+		case 500:
+			alert(":'('");
+	}
 };
