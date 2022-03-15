@@ -1,19 +1,9 @@
 const main_1 = document.getElementById("landing_main");
 
-// fetch from api once built
-const texts = {
-	text_1: {
-		heading: "Heading",
-		content: "Some juicy stuff",
-	},
-	text_2: {
-		heading: "Other heading",
-		content: "Mooore content",
-	},
-	text_3: {
-		heading: "3rd one",
-		content: "Hello there",
-	},
+const fetchText = async() => {
+	let data = await fetch('http://localhost:8888/mysite/api/text/text.php');
+	data = await data.json();
+	setTexts(data);
 };
 
 const setTexts = (obj) => {
@@ -34,4 +24,4 @@ const setTexts = (obj) => {
 	});
 };
 
-setTexts(texts);
+fetchText();
