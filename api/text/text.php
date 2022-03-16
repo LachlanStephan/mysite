@@ -1,25 +1,14 @@
 <?php
+    require("../utils/handleText.php");
+
     $res = [
         'section1' => null,
         'section2' => null,
         'section3' => null,
     ];
 
-    class text {
-        public $heading;
-        public $content;
-
-        // funcs
-        function setHeading($heading) {
-            $this->heading = $heading;
-        }
-        function setContent($content) {
-            $this->content = $content;
-        }
-    }
-
     // Section 1
-    $section1 = new text();
+    $section1 = new Text();
 
     $heading1 = "A heading...";
     $content1 = "Hey some content here";

@@ -1,48 +1,37 @@
 <?php
+    require("../utils/handleText.php");
+
     $res = [
         'blog1' => null,
         'blog2' => null,
         'blog3' => null,
     ];
 
-    class blog {
-        public $title;
-        public $content;
-
-        // funcs
-        function setTitle($title) {
-            $this->title = $title;
-        }
-        function setContent($content) {
-            $this->content = $content;
-        }
-    }
-
     // Blog 1
-    $blog1 = new blog();
+    $blog1 = new Text();
 
-    $title1 = "Title one hey..";
+    $heading1 = "Title one hey..";
     $content1 = "blog content 1";
 
-    $blog1->setTitle($title1);
+    $blog1->setHeading($heading1);
     $blog1->setContent($content1);
 
     // Blog 2
-    $blog2 = new blog();
+    $blog2 = new Text();
 
-    $title2 = "Title two hey..";
+    $heading2 = "Title two hey..";
     $content2 = "blog content 2";
 
-    $blog2->setTitle($title2);
+    $blog2->setHeading($heading2);
     $blog2->setContent($content2);
 
     // Blog 3
-    $blog3 = new blog();
+    $blog3 = new Text();
 
-    $title3 = "Title three hey..";
+    $heading3 = "Title three hey..";
     $content3 = "blog content 3";
 
-    $blog3->setTitle($title3);
+    $blog3->setHeading($heading3);
     $blog3->setContent($content3);
 
     $res['blog1'] = $blog1;
