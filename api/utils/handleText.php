@@ -12,4 +12,5 @@
             $this->content = $content;
         }
     }
+
 ?>

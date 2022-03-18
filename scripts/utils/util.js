@@ -1,3 +1,13 @@
+const preventFormDefault = (event) => {
+	if (typeof event.cancelable !== "boolean" || event.cancelable) {
+		event.preventDefault();
+	}
+};
+
+const toggleDisplay = (ele, string) => {
+	ele.style.display = string;
+};
+
 const createTexts = (ele, obj) => {
 	Object.keys(obj).forEach((key) => {
 		const sect = document.createElement("section");

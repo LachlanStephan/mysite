@@ -6,14 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="../style.css" />
-		<script src="../scripts/utils/toggleDisplay.js"></script>
-		<script src="./scripts/showForm.js" defer></script>
-		<script src="./scripts/auth.js" defer></script>
+		<script src="../scripts/utils/util.js" defer></script>
+		<script src="./scripts/content/showForm.js" defer></script>
+		<script src="./scripts/content/createOptions.js" defer></script>
+		<script src="./scripts/auth/auth.js" defer></script>
 	</head>
 	<body>
-		<header class="admin_header">
-			<h5>Admin page</h5>
-		</header>
 		<main id="auth_main">
 			<form onsubmit="checkIfAdmin(event)" id="auth_form">
 				<label for="pass">Pass:</label>
@@ -21,6 +19,7 @@
 				<button type="submit">Go</button>
 			</form>
 		</main>
+		<main id="admin_options"></main>
 		<main id="admin_section_main"></main>
 		<main id="admin_blog_main"></main>
 	</body>

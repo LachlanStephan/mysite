@@ -6,12 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
 
-		<script src="./scripts/utils/createText.js" defer></script>
-		<script src="./scripts/handleText.js" defer></script>
-		<script src="./scripts/darkMode.js" defer></script>
-		<script src="./scripts/toggleContent.js" defer></script>
-		<script src="./scripts/submit.js" defer></script>
-		<script src="./scripts/handleBlogs.js" defer></script>
+		<script src="./scripts/utils/util.js" defer></script>
+		<script src="./scripts/sections/handleText.js" defer></script>
+		<script src="./scripts/darkMode/darkMode.js" defer></script>
+		<script src="./scripts/content/toggleContent.js" defer></script>
+		<script src="./scripts/contact/submitContact.js" defer></script>
+		<script src="./scripts/blog/handleBlogs.js" defer></script>
 
 		<script
 			src="https://kit.fontawesome.com/9aba6f04e1.js"
@@ -56,7 +56,7 @@
 
 		<!-- Contact form-->
 		<main id="form_main">
-			<form id="c_form" onsubmit="submitForm(event)">
+			<form id="c_form" onsubmit="submitContactForm(event)">
 				<label for="subject">Subject</label>
 				<input type="text" name="subject" id="subject" />
 				<label for="message">Message</label>

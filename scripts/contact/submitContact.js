@@ -1,8 +1,6 @@
-const submitForm = (event) => {
-	if (typeof event.cancelable !== "boolean" || event.cancelable) {
-		event.preventDefault();
-		doVal();
-	}
+const submitContactForm = (event) => {
+	preventFormDefault(event);
+	doVal();
 };
 
 const doVal = () => {
@@ -13,13 +11,14 @@ const doVal = () => {
 };
 
 const doSubmit = async (d) => {
-	const res = await fetch(
+	let res = await fetch(
 		"http://localhost:8888/mysite/api/contact/contact.php",
 		{
 			method: "POST",
 			body: d,
 		}
 	);
+	res = await res.json();
 	handleRes(res.status);
 	console.warn(res);
 };
@@ -27,7 +26,7 @@ const doSubmit = async (d) => {
 // update alerts to something not terrible
 const handleRes = (status) => {
 	switch (status) {
-		case 200:
+		case 202:
 			alert(":')");
 			break;
 		case 500:
