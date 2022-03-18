@@ -29,10 +29,6 @@ const toggleBlog = () => {
 	}
 };
 
-const toggleDisplay = (ele, string) => {
-	ele.style.display = string;
-};
-
 const toggleLinkText = (string) => {
 	linkText.innerHTML = string;
 };

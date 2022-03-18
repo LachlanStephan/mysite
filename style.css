@@ -65,6 +65,19 @@ a {
 	cursor: pointer;
 }
 
+button {
+	margin: 1rem 0;
+}
+
+.admin_header {
+	padding: 2rem 0;
+}
+
+#admin_section_main,
+#admin_blog_main {
+	display: none;
+}
+
 /* Media query stuffs */
 @media (max-width: 1000px) {
 	main,
