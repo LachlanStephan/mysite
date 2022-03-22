@@ -1,5 +1,7 @@
 const ele = document.getElementById("admin_options");
 const options = ["blog", "section"];
+const sect_form = document.getElementById("form_section");
+const blog_form = document.getElementById("form_blog");
 
 const createBtns = () => {
 	console.log(ele);
@@ -10,13 +12,25 @@ const createBtns = () => {
 
 		if (btn.innerHTML == "blog") {
 			btn.onclick = () => {
-				showForm("blog"); // swap to create form
+				if (formDoesNotExist("blog")) {
+					createForm("blog");
+				}
 			};
 		}
 		if (btn.innerHTML == "section") {
 			btn.onclick = () => {
-				showForm("section"); // swap tp create form
+				if (formDoesNotExist("section")) {
+					createForm("section");
+				}
 			};
 		}
 	}
+};
+
+const formDoesNotExist = (form) => {
+	const id = "form" + "_" + form;
+	if (document.getElementById(id)) {
+		return false;
+	}
+	return true;
 };

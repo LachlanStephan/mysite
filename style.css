@@ -73,11 +73,6 @@ button {
 	padding: 2rem 0;
 }
 
-#admin_section_main,
-#admin_blog_main {
-	display: none;
-}
-
 /* Media query stuffs */
 @media (max-width: 1000px) {
 	main,
