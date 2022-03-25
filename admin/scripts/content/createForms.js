@@ -36,7 +36,10 @@ const createForm = (form) => {
 
 	// submit
 	const submitBtn = document.createElement("button");
-	submitBtn.innerHTML = "Go";
+	submitBtn.innerHTML = "Go" + " " + form;
+	submitBtn.onclick = () => {
+		postContent(submitBtn.innerHTML);
+	};
 
 	// append all ele
 	admin_form.appendChild(formHeading);
@@ -45,5 +48,5 @@ const createForm = (form) => {
 	newForm.appendChild(titleInput);
 	newForm.appendChild(contentLabel);
 	newForm.appendChild(contentInput);
-	newForm.appendChild(submitBtn);
+	admin_form.appendChild(submitBtn);
 };

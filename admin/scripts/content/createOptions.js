@@ -4,7 +4,6 @@ const sect_form = document.getElementById("form_section");
 const blog_form = document.getElementById("form_blog");
 
 const createBtns = () => {
-	console.log(ele);
 	for (let i = 0; i < options.length; i++) {
 		const btn = document.createElement("button");
 		btn.innerHTML = options[i];

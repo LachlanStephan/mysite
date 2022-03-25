@@ -1,14 +1,30 @@
 <?php
+    require("../index.php");
+
     $res = [
         'status' => 403,
         'msg' => '',
     ];
 
     function validatePass($pass) {
-        if ($pass) {
+        global $conn;
+
+        $u = 'Lach';
+        $sql = '
+            SELECT user_name, password 
+            FROM user 
+            WHERE user_name = :u
+        ';
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(array(
+            ':u' => $u
+        ));
+
+        $row = $stmt->fetch();
+        if ($row['password'] === $pass) {
             return true;
-        }
-        if (!$pass) {
+        } else {
             return false;
         }
     }
