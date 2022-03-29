@@ -20,6 +20,7 @@ const createForm = (form) => {
 	// input
 	titleInput.setAttribute("type", "text");
 	titleInput.setAttribute("id", titleId);
+	titleInput.setAttribute("name", titleId);
 
 	// #### content
 	const contentLabel = document.createElement("label");
@@ -33,6 +34,7 @@ const createForm = (form) => {
 	// textarea
 	contentInput.setAttribute("type", "text");
 	contentInput.setAttribute("id", contentId);
+	contentInput.setAttribute("name", contentId);
 
 	// submit
 	const submitBtn = document.createElement("button");
