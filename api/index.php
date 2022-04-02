@@ -1,9 +1,10 @@
 <?php
     $uname = "root";
     $pass = "root";
+    $w_pass = "";
 
     try {
-        $conn = new PDO("mysql:host=localhost:8889;dbname=mysite", $uname, $pass);
+        $conn = new PDO("mysql:host=localhost;dbname=mysite", $uname, $w_pass);
 
         //set attributes 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

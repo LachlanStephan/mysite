@@ -11,13 +11,10 @@ const doVal = () => {
 };
 
 const doSubmit = async (d) => {
-	let res = await fetch(
-		"http://localhost:8888/mysite/api/contact/contact.php",
-		{
-			method: "POST",
-			body: d,
-		}
-	);
+	let res = await fetch("http://localhost/mysite/api/contact/contact.php", {
+		method: "POST",
+		body: d,
+	});
 	res = await res.json();
 	handleRes(res.status);
 	console.warn(res);

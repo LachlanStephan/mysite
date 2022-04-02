@@ -2,6 +2,7 @@
 
 function validatePass($pass) 
 {
+
     global $conn;
 
     $u = 'Lach';
@@ -12,9 +13,9 @@ function validatePass($pass)
     ';
 
     $stmt = $conn->prepare($sql);
-    $stmt->execute(array(
+    $stmt->execute([
         ':u' => $u
-    ));
+    ]);
 
     $row = $stmt->fetch();
     if ($row['password'] === $pass) {

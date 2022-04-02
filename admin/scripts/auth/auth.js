@@ -14,13 +14,10 @@ const validatePass = () => {
 };
 
 const sumbitPass = async (authData) => {
-	let res = await fetch(
-		"http://localhost:8888/mysite/api/auth/checkIfAdmin.php",
-		{
-			method: "POST",
-			body: authData,
-		}
-	);
+	let res = await fetch("http://localhost/mysite/api/auth/checkIfAdmin.php", {
+		method: "POST",
+		body: authData,
+	});
 	res = await res.json();
 	handleRes(res.status);
 	console.warn(res);

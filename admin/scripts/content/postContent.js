@@ -3,25 +3,24 @@ const doPost = async (data, url) => {
 	let res = await fetch(url, {
 		method: "POST",
 		body: data,
-		//
 	});
-	console.warn(res);
+	if (res.status === 200) {
+		window.location.href = "http://localhost/mysite";
+	}
 };
 
 const postBlog = () => {
 	const b_form = document.getElementById("form_blog");
 	const b_data = new FormData(b_form);
-	const url = "http://localhost:8888/mysite/api/blogs/newBlog.php";
+	const url = "http://localhost/mysite/api/blogs/newBlog.php";
 	doPost(b_data, url);
-	//
-	console.log("post blog");
 };
 
 const postSection = () => {
 	const s_form = document.getElementById("form_section");
 	const s_data = new FormData(s_form);
-	//
-	console.log("post section");
+	const url = "";
+	doPost(s_data, url);
 };
 
 const postContent = (type) => {

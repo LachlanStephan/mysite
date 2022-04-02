@@ -1,9 +1,9 @@
 const main_2 = document.getElementById("blog_main");
 
-const getBlogs = async() => {
-	let data = await fetch('http://localhost:8888/mysite/api/blogs/blog.php');
+const getBlogs = async () => {
+	let data = await fetch("http://localhost/mysite/api/blogs/getBlog.php");
 	data = await data.json();
-	createTexts(main_2, data);
-}
+	createTexts(main_2, data.blogs);
+};
 
 getBlogs();
