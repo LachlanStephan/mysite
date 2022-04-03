@@ -3,14 +3,14 @@
     require("./functions.php");
 
     $res = [
-        'blogs' => [],
+        'sections' => [],
         'status' => 500,
     ];
 
-    $blogs = getBlogs();
+    $sects = getSections();
 
-    if (!empty($blogs)) {
-        $res['blogs'] = $blogs;
+    if (!empty($sects)) {
+        $res['sections'] = $sects;
         $res['status'] = 200;
     }
 

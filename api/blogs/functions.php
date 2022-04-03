@@ -24,7 +24,7 @@
     {
         global $conn;
 
-        $sql = "SELECT * FROM blog";
+        $sql = "SELECT * FROM blog"; // will need to limit at some point
 
         $stmt = $conn->prepare($sql);
         $stmt->execute();
