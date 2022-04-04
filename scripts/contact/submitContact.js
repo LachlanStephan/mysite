@@ -11,7 +11,7 @@ const doVal = () => {
 };
 
 const doSubmit = async (d) => {
-	let res = await fetch("http://localhost/mysite/api/contact/contact.php", {
+	let res = await fetch(urls.contact, {
 		method: "POST",
 		body: d,
 	});

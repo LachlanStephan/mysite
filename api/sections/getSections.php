@@ -11,7 +11,7 @@
 
     if (!empty($sects)) {
         $res['sections'] = $sects;
-        $res['status'] = 200;
+        $res['status'] = 202;
     }
 
     echo json_encode($res);

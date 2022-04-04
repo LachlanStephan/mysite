@@ -4,22 +4,30 @@ const doPost = async (data, url) => {
 		method: "POST",
 		body: data,
 	});
-	if (res.status === 200) {
-		window.location.href = "http://localhost/mysite";
+	res = await res.json();
+	handleContentRes(res.status);
+};
+
+const handleContentRes = (status) => {
+	if (status === 202) {
+		window.location.href = urls.home;
+	}
+	if (status !== 202) {
+		alert("Oops");
 	}
 };
 
 const postBlog = () => {
 	const b_form = document.getElementById("form_blog");
 	const b_data = new FormData(b_form);
-	const url = "http://localhost/mysite/api/blogs/newBlog.php";
+	const url = urls.postBlogs;
 	doPost(b_data, url);
 };
 
 const postSection = () => {
 	const s_form = document.getElementById("form_section");
 	const s_data = new FormData(s_form);
-	const url = "";
+	const url = urls.postSections;
 	doPost(s_data, url);
 };
 

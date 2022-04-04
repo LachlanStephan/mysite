@@ -9,12 +9,12 @@ const validatePass = () => {
 	const p = authData.get("pass");
 
 	if (typeof p === "string" && p.length > 0) {
-		sumbitPass(authData);
+		submitPass(authData);
 	}
 };
 
-const sumbitPass = async (authData) => {
-	let res = await fetch("http://localhost/mysite/api/auth/checkIfAdmin.php", {
+const submitPass = async (authData) => {
+	let res = await fetch(urls.auth, {
 		method: "POST",
 		body: authData,
 	});
