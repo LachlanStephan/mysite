@@ -28,7 +28,7 @@ const handleRes = (status) => {
 		createBtns();
 		console.log("approved");
 	}
-	if (status !== 200) {
+	if (status !== 202) {
 		console.log("go away");
 	}
 };

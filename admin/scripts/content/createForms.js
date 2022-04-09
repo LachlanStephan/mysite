@@ -1,6 +1,34 @@
 const admin_form = document.getElementById("admin_forms");
 
+const createContentLabel = (form) => {
+	const contentId = "content" + "_" + form;
+	const contentLabel = document.createElement("label");
+
+	// label
+	contentLabel.setAttribute("for", contentId);
+	contentLabel.innerHTML = "Content";
+
+	return contentLabel;
+};
+
+const createContentInput = (form) => {
+	const contentId = "content" + "_" + form;
+	const contentInput = document.createElement("textarea");
+	// content
+	contentInput.setAttribute("type", "text");
+	contentInput.setAttribute("id", contentId);
+	contentInput.setAttribute("name", contentId);
+
+	return contentInput;
+};
+
 const createForm = (form) => {
+	let isBlog;
+
+	if (form === "blog") {
+		isBlog = true;
+	}
+
 	const newForm = document.createElement("form");
 	newForm.setAttribute("name", form);
 	newForm.setAttribute("id", "form_" + form);
@@ -22,19 +50,19 @@ const createForm = (form) => {
 	titleInput.setAttribute("id", titleId);
 	titleInput.setAttribute("name", titleId);
 
-	// #### content
-	const contentLabel = document.createElement("label");
-	const contentInput = document.createElement("textarea");
+	// #### description
+	const descriptionLabel = document.createElement("label");
+	const descriptionInput = document.createElement("textarea");
 
 	// label
-	const contentId = "content_input" + "_" + form;
-	contentLabel.setAttribute("for", contentId);
-	contentLabel.innerHTML = "Content";
+	const descriptionId = "desc_input" + "_" + form;
+	descriptionLabel.setAttribute("for", descriptionId);
+	descriptionLabel.innerHTML = "Description";
 
 	// textarea
-	contentInput.setAttribute("type", "text");
-	contentInput.setAttribute("id", contentId);
-	contentInput.setAttribute("name", contentId);
+	descriptionInput.setAttribute("type", "text");
+	descriptionInput.setAttribute("id", descriptionId);
+	descriptionInput.setAttribute("name", descriptionId);
 
 	// submit
 	const submitBtn = document.createElement("button");
@@ -48,7 +76,11 @@ const createForm = (form) => {
 	admin_form.appendChild(newForm);
 	newForm.appendChild(titleLabel);
 	newForm.appendChild(titleInput);
-	newForm.appendChild(contentLabel);
-	newForm.appendChild(contentInput);
+	newForm.appendChild(descriptionLabel);
+	newForm.appendChild(descriptionInput);
+	if (isBlog) {
+		newForm.appendChild(createContentLabel(form));
+		newForm.appendChild(createContentInput(form));
+	}
 	admin_form.appendChild(submitBtn);
 };

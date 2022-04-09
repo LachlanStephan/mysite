@@ -17,7 +17,7 @@ const createTexts = (ele, obj) => {
 		const br = document.createElement("br");
 
 		h3.innerHTML = obj[key].title;
-		p.innerHTML = obj[key].content;
+		p.innerHTML = obj[key].description;
 
 		ele.appendChild(sect);
 		sect.appendChild(h3);
