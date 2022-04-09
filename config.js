@@ -1,8 +1,6 @@
 let isDev = false;
 let isProd = false;
 
-isDev = true;
-
 const checkEnv = async () => {
 	const prodUrl = "https://ljstephan.dev/mysite_server/api/auth/checkEnv.php";
 	fetch(prodUrl)
