@@ -1,6 +1,7 @@
 * {
-	font-family: "Ubuntu Mono", monospace;
 	/* font-family: "Architects Daughter", cursive; */
+	font-family: "Ubuntu Mono", monospace;
+	--delay: 0.3s ease;
 }
 
 body {
@@ -8,11 +9,13 @@ body {
 	margin: 0;
 	background-color: rgb(20, 20, 20);
 	color: rgb(226, 222, 222);
+	transition: var(--delay);
 }
 
 .lightMode {
 	color: rgb(20, 20, 20);
 	background-color: rgb(226, 222, 222);
+	transition: var(--delay);
 }
 
 main,
