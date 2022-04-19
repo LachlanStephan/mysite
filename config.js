@@ -2,7 +2,7 @@ let isDev = false;
 let isProd = false;
 
 const checkProd = async () => {
-	const prodUrl = "https://lachlanstephan.herokuapp.com/api/checkEnv.php";
+	const prodUrl = "https://lachlanstephan.herokuapp.com/checkEnv.php";
 	fetch(prodUrl)
 		.then((response) => () => {
 			if (response) {
@@ -13,7 +13,7 @@ const checkProd = async () => {
 };
 
 const checkLocal = async () => {
-	const devUrl = "http://localhost/mysite_server/api/checkEnv.php";
+	const devUrl = "http://localhost/mysite_server/checkEnv.php";
 	fetch(devUrl)
 		.then((response) => () => {
 			if (response) {
@@ -55,6 +55,8 @@ const prod = {
 let urls;
 if (isProd) {
 	urls = prod;
-} else {
+}
+
+if (isDev) {
 	urls = dev;
 }
