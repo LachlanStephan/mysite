@@ -1,36 +1,35 @@
 let isDev = false;
 let isProd = false;
 
+const doFetch = async (url) => {
+	const req = await fetch(url, {
+		method: "GET",
+	});
+	if (req.status === 200) {
+		return true;
+	}
+};
+
 const checkProd = async () => {
 	const prodUrl = "https://lachlanstephan.herokuapp.com/checkEnv.php";
-	fetch(prodUrl, {
-		method: "GET",
-	})
-		.then((response) => () => {
-			if (response) {
-				isProd = true;
-			}
-			if (response.status === 200) {
-				isProd = true;
-			}
-		})
-		.catch(console.log("err"));
+	try {
+		if (await doFetch(prodUrl)) {
+			isProd = true;
+		}
+	} catch (e) {
+		console.error(e);
+	}
 };
 
 const checkLocal = async () => {
 	const devUrl = "http://localhost/mysite_server/checkEnv.php";
-	fetch(devUrl, {
-		method: "GET",
-	})
-		.then((response) => () => {
-			if (response) {
-				isDev = true;
-			}
-			if (response.status === 200) {
-				isProd = true;
-			}
-		})
-		.catch(console.log("err"));
+	try {
+		if (await doFetch(devUrl)) {
+			isDev = true;
+		}
+	} catch (e) {
+		console.error(e);
+	}
 };
 
 checkProd();
