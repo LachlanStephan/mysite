@@ -1,17 +1,30 @@
 let isDev = false;
 let isProd = false;
 
-const checkEnv = async () => {
-	const prodUrl =
-		"https://lachlanstephan.herokuapp.com/api/auth/checkEnv.php";
+const checkProd = async () => {
+	const prodUrl = "https://lachlanstephan.herokuapp.com/api/checkEnv.php";
 	fetch(prodUrl)
 		.then((response) => () => {
-			if (response) isProd = true;
+			if (response) {
+				isProd = true;
+			}
 		})
-		.catch((isDev = true));
+		.catch(console.log("err"));
 };
 
-checkEnv();
+const checkLocal = async () => {
+	const devUrl = "http://localhost/mysite_server/api/checkEnv.php";
+	fetch(devUrl)
+		.then((response) => () => {
+			if (response) {
+				isDev = true;
+			}
+		})
+		.catch(console.log("err"));
+};
+
+checkProd();
+checkLocal();
 
 console.warn(isDev, "dev", isProd, "prod");
 
