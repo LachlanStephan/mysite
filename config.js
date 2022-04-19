@@ -3,9 +3,14 @@ let isProd = false;
 
 const checkProd = async () => {
 	const prodUrl = "https://lachlanstephan.herokuapp.com/checkEnv.php";
-	fetch(prodUrl)
+	fetch(prodUrl, {
+		method: "GET",
+	})
 		.then((response) => () => {
 			if (response) {
+				isProd = true;
+			}
+			if (response.status === 200) {
 				isProd = true;
 			}
 		})
@@ -14,10 +19,15 @@ const checkProd = async () => {
 
 const checkLocal = async () => {
 	const devUrl = "http://localhost/mysite_server/checkEnv.php";
-	fetch(devUrl)
+	fetch(devUrl, {
+		method: "GET",
+	})
 		.then((response) => () => {
 			if (response) {
 				isDev = true;
+			}
+			if (response.status === 200) {
+				isProd = true;
 			}
 		})
 		.catch(console.log("err"));
