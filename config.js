@@ -13,6 +13,8 @@ const checkEnv = async () => {
 
 checkEnv();
 
+console.warn(isDev, "dev", isProd, "prod");
+
 const dev = {
 	home: "http://127.0.0.1:5500/index.html",
 	auth: "http://localhost/mysite_server/api/auth/checkIfAdmin.php",
@@ -40,8 +42,6 @@ const prod = {
 let urls;
 if (isProd) {
 	urls = prod;
-}
-
-if (isDev) {
+} else {
 	urls = dev;
 }
