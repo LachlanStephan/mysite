@@ -2,7 +2,8 @@ let isDev = false;
 let isProd = false;
 
 const checkEnv = async () => {
-	const prodUrl = "https://ljstephan.dev/mysite_server/api/auth/checkEnv.php";
+	const prodUrl =
+		"https://lachlanstephan.herokuapp.com/api/auth/checkEnv.php";
 	fetch(prodUrl)
 		.then((response) => () => {
 			if (response) isProd = true;
