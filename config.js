@@ -24,14 +24,16 @@ const dev = {
 
 const prod = {
 	home: "https://ljstephan.dev",
-	auth: "https://ljstephan.dev/mysite_server/api/auth/checkIfAdmin.php",
-	contact: "https://ljstephan.dev/mysite_server/api/contact/contact.php",
+	auth: "https://lachlanstephan.herokuapp.com/api/auth/checkIfAdmin.php",
+	contact: "https://lachlanstephan.herokuapp.com/api/contact/contact.php",
 	getSections:
-		"https://ljstephan.dev/mysite_server/api/sections/getSections.php",
-	getBlogs: "https://ljstephan.dev/mysite_server/api/blogs/getBlog.php",
-	postBlogs: "https://ljstephan.dev/mysite_server/api/blogs/newBlog.php",
+		"https://lachlanstephan.herokuapp.com/api/sections/getSections.php",
+	getBlogs:
+		"https://lachlanstephan.herokuapp.com/mysite_server/api/blogs/getBlog.php",
+	postBlogs:
+		"https://lachlanstephan.herokuapp.com/mysite_server/api/blogs/newBlog.php",
 	postSections:
-		"https://ljstephan.dev/mysite_server/api/sections/newSection.php",
+		"https://llachlanstephan.herokuapp.com/api/sections/newSection.php",
 };
 
 let urls;
