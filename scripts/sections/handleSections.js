@@ -5,5 +5,3 @@ const fetchSections = async () => {
 	data = await data.json();
 	createTexts(main_1, data.sections);
 };
-
-fetchSections();

@@ -5,5 +5,3 @@ const getBlogs = async () => {
 	data = await data.json();
 	createTexts(main_2, data.blogs);
 };
-
-getBlogs();
