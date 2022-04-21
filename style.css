@@ -76,6 +76,10 @@ button {
 	padding: 2rem 0;
 }
 
+#blog_main section:hover {
+	cursor: pointer;
+}
+
 /* Media query stuffs */
 @media (max-width: 1000px) {
 	main,

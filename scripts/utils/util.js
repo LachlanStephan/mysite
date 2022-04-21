@@ -19,10 +19,15 @@ const createTexts = (ele, obj) => {
 		h3.innerHTML = obj[key].title;
 		p.innerHTML = obj[key].description;
 
+		if (obj[key].blog_id) {
+			const b_id = "blog" + "_" + obj[key].blog_id;
+			const content = obj[key].content;
+			setBlogStuff(sect, b_id, content);
+		}
+
 		ele.appendChild(sect);
 		sect.appendChild(h3);
 		sect.appendChild(p);
-
 		sect.appendChild(br);
 	});
 };
