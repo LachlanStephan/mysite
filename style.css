@@ -48,6 +48,7 @@ label {
 
 textarea {
 	min-height: 3rem;
+	width: 100%;
 }
 
 .fa-solid:hover {
