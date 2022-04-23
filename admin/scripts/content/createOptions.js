@@ -24,17 +24,21 @@ const createBtns = () => {
 			};
 		}
 		if (btn.innerHTML === "edit sections") {
+			let counter = 0;
 			btn.onclick = () => {
-				if (editContentDoesNotExist("section")) {
-					editSections("sections");
+				if (counter < 1) {
+					editStuff("sections");
 				}
+				counter++;
 			};
 		}
 		if (btn.innerHTML === "edit blogs") {
+			let counter = 0;
 			btn.onclick = () => {
-				if (editContentDoesNotExist("blog")) {
-					editSections("blogs");
+				if (counter < 1) {
+					editStuff("blogs");
 				}
+				counter++;
 			};
 		}
 	}
@@ -43,14 +47,6 @@ const createBtns = () => {
 const formDoesNotExist = (form) => {
 	const id = "form" + "_" + form;
 	if (document.getElementById(id)) {
-		return false;
-	}
-	return true;
-};
-
-const editContentDoesNotExist = (id) => {
-	const edit_id = "edit_" + id;
-	if (document.getElementById(edit_id)) {
 		return false;
 	}
 	return true;
