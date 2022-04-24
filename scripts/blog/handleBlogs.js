@@ -19,7 +19,16 @@ const clickOnBlog = (id, content) => {
 	window.open(urls.blog, "_blank");
 };
 
+const checkTheme = () => {
+	let theme = localStorage.getItem("current_mode");
+	if (theme === "lightMode") {
+		const body = document.getElementById("body");
+		body.classList.add("lightMode");
+	}
+};
+
 const showBlog = () => {
+	checkTheme();
 	const ele = document.getElementById("blog_page");
 	const sect = document.createElement("section");
 	sect.setAttribute("id", "blog_" + localStorage.getItem("blog_id"));

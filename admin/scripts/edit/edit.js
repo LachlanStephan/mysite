@@ -30,20 +30,20 @@ const showContent = (content, type) => {
 		let text_inner = "";
 
 		let db_id = "";
+		let container_id = "";
 		if (type === "section") {
 			db_id = content[i].section_id;
 			text_inner = content[i].description;
-			ele.setAttribute(
-				"id",
-				"edit_" + type + "_" + content[i].section_id
-			);
+			container_id = "edit_" + type + "_" + content[i].section_id;
+			ele.setAttribute("id", container_id);
 		}
 		const blogDesc = document.createElement("textarea");
 		if (type === "blog") {
 			db_id = content[i].blog_id;
 			blogDesc.innerHTML = content[i].description;
 			text_inner = content[i].content;
-			ele.setAttribute("id", "edit_" + type + "_" + content[i].blog_id);
+			container_id = "edit_" + type + "_" + content[i].blog_id;
+			ele.setAttribute("id", container_id);
 		}
 
 		blockTitle.innerHTML = blockTitleText;
@@ -52,7 +52,7 @@ const showContent = (content, type) => {
 		submitBtn.innerHTML = "Go";
 
 		submitBtn.onclick = () => {
-			getSubmitData(ele.id, db_id);
+			getSubmitData(container_id, db_id, type);
 		};
 
 		main.appendChild(ele);
@@ -60,33 +60,32 @@ const showContent = (content, type) => {
 		ele.appendChild(title);
 		if (type === "blog") ele.appendChild(blogDesc);
 		ele.appendChild(text);
-		ele.appendChild(submitBtn);
 		ele.after(br);
 		ele.after(hr);
+		ele.after(submitBtn);
 	}
 };
 
-const getSubmitData = (id, db_id) => {
+const getSubmitData = (id, db_id, type) => {
 	const container = document.getElementById(id);
 	const childData = container.children;
 
-	let data = {};
-	data.title = childData[1].innerHTML;
-	data.description = childData[2].innerHTML;
-	data.db_id = db_id;
+	let data = new FormData();
+	data.append("title", childData[1].value);
+	data.append("description", childData[2].value);
+	data.append("db_id", db_id);
 
 	let url = urls.updateSection;
 
-	if (childData.length === 5) {
+	if (type === "blog") {
 		url = urls.updateBlog;
-		console.log("blog");
-		data.content = childData[3].value;
+		const b_content = childData[3].value;
+		data.append("content", b_content);
 	}
 	doEditSubmit(url, data);
 };
 
 const doEditSubmit = async (url, data) => {
-	console.log(url, data);
 	const edit_request = await fetch(url, {
 		method: "POST",
 		body: data,
