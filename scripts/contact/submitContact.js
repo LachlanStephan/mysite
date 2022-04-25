@@ -25,14 +25,10 @@ const doSubmit = async (d) => {
 	}
 };
 
-// update alerts to something not terrible
 const handleRes = (status) => {
 	switch (status) {
 		case 202:
-			alert(":')");
-			break;
-		case 500:
-			alert(":'('");
+			mailSuccess();
 			break;
 		default:
 			mailFailed();

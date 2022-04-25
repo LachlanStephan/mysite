@@ -20,15 +20,13 @@ const submitPass = async (authData) => {
 	});
 	res = await res.json();
 	handleRes(res.status);
-	console.warn(res);
 };
 
 const handleRes = (status) => {
 	if (status === 202) {
 		createBtns();
-		console.log("approved");
 	}
 	if (status !== 202) {
-		console.log("go away");
+		location.href = urls.home;
 	}
 };

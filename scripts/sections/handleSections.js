@@ -8,4 +8,4 @@ const fetchSections = async () => {
 	createTexts(main_1, data.sections);
 };
 
-fetchSections();
+setActiveLink("home");

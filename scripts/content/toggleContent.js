@@ -3,20 +3,10 @@ const blog = document.getElementById("blog_main");
 const linkText = document.getElementById("blog_link");
 const formEle = document.getElementById("form_main");
 
-let landing_page = true;
-
-const checkWhichContent = () => {
-	if (landing.style.display !== "none") {
-		landing_page = true;
-	} else {
-		landing_page = false;
-	}
-};
-
 const toggleBlog = (page) => {
-	checkWhichContent();
 	removePreviousActive();
 	setActiveLink(page);
+	setCurrentPage(page);
 	if (page === "blog") {
 		toggleDisplay(landing, "none");
 		toggleDisplay(formEle, "none");
@@ -29,8 +19,17 @@ const toggleBlog = (page) => {
 	}
 };
 
-const setDefaultLinkActive = () => {
-	setActiveLink("home");
+const setCurrentPage = (page) => {
+	localStorage.setItem("current_page", page);
 };
 
-setDefaultLinkActive();
+const checkCurrPage = () => {
+	if (localStorage.getItem("current_page")) {
+		const p = localStorage.getItem("current_page");
+		if (p === "blog") {
+			toggleBlog("blog");
+		}
+	}
+};
+
+checkCurrPage();

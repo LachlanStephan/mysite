@@ -106,6 +106,10 @@ button {
 	padding: 1rem 0rem;
 }
 
+.blog_header {
+	margin: 1rem auto;
+}
+
 /* Media query stuffs */
 @media (max-width: 1000px) {
 	main,
