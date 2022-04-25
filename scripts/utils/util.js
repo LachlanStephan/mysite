@@ -52,3 +52,15 @@ const createNoContentEle = (ele) => {
 	sect.setAttribute("id", "no_content");
 	ele.appendChild(sect);
 };
+
+const setActiveLink = (page) => {
+	const link = document.getElementById(page + "_link");
+	link.classList.add("active");
+};
+
+const removePreviousActive = () => {
+	const links = document.getElementsByClassName("link");
+	for (let i = 0; i < links.length; i++) {
+		links[i].classList.remove("active");
+	}
+};

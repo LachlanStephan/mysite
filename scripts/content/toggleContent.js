@@ -28,14 +28,8 @@ const toggleBlog = (page) => {
 	}
 };
 
-const setActiveLink = (page) => {
-	const link = document.getElementById(page + "_link");
-	link.classList.add("active");
+const setDefaultLinkActive = () => {
+	setActiveLink("home");
 };
 
-const removePreviousActive = () => {
-	const links = document.getElementsByClassName("link");
-	for (let i = 0; i < links.length; i++) {
-		links[i].classList.remove("active");
-	}
-};
+setDefaultLinkActive();
