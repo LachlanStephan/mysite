@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="../scripts/utils/util.js" defer></script>
+		<script src="../config.js" defer></script>
+		<script src="./scripts/content/postContent.js" defer></script>
+		<script src="./scripts/edit/edit.js" defer></script>
+		<script src="./scripts/content/createForms.js" defer></script>
+		<script src="./scripts/content/createOptions.js" defer></script>
+		<script src="./scripts/auth/auth.js" defer></script>
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body>
+		<main id="auth_main">
+			<form onsubmit="checkIfAdmin(event)" id="auth_form">
+				<label for="pass">Pass:</label>
+				<input type="text" name="pass" id="pass" />
+				<button type="submit">Go</button>
+			</form>
+		</main>
+		<main id="admin_options"></main>
+		<main id="admin_forms"></main>
+		<main id="admin_edit"></main>
+	</body>
+</html>

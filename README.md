@@ -1,5 +1,13 @@
-## mysite
+### Personal site
 
-This is my personal site and is to be used as a portfolio and a place to practice new technologies and techniques.
+# Tech
 
-## <a href="https://ljstephan.dev/">Live here</a>
+-   html5
+-   css3
+-   js
+-   php
+
+# Todo
+
+-   create admin login for upload of content to api
+-   create db
