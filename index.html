@@ -9,12 +9,12 @@
 		<!-- Call this first -->
 		<script src="./scripts/utils/util.js" defer></script>
 		<!-- -->
+		<script src="./config.js" defer></script>
 		<script src="./scripts/sections/handleSections.js" defer></script>
 		<script src="./scripts/blog/handleBlogs.js" defer></script>
 		<script src="./scripts/darkMode/darkMode.js" defer></script>
 		<script src="./scripts/content/toggleContent.js" defer></script>
 		<script src="./scripts/contact/submitContact.js" defer></script>
-		<script src="./config.js" defer></script>
 
 		<script
 			src="https://kit.fontawesome.com/9aba6f04e1.js"
@@ -46,10 +46,23 @@
 			<i onclick="toggleColour()" id="toggleIcon" class=""></i>
 			<br />
 			<br />
-			<a href="javascript:;" onclick="toggleBlog()" id="blog_link"
+			<a
+				href="javascript:;"
+				onclick="toggleBlog('home')"
+				id="home_link"
+				class="link"
+				>Home</a
+			>
+			<a
+				href="javascript:;"
+				onclick="toggleBlog('blog')"
+				id="blog_link"
+				class="link"
 				>Blog</a
 			>
 		</header>
+
+		<main id="loader">Loading...</main>
 
 		<!-- Landing page -->
 		<main id="landing_main"></main>
@@ -68,6 +81,7 @@
 				</textarea>
 				<button type="submit" class="submitBtn">Go</button>
 			</form>
+			<p id="mail_response"></p>
 		</main>
 	</body>
 </html>

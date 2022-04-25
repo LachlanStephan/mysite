@@ -1,8 +1,10 @@
 const main_2 = document.getElementById("blog_main");
 
 const getBlogs = async () => {
+	setLoader();
 	let data = await fetch(urls.getBlogs);
 	data = await data.json();
+	removeLoader();
 	createTexts(main_2, data.blogs);
 };
 
@@ -35,3 +37,5 @@ const showBlog = () => {
 	sect.innerHTML = localStorage.getItem("blog_content");
 	ele.appendChild(sect);
 };
+
+getBlogs();

@@ -64,9 +64,17 @@ a {
 	display: none;
 }
 
-#blog_link:hover {
+.link {
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+.active {
+	text-decoration: underline;
+}
+
+#mail_response {
+	display: none;
 }
 
 button {
@@ -79,6 +87,15 @@ button {
 
 #blog_main section:hover {
 	cursor: pointer;
+}
+
+#loader {
+	display: none;
+	padding: 1rem 0rem;
+}
+
+#no_content {
+	padding: 1rem 0rem;
 }
 
 /* Media query stuffs */

@@ -13,22 +13,29 @@ const checkWhichContent = () => {
 	}
 };
 
-const toggleBlog = () => {
+const toggleBlog = (page) => {
 	checkWhichContent();
-	if (landing_page) {
-		toggleLinkText("Home");
+	removePreviousActive();
+	setActiveLink(page);
+	if (page === "blog") {
 		toggleDisplay(landing, "none");
 		toggleDisplay(formEle, "none");
 		toggleDisplay(blog, "block");
 	}
-	if (!landing_page) {
-		toggleLinkText("Blog");
-		toggleDisplay(landing, "block");
+	if (page === "home") {
 		toggleDisplay(formEle, "block");
 		toggleDisplay(blog, "none");
 	}
 };
 
-const toggleLinkText = (string) => {
-	linkText.innerHTML = string;
+const setActiveLink = (page) => {
+	const link = document.getElementById(page + "_link");
+	link.classList.add("active");
+};
+
+const removePreviousActive = () => {
+	const links = document.getElementsByClassName("link");
+	for (let i = 0; i < links.length; i++) {
+		links[i].classList.remove("active");
+	}
 };

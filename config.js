@@ -1,5 +1,5 @@
-// let isDev = true;
-let isDev = false;
+let isDev = true;
+// let isDev = false;
 let urls;
 
 const dev = {
@@ -39,46 +39,3 @@ if (isDev) {
 if (!isDev) {
 	urls = prod;
 }
-
-const getStuff = async () => {
-	await Promise.all([fetchSections(), getBlogs()]);
-};
-
-getStuff();
-
-// const doFetch = async (url) => {
-// 	const req = await fetch(url, {
-// 		method: "GET",
-// 	});
-// 	if (req.status === 200) {
-// 		return true;
-// 	}
-// };
-
-// const checkProd = async () => {
-// 	const prodUrl = "https://lachlanstephan.herokuapp.com/checkEnv.php";
-// 	try {
-// 		if (await doFetch(prodUrl)) {
-// 			console.log("prod r true");
-// 			urls = prod;
-// 			getStuff();
-// 		}
-// 	} catch (e) {
-// 		console.log(e);
-// 	}
-// };
-
-// const checkLocal = async () => {
-// 	const devUrl = "http://localhost/mysite_server/checkEnv.php";
-// 	try {
-// 		if (await doFetch(devUrl)) {
-// 			urls = dev;
-// 			getStuff();
-// 		}
-// 	} catch (e) {
-// 		console.log(e);
-// 	}
-// };
-
-// checkProd();
-// checkLocal();
