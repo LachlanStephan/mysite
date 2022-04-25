@@ -1,5 +1,5 @@
-let isDev = true;
-// let isDev = false;
+// let isDev = true;
+let isDev = false;
 let urls;
 
 const dev = {
