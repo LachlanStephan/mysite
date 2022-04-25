@@ -5,9 +5,9 @@
 -   html5
 -   css3
 -   js
--   php
 
 # Todo
 
--   create admin login for upload of content to api
--   create db
+-   add read time to blogs
+-   add client side validation to contact form
+-   actually write some sections and blogs

@@ -46,9 +46,17 @@ label {
 	margin: 1rem 0rem 0.2rem 0rem;
 }
 
+#subject {
+	width: 100%;
+}
+
 textarea {
 	min-height: 3rem;
 	width: 100%;
+}
+
+.submitBtn {
+	width: 3rem;
 }
 
 .fa-solid:hover {
