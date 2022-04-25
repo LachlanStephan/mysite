@@ -23,6 +23,7 @@ const toggleBlog = (page) => {
 		toggleDisplay(blog, "block");
 	}
 	if (page === "home") {
+		toggleDisplay(landing, "block");
 		toggleDisplay(formEle, "block");
 		toggleDisplay(blog, "none");
 	}
