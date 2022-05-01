@@ -3,7 +3,7 @@ let isDev = false;
 let urls;
 
 const dev = {
-	home: "http://127.0.0.1:5500/index.html",
+	home: "http://127.0.0.1:5500/",
 	blog: "http://127.0.0.1:5500/blog.html",
 	auth: "http://localhost/mysite_server/api/auth/checkIfAdmin.php",
 	getSections: "http://localhost/mysite_server/api/sections/getSections.php",

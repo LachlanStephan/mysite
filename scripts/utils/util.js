@@ -21,7 +21,8 @@ const removeLoader = () => {
 const createTexts = (ele, obj) => {
 	if (obj.length > 0) {
 		Object.keys(obj).forEach((key) => {
-			const sect = document.createElement("section");
+			let container;
+			container = document.createElement("section");
 
 			const h3 = document.createElement("h3");
 			const p = document.createElement("p");
@@ -31,19 +32,40 @@ const createTexts = (ele, obj) => {
 			p.innerHTML = obj[key].description;
 
 			if (obj[key].blog_id) {
+				container = document.createElement("a");
+				const db_id = obj[key].blog_id;
 				const b_id = "blog" + "_" + obj[key].blog_id;
+				container.setAttribute("class", "blog_links");
+				container.setAttribute(
+					"href",
+					"http://localhost/mysite_server/api/blogs/showBlog.php" +
+						"?id=" +
+						db_id +
+						"&" +
+						"theme=" +
+						getCurrTheme()
+				);
+				container.setAttribute("id", b_id);
 				const content = obj[key].content;
-				setBlogStuff(sect, b_id, content);
+				setBlogStuff(container, b_id, content);
 			}
 
-			ele.appendChild(sect);
-			sect.appendChild(h3);
-			sect.appendChild(p);
-			sect.appendChild(br);
+			ele.appendChild(container);
+			container.appendChild(h3);
+			container.appendChild(p);
+			container.appendChild(br);
 		});
 	} else {
 		createNoContentEle(ele);
 	}
+};
+
+const getCurrTheme = () => {
+	const storedTheme = localStorage.getItem("current_mode");
+	if (storedTheme) {
+		return storedTheme;
+	}
+	return "";
 };
 
 const createNoContentEle = (ele) => {

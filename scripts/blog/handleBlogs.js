@@ -8,13 +8,4 @@ const getBlogs = async () => {
 
 const setBlogStuff = (sect, b_id, content) => {
 	sect.setAttribute("id", b_id);
-	sect.onclick = () => {
-		clickOnBlog(b_id, content);
-	};
-};
-
-const clickOnBlog = (id, content) => {
-	localStorage.setItem("blog_id", id);
-	localStorage.setItem("blog_content", content);
-	location.href = urls.blog;
 };

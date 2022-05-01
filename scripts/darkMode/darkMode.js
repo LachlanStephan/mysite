@@ -15,11 +15,8 @@ const toggleColour = () => {
 };
 
 const setCorrectModeInLocal = (currClass) => {
-	if (currClass === "lightMode") {
-		localStorage.setItem("current_mode", currClass);
-	} else {
-		localStorage.setItem("current_mode", "");
-	}
+	setThemeParam(currClass);
+	localStorage.setItem("current_mode", currClass);
 };
 
 const toggleIcon = (suffix) => {
@@ -28,6 +25,17 @@ const toggleIcon = (suffix) => {
 
 const setIcon = () => {
 	icon.className = iconClass + "on";
+};
+
+const setThemeParam = (currClass) => {
+	const links = document.getElementsByClassName("blog_links");
+	for (let i = 0; i < links.length; i++) {
+		const curr = links[i].getAttribute("href");
+		const parts = curr.split("&");
+		const partToKeep = parts[0];
+		const newHref = partToKeep + "&" + "theme=" + currClass;
+		links[i].setAttribute("href", newHref);
+	}
 };
 
 setIcon();
