@@ -86,3 +86,15 @@ const removePreviousActive = () => {
 		links[i].classList.remove("active");
 	}
 };
+
+const setFetchFailedErrMsg = (e, ele) => {
+	removeLoader();
+	const failedMsg = document.createElement("section");
+	failedMsg.innerHTML = "Fetch failed...";
+	failedMsg.style.paddingTop = "1rem";
+	ele.appendChild(failedMsg);
+	setTimeout(() => {
+		failedMsg.innerHTML = "";
+	}, 5000);
+	console.error(e);
+};

@@ -15,4 +15,4 @@
 # Impovements / Roadmap
 
 -   blogs should have unique urls and fetch their content on load
--   re-factor all scripts to modules 
+-   re-write site with SvelteKit
