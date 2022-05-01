@@ -10,6 +10,6 @@ const getBlogs = async () => {
 	}
 };
 
-const setBlogStuff = (sect, b_id, content) => {
+const setBlogStuff = (sect, b_id) => {
 	sect.setAttribute("id", b_id);
 };
