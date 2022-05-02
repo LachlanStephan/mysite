@@ -10,9 +10,7 @@
 
 -   add delete action in admin for sections/blogs
 -   add read time to blogs
--   write some blogs
 
 # Impovements / Roadmap
 
--   blogs should have unique urls and fetch their content on load
--   re-write site with SvelteKit
+-   plan re-write with SvelteKit
