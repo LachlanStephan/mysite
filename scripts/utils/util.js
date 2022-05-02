@@ -38,7 +38,7 @@ const createTexts = (ele, obj) => {
 				container.setAttribute("class", "blog_links");
 				container.setAttribute(
 					"href",
-					"http://localhost/mysite_server/api/blogs/showBlog.php" +
+					urls.showBlog +
 						"?id=" +
 						db_id +
 						"&" +
