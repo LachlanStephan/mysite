@@ -15,6 +15,9 @@ const dev = {
 		"http://localhost/mysite_server/api/sections/updateSection.php",
 	updateBlog: "http://localhost/mysite_server/api/blogs/updateBlog.php",
 	showBlog: "http://localhost/mysite_server/api/blogs/showBlog.php",
+	deleteSection:
+		"http://localhost/mysite_server/api/sections/deleteSection.php",
+	deleteBlog: "http://localhost/mysite_server/api/blogs/deleteBlog.php",
 };
 
 const prod = {
@@ -32,6 +35,9 @@ const prod = {
 	updateSection:
 		"https://lachlanstephan.herokuapp.com/api/sections/updateSection.php",
 	showBlog: "https://lachlanstephan.herokuapp.com/api/blogs/showBlog.php",
+	deleteSection:
+		"https://lachlanstephan.herokuapp.com/api/sections/deleteSection.php",
+	deleteBlog: "https://lachlanstephan.herokuapp.com/api/blogs/deleteBlog.php",
 };
 
 if (isDev) {
