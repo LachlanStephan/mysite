@@ -1,41 +1,44 @@
-const icon = document.getElementById("toggleIcon");
-const iconClass = "fa-solid fa-toggle-";
+class DarkMode extends Util {
+	// private properties
+	#body;
 
-const toggleColour = () => {
-	const body = document.getElementById("body");
-	// for icon
-	if (body.className === "lightMode") {
-		toggleIcon("on");
-	} else {
-		toggleIcon("off");
+	// public properties
+
+	// initialise values
+	constructor() {
+		super();
+		this.#body = document.getElementById("body");
 	}
-	// for actual css change
-	body.classList.toggle("lightMode");
-	setCorrectModeInLocal(body.className);
-};
 
-const setCorrectModeInLocal = (currClass) => {
-	setThemeParam(currClass);
-	localStorage.setItem("current_mode", currClass);
-};
+	// private methods
+	#setThemeParam = (currClass) => {
+		const links = document.getElementsByClassName("blog_links");
+		for (let i = 0; i < links.length; i++) {
+			const curr = links[i].getAttribute("href");
+			const parts = curr.split("&");
+			const partToKeep = parts[0];
+			const newHref = partToKeep + "&" + "theme=" + currClass;
+			links[i].setAttribute("href", newHref);
+		}
+	};
 
-const toggleIcon = (suffix) => {
-	icon.className = iconClass + suffix;
-};
+	#setCorrectModeInLocal = (currClass) => {
+		this.#setThemeParam(currClass);
+		localStorage.setItem("current_mode", currClass);
+	};
 
-const setIcon = () => {
-	icon.className = iconClass + "on";
-};
+	// public methods
+	toggleColour = () => {
+		// for icon
+		if (this.#body.className === "lightMode") {
+			this.toggleIcon("on");
+		} else {
+			this.toggleIcon("off");
+		}
+		// for actual css change
+		this.#body.classList.toggle("lightMode");
+		this.#setCorrectModeInLocal(this.#body.className);
+	};
+}
 
-const setThemeParam = (currClass) => {
-	const links = document.getElementsByClassName("blog_links");
-	for (let i = 0; i < links.length; i++) {
-		const curr = links[i].getAttribute("href");
-		const parts = curr.split("&");
-		const partToKeep = parts[0];
-		const newHref = partToKeep + "&" + "theme=" + currClass;
-		links[i].setAttribute("href", newHref);
-	}
-};
-
-setIcon();
+const dm = new DarkMode();
