@@ -13,4 +13,5 @@
 
 # Impovements / Roadmap
 
--   plan re-write with SvelteKit
+-   re-write all code with classes
+-   re-create / create some some ui with web components (maybe make home and blog two different pages with shared header/footer web comp)
