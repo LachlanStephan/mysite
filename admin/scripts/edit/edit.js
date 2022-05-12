@@ -23,6 +23,7 @@ class Edit extends Util {
 		const main = document.getElementById("admin_edit");
 		for (let i = 0; i < content.length; i++) {
 			const submitBtn = document.createElement("button");
+			const deleteBtn = document.createElement("button");
 			const blockTitle = document.createElement("h4");
 			const ele = document.createElement("section");
 			const title = document.createElement("textarea");
@@ -59,6 +60,12 @@ class Edit extends Util {
 				this.#getSubmitData(container_id, db_id, type);
 			};
 
+			deleteBtn.innerHTML = "Delete";
+
+			deleteBtn.onclick = () => {
+				this.#doDeleteData(db_id, type);
+			};
+
 			main.appendChild(ele);
 			ele.appendChild(blockTitle);
 			ele.appendChild(title);
@@ -66,9 +73,25 @@ class Edit extends Util {
 			ele.appendChild(text);
 			ele.after(br);
 			ele.after(hr);
+			ele.after(deleteBtn);
 			ele.after(submitBtn);
 		}
 	};
+
+	async #doDeleteData(db_id, type) {
+		let url;
+		type === "blog" ? (url = urls.deleteBlog) : (url = urls.deleteSection);
+		let data = new FormData();
+		data.append("del_id", db_id);
+		const del_request = await fetch(url, {
+			method: "POST",
+			body: data,
+		});
+		const del_response = await del_request.json();
+
+		if (del_response.status === 202) alert("yay");
+		if (del_response.status !== 202) alert("nay");
+	}
 
 	#getSubmitData = (id, db_id, type) => {
 		const container = document.getElementById(id);
