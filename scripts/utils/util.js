@@ -18,6 +18,7 @@ class Util {
 		const storedTheme = localStorage.getItem("current_mode");
 		return storedTheme ? storedTheme : "";
 	};
+
 	#createNoContentEle = (ele) => {
 		const sect = document.createElement("section");
 		sect.innerHTML = "Nothing here yet";
@@ -76,9 +77,15 @@ class Util {
 							this.#getCurrTheme()
 					);
 					container.setAttribute("id", b_id);
+                    const readCont = this.addReadTimeContainer();
+                    readCont.appendChild(h3);
+                    readCont.appendChild(this.addReadIcon());
+                    container.appendChild(readCont);
 				}
 				ele.appendChild(container);
-				container.appendChild(h3);
+                if (!obj[key].blog_id) {
+				    container.appendChild(h3);
+                }
 				container.appendChild(p);
 				container.appendChild(br);
 			});
@@ -86,6 +93,24 @@ class Util {
 			this.#createNoContentEle(ele);
 		}
 	};
+
+    /**
+     * Split making sections and blogs into their functions 
+     * Move new funcs into their respective files - out of util
+     * */
+
+    addReadTimeContainer() {
+        const container = document.createElement('div');
+        container.className = 'read_time_container';
+        return container;
+    }
+
+    addReadIcon() {
+        const i = document.createElement('i');
+        i.className = 'fa-solid fa-clock';
+        i.style.margin = '0 0 0 0.5rem';
+        return i;
+    }
 
 	setActiveLink = (page) => {
 		const link = document.getElementById(page + "_link");

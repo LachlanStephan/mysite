@@ -109,6 +109,12 @@ button {
 	margin: 1rem auto;
 }
 
+.read_time_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /* Media query stuffs */
 @media (max-width: 1000px) {
 	main,
