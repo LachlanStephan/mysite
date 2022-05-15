@@ -26,6 +26,19 @@ class Util {
 		ele.appendChild(sect);
 	};
 
+    #addReadTimeContainer() {
+        const container = document.createElement('div');
+        container.className = 'read_time_container';
+        return container;
+    }
+
+    #addReadIcon() {
+        const i = document.createElement('i');
+        i.className = 'fa-solid fa-clock';
+        i.style.margin = '0 0 0 0.5rem';
+        return i;
+    }
+
 	// public methods
 	preventFormDefault = (event) => {
 		if (typeof event.cancelable !== "boolean" || event.cancelable) {
@@ -77,9 +90,9 @@ class Util {
 							this.#getCurrTheme()
 					);
 					container.setAttribute("id", b_id);
-                    const readCont = this.addReadTimeContainer();
+                    const readCont = this.#addReadTimeContainer();
                     readCont.appendChild(h3);
-                    readCont.appendChild(this.addReadIcon());
+                    readCont.appendChild(this.#addReadIcon());
                     container.appendChild(readCont);
 				}
 				ele.appendChild(container);
@@ -98,19 +111,6 @@ class Util {
      * Split making sections and blogs into their functions 
      * Move new funcs into their respective files - out of util
      * */
-
-    addReadTimeContainer() {
-        const container = document.createElement('div');
-        container.className = 'read_time_container';
-        return container;
-    }
-
-    addReadIcon() {
-        const i = document.createElement('i');
-        i.className = 'fa-solid fa-clock';
-        i.style.margin = '0 0 0 0.5rem';
-        return i;
-    }
 
 	setActiveLink = (page) => {
 		const link = document.getElementById(page + "_link");
