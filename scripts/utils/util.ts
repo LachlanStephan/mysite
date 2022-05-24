@@ -1,10 +1,16 @@
-class Util {
+interface Section {
+	title: string;
+	description: string;
+	blog_id: number;
+}
+
+export class Util {
 	// private properties
-	#icon;
-	#iconClass;
+	#icon: HTMLElement | null;
+	#iconClass: string;
 
 	// public properties
-	loader;
+	loader: HTMLElement | null;
 
 	// initialise values
 	constructor() {
@@ -19,51 +25,59 @@ class Util {
 		return storedTheme ? storedTheme : "";
 	};
 
-	#createNoContentEle = (ele) => {
-		const sect = document.createElement("section");
-		sect.innerHTML = "Nothing here yet";
-		sect.setAttribute("id", "no_content");
-		ele.appendChild(sect);
+	#createNoContentEle = (ele: HTMLElement | null) => {
+		if (ele !== null) {
+			const sect = document.createElement("section");
+			sect.innerHTML = "Nothing here yet";
+			sect.setAttribute("id", "no_content");
+			ele.appendChild(sect);
+		}
 	};
 
-    #addReadTimeContainer() {
-        const container = document.createElement('div');
-        container.className = 'read_time_container';
-        return container;
-    }
+	#addReadTimeContainer() {
+		const container = document.createElement("div");
+		container.className = "read_time_container";
+		return container;
+	}
 
-    #addReadIcon() {
-        const i = document.createElement('i');
-        i.className = 'fa-solid fa-clock';
-        i.style.margin = '0 0 0 0.5rem';
-        return i;
-    }
+	#addReadIcon() {
+		const i = document.createElement("i");
+		i.className = "fa-solid fa-clock";
+		i.style.margin = "0 0 0 0.5rem";
+		return i;
+	}
 
 	// public methods
-	preventFormDefault = (event) => {
+	preventFormDefault = (event: SubmitEvent) => {
 		if (typeof event.cancelable !== "boolean" || event.cancelable) {
 			event.preventDefault();
 		}
 	};
 
-	toggleIcon = (suffix) => {
-		this.#icon.className = this.#iconClass + suffix;
+	toggleIcon = (suffix: string) => {
+		if (this.#icon !== null) {
+			this.#icon.className = this.#iconClass + suffix;
+		}
 	};
 
-	toggleDisplay = (ele, string) => {
+	toggleDisplay = (ele: HTMLElement, string: string) => {
 		ele.style.display = string;
 	};
 
 	setLoader = () => {
-		this.toggleDisplay(this.loader, "block");
+		if (this.loader !== null) {
+			this.toggleDisplay(this.loader, "block");
+		}
 	};
 
 	removeLoader = () => {
-		this.toggleDisplay(this.loader, "none");
+		if (this.loader !== null) {
+			this.toggleDisplay(this.loader, "none");
+		}
 	};
 
-	createTexts = (ele, obj) => {
-		if (obj.length > 0) {
+	createTexts = (ele: HTMLElement | null, obj: Section) => {
+		if (obj !== null && ele !== null) {
 			Object.keys(obj).forEach((key) => {
 				let container;
 				container = document.createElement("section");
@@ -72,13 +86,13 @@ class Util {
 				const p = document.createElement("p");
 				const br = document.createElement("br");
 
-				h3.innerHTML = obj[key].title;
-				p.innerHTML = obj[key].description;
+				h3.innerHTML = obj.title;
+				p.innerHTML = obj.description;
 
-				if (obj[key].blog_id) {
+				if (obj.blog_id) {
 					container = document.createElement("a");
-					const db_id = obj[key].blog_id;
-					const b_id = "blog" + "_" + obj[key].blog_id;
+					const db_id = obj.blog_id;
+					const b_id = "blog" + "_" + obj.blog_id;
 					container.setAttribute("class", "blog_links");
 					container.setAttribute(
 						"href",
@@ -90,15 +104,15 @@ class Util {
 							this.#getCurrTheme()
 					);
 					container.setAttribute("id", b_id);
-                    const readCont = this.#addReadTimeContainer();
-                    readCont.appendChild(h3);
-                    readCont.appendChild(this.#addReadIcon());
-                    container.appendChild(readCont);
+					const readCont = this.#addReadTimeContainer();
+					readCont.appendChild(h3);
+					readCont.appendChild(this.#addReadIcon());
+					container.appendChild(readCont);
 				}
 				ele.appendChild(container);
-                if (!obj[key].blog_id) {
-				    container.appendChild(h3);
-                }
+				if (!obj.blog_id) {
+					container.appendChild(h3);
+				}
 				container.appendChild(p);
 				container.appendChild(br);
 			});
@@ -107,10 +121,10 @@ class Util {
 		}
 	};
 
-    /**
-     * Split making sections and blogs into their functions 
-     * Move new funcs into their respective files - out of util
-     * */
+	/**
+	 * Split making sections and blogs into their functions
+	 * Move new funcs into their respective files - out of util
+	 * */
 
 	setActiveLink = (page) => {
 		const link = document.getElementById(page + "_link");

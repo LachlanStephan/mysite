@@ -1,7 +1,9 @@
+import { Util } from "./scripts/utils/util.js";
+
 class Main extends Util {
 	// private properties
-	#body;
-	#curr_theme;
+	#body: HTMLElement | null;
+	#curr_theme: string | null;
 
 	// initialise values
 	constructor() {
@@ -21,7 +23,7 @@ class Main extends Util {
 
 	// public methods
 	checkTheme() {
-		if (this.#curr_theme !== null) {
+		if (this.#curr_theme !== null && this.#body !== null) {
 			this.#body.className = this.#curr_theme;
 			this.#setCorrectIcon();
 		}
