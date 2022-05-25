@@ -1,7 +1,14 @@
 interface Section {
 	title: string;
 	description: string;
-	blog_id: number;
+	section_id: number;
+}
+
+interface Blog {
+  title: string;
+  description: string;
+  content: string;
+  blog_id: number;
 }
 
 export class Util {
@@ -47,6 +54,13 @@ export class Util {
 		return i;
 	}
 
+  #createElements(ele: string, str: string): HTMLElement {
+    let e: HTMLElement;
+    e = document.createElement(ele);
+    e.innerHTML = str;
+    return e;
+  }
+
 	// public methods
 	preventFormDefault = (event: SubmitEvent) => {
 		if (typeof event.cancelable !== "boolean" || event.cancelable) {
@@ -75,6 +89,26 @@ export class Util {
 			this.toggleDisplay(this.loader, "none");
 		}
 	};
+
+  // create func for sect
+  createSections(ele: HTMLElement | null, obj: Section) {
+    if (obj !== null && ele !== null) {
+      Object.keys(obj).forEach((keys) => {
+        const container: HTMLElement = document.createElement('section');
+        const h3: HTMLElement = this.#createElements("h3", obj.title);
+        const p: HTMLElement = this.#createElements("p", obj.description);
+        const br: HTMLElement = document.createElement('br');
+
+				ele.appendChild(container);
+        ele.appendChild(h3)
+				container.appendChild(p);
+				container.appendChild(br);
+      });
+    }
+  }
+
+  // create func for blogs
+
 
 	createTexts = (ele: HTMLElement | null, obj: Section) => {
 		if (obj !== null && ele !== null) {
