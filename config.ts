@@ -48,4 +48,4 @@ if (!isDev) {
 	urls = prod;
 }
 
-export default urls;
+export urls;

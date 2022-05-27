@@ -19,7 +19,7 @@ class Section extends Util {
 			let data = await fetch(urls.getSections);
 			data = await data.json();
 			this.removeLoader();
-			this.createTexts(this.#main_1, data.sections);
+			this.createSections(this.#main_1, data.sections);
 		} catch (e) {
 			this.setFetchFailedErrMsg(e, this.#main_1);
 		}
