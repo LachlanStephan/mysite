@@ -8,7 +8,7 @@ interface Props {
 export const Texts: FC<Props> = (Props) => {
   return (
     <>
-      <h1 className="text-lg font-bold">{Props.title}</h1>
+      <h2 className="text-gray-800 font-bold">{Props.title}</h2>
       <p>{Props.text}</p>
       <br />
     </>
