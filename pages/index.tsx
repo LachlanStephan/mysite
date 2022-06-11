@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             <main className="container w-full md:w-4/5 lg:w-4/5 mx-auto my-0  p-4 text-black">
                 <Header
                     name="Lachlan Stephan"
-                    desc="This is my personal site where I write about learnings and other random stuff"
+                    desc="I am a Junior Software Developer who enjoys all things web and is looking "
                 />
                 {textsList}
                 <CommitChart />
