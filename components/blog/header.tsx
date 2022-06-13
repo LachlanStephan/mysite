@@ -1,13 +1,13 @@
 import { FC } from "react";
 
 interface Props {
-  title: string;
+	title: string;
 }
 
 export const Header: FC<Props> = (Props) => {
-  return (
-    <>
-      <h1 className="text-lg font-bold">{Props.title}</h1>
-    </>
-  );
+	return (
+		<>
+			<h1>{Props.title}</h1>
+		</>
+	);
 };
