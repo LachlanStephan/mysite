@@ -7,4 +7,8 @@ export const NavConfig = [
 		href: "/blogs",
 		title: "Blog",
 	},
+  {
+    href: "/projects",
+    title: "Projects",
+  }
 ];
