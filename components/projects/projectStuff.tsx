@@ -55,7 +55,7 @@ export const ProjStuff: FC = () => {
   const showInfoModal = async (data: any) => {
     setInfoData(await data);
     setShowInfo(true)
-  };
+  };    
 
   const closeModal = () => {
     setShowInfo(false);

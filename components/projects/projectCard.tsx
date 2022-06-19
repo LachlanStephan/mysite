@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { FaExternalLinkSquareAlt, FaInfoCircle } from "react-icons/fa";
 import { Octokit } from "@octokit/core";
 
 interface Props {
@@ -28,13 +28,13 @@ export const ProjectCard: FC<Props> = (Props) => {
       owner: owner,
       repo: repo,
     });
-    const res = await req;
+    const res = await req.data;
     return await res;
   };
 
   return (
     <>
-      <div className="rounded-2 border-2 border-gray-300 my-2 min-h-32 h-auto w-full flex flex-col p-2 justify-between">
+      <div className="w-full rounded-2 border-2 border-gray-300 my-2 min-h-32 h-auto w-full flex flex-col p-2 justify-between">
         <div className="flex justify-between">
           Repo: {Props.name}
           <a href={Props.html_url} target="_blank">
@@ -44,7 +44,9 @@ export const ProjectCard: FC<Props> = (Props) => {
         <div>Language: {Props.language}</div>
         <div className="flex justify-between">
           Desc: {Props.desc}
-          <div onClick={() => Props.showInfo(getReadme(Props.name))}>i</div>
+          <div className="cursor-pointer" onClick={() => Props.showInfo(getReadme(Props.name))}>
+            <FaInfoCircle /> 
+          </div>
         </div>
       </div>
     </>
