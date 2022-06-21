@@ -53,7 +53,7 @@ export const CommitBoard: FC<Props> = (Props) => {
 
 	return (
 		<>
-			<h1>Github: Last 30 days</h1>
+			<h2>Github: Last 30 days</h2>
 			<br />
 			<div className="grid gap-1 grid-flow-col grid-cols-auto grid-rows-6 h-auto w-auto">
 				{board.map((v: any, i: number) => {

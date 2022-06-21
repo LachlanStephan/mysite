@@ -10,7 +10,7 @@ export const About: FC<Props> = (Props) => {
 		<>
 			<h1>{Props.name}</h1>
 			<br />
-			<h2 className="text-base">{Props.desc}</h2>
+			<p className="text-base">{Props.desc}</p>
 			<br />
 		</>
 	);

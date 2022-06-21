@@ -1,10 +1,10 @@
 export const textContent = [
 	{
-		title: "hey there",
-		content: "some other stuff",
+		title: "",
+		content: "",
 	},
 	{
-		title: "howdy",
-		content: "some shit",
+		title: "",
+		content: "",
 	},
 ];

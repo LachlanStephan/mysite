@@ -15,8 +15,10 @@ export const Interests: FC<Props> = (Props) => {
 	const table = content.map((int, i) => {
 		return (
 			<React.Fragment key={i}>
-				<div>{int.interest}</div>
-				<div>{int.why}</div>
+				<h4 className="sm:hidden">Interest:</h4>
+				<div className="my-2">{int.interest}</div>
+				<h4 className="sm:hidden">Why:</h4>
+				<div className="my-2">{int.why}</div> 
 			</React.Fragment>
 		);
 	});
@@ -24,9 +26,9 @@ export const Interests: FC<Props> = (Props) => {
 		<>
 			<h2 className="text-lg font-bold">{Props.title}</h2>
 			<br />
-			<div className="grid grid-gap-1 grid-cols-2 grid-rows-auto">
-				<div className="text-gray-800 font-bold">Interest:</div>
-				<div className="text-gray-800 font-bold">Why:</div>
+			<div className="grid grid-gap-1 grid-cols-1 grid-rows-auto sm:grid-cols-2">
+				<h4 className="hidden sm:block">Interest:</h4>
+				<h4 className="hidden sm:block">Why:</h4>
 				{table}
 			</div>
 			<br />
