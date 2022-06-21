@@ -1,0 +1,39 @@
+@tailwind base;
+@layer base {
+	h1 {
+		@apply heading_one;
+	}
+  h2 {
+    @apply heading_two;
+  }
+  h3 {
+    @apply heading_three;
+  }
+  h4 {
+    @apply heading_four;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+body {
+	font-family: "Ubuntu Mono", monospace;
+}
+
+.heading_one {
+	font-weight: bold;
+	font-size: x-large;
+}
+.heading_two {
+	font-weight: bold;
+	font-size: large;;
+}
+.heading_three {
+	font-weight: bold;
+	font-size: medium;
+}   
+.heading_four {
+  color: rgb(41 37 36);
+	font-weight: bold;
+}
