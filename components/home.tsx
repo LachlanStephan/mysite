@@ -4,6 +4,7 @@ import { FC } from "react";
 import { CommitChart } from "../components/commitChart";
 import { Interests } from "../components/interests";
 import { About } from "../components/about";
+import Head from "next/head";
 
 // interface textStuff {
 // title: string;
@@ -24,6 +25,9 @@ export const Home: FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Home - Lachlan Stephan</title>
+      </Head>
       <About
         name="Lachlan Stephan"
         desc="I am a Junior Software Developer who is constantly trying to be a better dev."

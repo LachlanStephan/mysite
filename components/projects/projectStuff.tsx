@@ -44,7 +44,6 @@ export const ProjStuff: FC = () => {
     setLoading(true);
     const p: ProjRes[] = [];
     for (let i = 0; i < projs.length; i++) {
-      console.log(projs[i].repo);
       const x: ProjRes = await getProjectData(projs[i].repo);
       p.push(x);
     }
