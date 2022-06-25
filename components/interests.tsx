@@ -16,9 +16,9 @@ export const Interests: FC<Props> = (Props) => {
 		return (
 			<React.Fragment key={i}>
 				<h4 className="sm:hidden">Interest:</h4>
-				<div className="my-2">{int.interest}</div>
+				<div className="mb-4">{int.interest}</div>
 				<h4 className="sm:hidden">Why:</h4>
-				<div className="my-2">{int.why}</div> 
+				<div className="mb-4">{int.why}</div> 
 			</React.Fragment>
 		);
 	});

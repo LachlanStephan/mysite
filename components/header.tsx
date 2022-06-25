@@ -12,7 +12,7 @@ export const Header: FC = () => {
 	const links = conf.map((link, i) => {
 		return (
 			<Link key={i} href={link.href}>
-				<a className="my-2 mr-2 hover:underline">{link.title}</a>
+				<a className="my-2 mr-2">{link.title}</a>
 			</Link>
 		);
 	});
