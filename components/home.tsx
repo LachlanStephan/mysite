@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 // import { Texts } from "../components/texts";
 // import { textContent } from "../components/textsContent";
 import { CommitChart } from "../components/commitChart";
@@ -30,7 +30,7 @@ export const Home: FC = () => {
       </Head>
       <About
         name="Lachlan Stephan"
-        desc="I am a Junior Software Developer who is constantly trying to be a better dev."
+        desc="Junior Software Dev - trying to be a somewhat decent developer"
       />
       <Interests title="Current interests" />
       <CommitChart />

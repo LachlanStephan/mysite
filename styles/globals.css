@@ -15,6 +15,12 @@
   a {
     @apply links;
   }
+  section {
+    @apply sections;
+  }
+  #__next {
+    @apply center;
+  }
 }
 @tailwind components;
 @tailwind utilities;
@@ -40,9 +46,13 @@ body {
   color: rgb(41 37 36);
 	font-weight: bold;
 }
-.links {
+.links:hover {  
   text-decoration: underline;
 }
-.links:hover {  
-  color: #838383;
+.sections {
+  margin: 1rem 0;
+}
+.center {
+  display: flex;
+  justify-content: center;
 }

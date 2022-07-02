@@ -12,7 +12,6 @@ const Blogs: FC = () => {
         <Link href={v.link}>
           <a className="hover:underline">{v.title}</a>
         </Link>
-        <br />
       </React.Fragment>
     );
   });
@@ -22,9 +21,10 @@ const Blogs: FC = () => {
       <Head>
         <title>Blogs - Lachlan Stephan</title>
       </Head>
-      <Header title="Blogs" />
-      <br />
-      <aside className="flex flex-col">{links}</aside>
+      <section>
+        <Header title="Blogs" />
+        <aside className="flex flex-col">{links}</aside>
+      </section>
     </Layout>
   );
 };

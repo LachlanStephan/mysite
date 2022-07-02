@@ -6,12 +6,14 @@ import Head from "next/head";
 const Projects: FC = () => {
   return (
     <>
+      <Layout>
       <Head>
         <title>Projects - Lachlan Stephan</title>
       </Head>
-      <Layout>
-        <h1>Projects</h1>
-        <ProjStuff />
+        <section>
+          <h1>Projects</h1>
+          <ProjStuff />
+        </section>
       </Layout>
     </>
   );

@@ -83,20 +83,17 @@ export const CommitBoard: FC<Props> = (Props) => {
   return (
     <>
       <h2>Github: Last 30 days</h2>
-      <br />
-      <div className="grid gap-px grid-flow-col grid-cols-auto grid-rows-6 h-auto w-auto">
+      <section className="grid gap-px grid-flow-col grid-cols-auto grid-rows-6 h-auto w-auto">
         {board.map((v: any, i: number) => {
           return (
-            <>
               <div id={v.date} key={i} className={getClass(v.count)}>
-                <div className="w-32 border-2 bg-gray-200 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
+                <div className="dark:bg-gray-700 dark:text-gray-200 w-32 border-2 bg-gray-200 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
                   {v.count} contributions on {v.date}
                 </div>
               </div>
-            </>
           );
         })}
-      </div>
+      </section>
     </>
   );
 };

@@ -1,19 +1,16 @@
 import Layout from "../../components/layout.js";
 import { Footer }  from "../../components/blog/footer";
+import { BlogHeader }  from "../../components/blog/blogHeader";
+import Head from "next/head";
 
 <Layout>
 
-**Date:** 21/06/2022
-
-<br />
-
-**Author:** Lachlan Stephan
-
-<br />
-
-# The making of this site
-
-<br />
+<BlogHeader
+  title="The making of this site"
+  date="21/06/2022"
+  author="Lachlan Stephan"
+  headMeta="Making of this site"
+/>
 
 This is the 3rd time I've rebuilt this site...
 
@@ -41,13 +38,13 @@ The original site was a CRA (create react app) with Typescript. It was a single 
 <br /> 
 
 ## The 2nd iteration
-The 2nd time I built this site was supposed to be the last... oops. I used HTML5, CSS3, JS, PHP and MySql. I thought this would be more impressive than using a framework and show off some underlying knowledge. I built a dynamic client with a very basic admin/cms to add new blocks of text to the homepage and to create new blogs. I thought it was pretty great until two main issues kept annoying me more and more...  
+The 2nd time I built this site was supposed to be the last... oops. I used HTML5, CSS3, JS, PHP and MySql. I thought this would be more impressive than using a framework and show off some underlying knowledge. I built a dynamic client with a very basic admin/cms to add new blocks of text to the homepage and to create new blogs. I thought it was pretty great until two main issues really ruined it for me...  
 
 <br />  
 
-**One:** Routing to individual blog posts. This was an issue as my solution to having dynamic/unique urls for each blog was to pass the id along with some query params to the api and render it on the server. I didn't love this as I really wanted to keep the view, in the view... Also I like the domain name and once rerouted to the server, it beomes the ugly free-teir url provided by Heroku. 
+**One:** Routing to individual blog posts. This was an issue as my solution to having dynamic/unique urls for each blog was to pass the id along with some query params to the api and render it on the server. I didn't love this as I really wanted to keep the view, in the view... Also I like the domain name and once rerouted to the server, it beomes the ugly free-tier url provided by Heroku. 
 <br />
-**Two:** Using a free teir database/server. This was easily the most painful part of the site, the free teirs are put to sleep if there is inactivity for a short time. I knew this before building but had no idea how much it would bother me. The initial call to the server to *"wake it up"* would take ~5 seconds. This is a damn long time when talking web about page load times, especially for how little content was actually being shown. I also really didn't want to pay for one of the other teirs.
+**Two:** Using a free tier database/server. This was easily the most painful part of the site, the free tiers are put to sleep if there is inactivity for a short time. I knew this before building but had no idea how much it would bother me. The initial call to the server to *"wake it up"* would take ~5 seconds. This is a damn long time when talking about web page load times, especially for how little content was actually being shown. I also really didn't want to pay for one of the better tiers.
 
 <br />  
 
@@ -75,5 +72,4 @@ I think I'm optimistic about this one.
 <Footer 
   title="The end."
 />
-
 </Layout>

@@ -21,7 +21,7 @@ export const Info: FC<Props> = (Props) => {
     <>
       <div className="flex justify-center items-start overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
         <div className="p-4 w-full max-w-2xl h-full md:h-auto">
-          <div className="bg-white border-2 border-gray-700 rounded-lg shadow">
+          <div className="dark:bg-gray-700 bg-white border-2 border-gray-700 rounded-lg shadow">
             <div className="flex justify-between items-start p-4 t border-b">
               <h3 className="text-xl font-semibold">
                 {data.data.name}
