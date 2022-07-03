@@ -34,7 +34,7 @@ export const ProjectCard: FC<Props> = (Props) => {
 
   return (
     <>
-      <div className="w-full rounded-2 border-2 border-gray-300 my-2 min-h-32 h-auto w-full flex flex-col p-2 justify-between">
+      <div className="w-full rounded-2 border-l-2 border-gray-300 my-2 min-h-32 h-auto w-full flex flex-col my-4 p-2 justify-between">
         <div className="flex justify-between">
           Repo: {Props.name}
           <a href={Props.html_url} target="_blank">

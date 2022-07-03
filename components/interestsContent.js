@@ -5,7 +5,7 @@ export const InterestsContent = [
 	},
 	{
 		interest: "Golang",
-		why: "It's simple, performant and I think will become a great skill to have for backend development. Also, I like how it does error handling.",
+		why: "It's simple, performant and I think will become a great skill to have for backend development. Also, I'm a fan of the error handling.",
 	},
   {
     interest: "Design patterns",

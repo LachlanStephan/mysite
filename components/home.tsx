@@ -30,7 +30,7 @@ export const Home: FC = () => {
       </Head>
       <About
         name="Lachlan Stephan"
-        desc="Junior Software Dev - trying to be a somewhat decent developer"
+        desc="Junior Software Dev - trying to be a somewhat decent developer..."
       />
       <Interests title="Current interests" />
       <CommitChart />
