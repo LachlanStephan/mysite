@@ -12,12 +12,10 @@ interface config {
 }
 
 export const Header: FC = () => {
-// const [light, setLight] = useState(true);
   const [speak, setSpeak] = useState(false);
   const str = "Hello there!";
 
   const toggleColour = () => {
-// setLight(!light);
     ToggleMode();
   };
 
