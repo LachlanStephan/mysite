@@ -46,8 +46,23 @@ body {
   color: rgb(41 37 36);
 	font-weight: bold;
 }
+.links {
+   background: linear-gradient(
+     to bottom,
+     pink 0%,
+     pink 100%
+ );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  border-radius: 2px;   
+  padding: .2rem;
+  margin: .2rem;
+  text-decoration: none;
+  transition: background-size .2s;
+}
 .links:hover {  
-  text-decoration: underline;
+  background-size: 4px 50px;
 }
 .sections {
   margin: 1rem 0;

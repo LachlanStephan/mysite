@@ -10,7 +10,7 @@ const Blogs: FC = () => {
     return (
       <React.Fragment key={i}>
         <Link href={v.link}>
-          <a className="hover:underline">{v.title}</a>
+          <a>{v.title}</a>
         </Link>
       </React.Fragment>
     );

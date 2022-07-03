@@ -1,6 +1,8 @@
 const colours = {
-  light: "white",
-  dark: "black",
+  w: "white",
+  b: "black",
+  l: "light",
+  d: "dark",
 }
 
 const ToggleMode = () => {
@@ -9,12 +11,12 @@ const ToggleMode = () => {
   const html = document.documentElement;
   let target: string = "";
 
-  if (html.classList.contains("dark")) {
-    target = colours.light;
-    html.className = "light";
+  if (html.classList.contains(colours.d)) {
+    target = colours.w;
+    html.className = colours.l;
   } else {
-    target = colours.dark;
-    html.className = "dark";
+    target = colours.b;
+    html.className = colours.d;
   }
   
   toggleBody(bod, target);

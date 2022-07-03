@@ -9,6 +9,6 @@ export const InterestsContent = [
 	},
   {
     interest: "Design patterns",
-		why: "I want to be able to implement design patterns to help with writing better code, they are also extremely interesting.",
+		why: "I want to be able to implement design patterns to help with writing better code, I also find this a pretty interesting topic.",
 	},
 ];

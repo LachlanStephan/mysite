@@ -44,9 +44,9 @@ export const ProjectCard: FC<Props> = (Props) => {
         <div>Language: {Props.language}</div>
         <div className="flex justify-between">
           Desc: {Props.desc}
-          <div className="cursor-pointer" onClick={() => Props.showInfo(getReadme(Props.name))}>
+          <a className="cursor-pointer" onClick={() => Props.showInfo(getReadme(Props.name))}>
             <FaInfoCircle /> 
-          </div>
+          </a>
         </div>
       </div>
     </>
