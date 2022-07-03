@@ -56,8 +56,8 @@ body {
   background-repeat: repeat-x;
   background-size: 4px 4px;
   border-radius: 2px;   
-  padding: .2rem;
-  margin: .2rem;
+  padding: .25rem;
+  margin: .25rem;
   text-decoration: none;
   transition: background-size .2s;
 }

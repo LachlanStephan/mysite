@@ -53,7 +53,7 @@ export const Header: FC = () => {
         />
         {links}
         <span
-          className="transistion active:translate-y-1 duration-500 flex justify-center items-center cursor-pointer"
+          className="h-8 w-8 ml-2 transistion active:translate-y-1 duration-500 flex justify-center items-center cursor-pointer"
           onClick={toggleColour}
         >
           <FaRegLightbulb />
