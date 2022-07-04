@@ -3,31 +3,34 @@
 	h1 {
 		@apply heading_one;
 	}
-  h2 {
-    @apply heading_two;
-  }
-  h3 {
-    @apply heading_three;
-  }
-  h4 {
-    @apply heading_four;
-  }
-  a {
-    @apply links;
-  }
-  section {
-    @apply sections;
-  }
-  #__next {
-    @apply center;
-  }
+	h2 {
+		@apply heading_two;
+	}
+	h3 {
+		@apply heading_three;
+	}
+	h4 {
+		@apply heading_four;
+	}
+	a {
+		@apply links;
+	}
+	section {
+		@apply sections;
+	}
+	#__next {
+		@apply center;
+	}
 }
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-body {
+body,
+html {
 	font-family: "Ubuntu Mono", monospace;
+	margin: 0;
+	padding: 0;
 }
 
 .heading_one {
@@ -36,41 +39,38 @@ body {
 }
 .heading_two {
 	font-weight: bold;
-	font-size: large;;
+	font-size: large;
 }
 .heading_three {
 	font-weight: bold;
 	font-size: medium;
-}   
+}
 .heading_four {
-  color: rgb(41 37 36);
+	color: rgb(41 37 36);
 	font-weight: bold;
 }
 .links {
-   background: linear-gradient(
-     to bottom,
-     pink 0%,
-     pink 100%
- );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 4px 4px;
-  border-radius: 2px;   
-  padding: .25rem;
-  margin: .25rem;
-  text-decoration: none;
-  transition: background-size .2s;
+	background: linear-gradient(to bottom, pink 0%, pink 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 4px;
+	border-radius: 2px;
+	padding: 0.25rem;
+	margin: 0.25rem;
+	text-decoration: none;
+	transition: background-size 0.2s;
 }
-.links:hover {  
-  background-size: 4px 50px;
+.links:hover {
+	background-size: 4px 50px;
 }
 a:hover {
-  color: black;
+	color: black;
 }
 .sections {
-  margin: 1rem 0;
+	margin: 1rem 0;
+	max-width: 100%;
 }
 .center {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }

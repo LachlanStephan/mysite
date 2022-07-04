@@ -7,11 +7,9 @@ interface Props {
 
 export const About: FC<Props> = (Props) => {
 	return (
-		<>
-    <section>
+		<section>
 			<h1>{Props.name}</h1>
 			<p className="text-base">{Props.desc}</p>
-    </section>
-		</>
+		</section>
 	);
 };
