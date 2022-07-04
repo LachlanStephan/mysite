@@ -13,7 +13,7 @@ interface config {
 
 export const Header: FC = () => {
 	const [speak, setSpeak] = useState(false);
-	const str = "Hello there!";
+	const str = "Hello!";
 
 	const toggleColour = () => {
 		ToggleMode();
@@ -35,37 +35,28 @@ export const Header: FC = () => {
 		);
 	});
 
-	const word = () => {
-		return (
-			<span className="hidden md:block text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
-				{str}
-			</span>
-		);
-	};
-
 	return (
-		<>
-			<header className="text-md h-20 dark:bg-black bg-white flex items-center sticky top-0 border-b-2 py-2 border-b-gray-300 w-full overflow-hidden">
-				<span className="hidden md:block">{speak ? word() : null}</span>
-				<Image
-					onClick={sayHi}
-					className="cursor-pointer transition transform hover:translate-y-0.5"
-					src={headIcon}
-					alt="cartoon picture of head"
-					width={40}
-					height={40}
-				/>
-				{links}
-				<span
-					className="h-8 w-8 ml-2 transistion active:translate-y-1 duration-500 flex justify-center items-center cursor-pointer"
-					onClick={toggleColour}
-				>
-					<FaRegLightbulb />
+		<header className="text-md min-h-20 dark:bg-black bg-white flex items-center sticky top-0 border-b-2 py-2 border-b-gray-300 w-full overflow-hidden">
+			{speak ? (
+				<span className="w-2 overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
+					{str}
 				</span>
-			</header>
-			<div className="block md:hidden w-full">
-				{speak ? word() : null}
-			</div>
-		</>
+			) : null}
+			<Image
+				onClick={sayHi}
+				className="cursor-pointer transition transform hover:translate-y-0.5"
+				src={headIcon}
+				alt="cartoon picture of head"
+				width={40}
+				height={40}
+			/>
+			{links}
+			<span
+				className="h-8 w-8 ml-2 transistion active:translate-y-1 duration-500 flex justify-center items-center cursor-pointer"
+				onClick={toggleColour}
+			>
+				<FaRegLightbulb />
+			</span>
+		</header>
 	);
 };

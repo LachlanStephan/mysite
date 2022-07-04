@@ -4,19 +4,17 @@ import Layout from "../components/layout";
 import Head from "next/head";
 
 const Projects: FC = () => {
-  return (
-    <>
-      <Layout>
-      <Head>
-        <title>Projects - Lachlan Stephan</title>
-      </Head>
-        <section>
-          <h1>Projects</h1>
-          <ProjStuff />
-        </section>
-      </Layout>
-    </>
-  );
+	return (
+		<Layout>
+			<Head>
+				<title>Projects - Lachlan Stephan</title>
+			</Head>
+			<section>
+				<h1>Projects</h1>
+				<ProjStuff />
+			</section>
+		</Layout>
+	);
 };
 
 export default Projects;
