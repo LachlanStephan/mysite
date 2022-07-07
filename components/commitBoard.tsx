@@ -43,7 +43,7 @@ export const CommitBoard: FC<Props> = (Props) => {
       if (boardDates[i] === formatCreatedAt(commits[j].created_at)) {
         if (
           commits[j].type === "PushEvent" ||
-          commits[i].type === "CreateEvent"
+          commits[j].type === "CreateEvent"
         ) {
           c.isCommit = true;
           c.date = boardDates[i];
@@ -57,7 +57,7 @@ export const CommitBoard: FC<Props> = (Props) => {
     board.push(c);
   }
 
-  const handleShades = (count: number):string => {
+  const getBgColour = (count: number):string => {
     switch(true) {
       case count === 0:
         return "bg-gray-700"
@@ -73,13 +73,9 @@ export const CommitBoard: FC<Props> = (Props) => {
   }
 
   const getClass = (count: number): string => {
-// cnst colour = isCommit ? "bg-green-400" : "bg-gray-700";
-    const colour = handleShades(count);
-    const correctClass =
-      "cursor-default group relative w-3 h-3 rounded-sm" + " " + colour;
-    return correctClass;
+    return "cursor-default group relative w-3 h-3 rounded-sm" + " " + getBgColour(count);
   };
-
+board
   return (
     <>
       <h2>Github: Last 30 days</h2>
