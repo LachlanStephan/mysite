@@ -69,7 +69,7 @@ export const ProjStuff: FC = () => {
 			{showInfo ? <Info data={infoData} closeModal={closeModal} /> : null}
 
 			{loading ? (
-				<div className="w-full">Loading...</div>
+				<div>Loading...</div>
 			) : (
 				project.map((p: ProjRes, i: number) => {
 					return (
