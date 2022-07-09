@@ -36,23 +36,26 @@ export const Header: FC = () => {
   });
 
   return (
-    <header className="text-md min-h-20 dark:bg-black bg-white border-b-2 py-2 flex items-center">
-      {speak ? (
-        <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
-          {str}
-        </span>
-      ) : null}
-      <Image
-        onClick={sayHi}
-        className="cursor-pointer transition transform hover:translate-y-0.5"
-        src={headIcon}
-        alt="cartoon picture of head"
-        width={40}
-        height={40}
-      />
-      {links}
+    <header className="text-md min-h-20 mb-8 py-2 flex justify-between items-center">
+      <div className="flex items-center">
+        {speak ? (
+          <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
+            {str}
+          </span>
+        ) : null}
+        <Image
+          onClick={sayHi}
+          className="cursor-pointer transition transform hover:translate-y-0.5"
+          src={headIcon}
+          alt="cartoon picture of head"
+          width={40}
+          height={40}
+        />
+
+        {links}
+      </div>
       <span
-        className="h-8 w-8 ml-2 transistion active:translate-y-1 duration-500 flex justify-center items-center cursor-pointer"
+        className="h-8 w-8 ml-2 hover:border-2 rounded-md transistion active:translate-y-1 duration-300 flex justify-center items-center cursor-pointer"
         onClick={toggleColour}
       >
         <FaRegLightbulb />

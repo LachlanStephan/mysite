@@ -1,8 +1,8 @@
-const colours = {
-  w: "white",
-  b: "black",
-  l: "light",
-  d: "dark",
+const config = {
+  lightColour: "#fffff4",
+  darkColour: "#191a1a",
+  lightMode: "light",
+  darkMode: "dark",
 }
 
 const ToggleMode = () => {
@@ -11,14 +11,14 @@ const bod = document.getElementsByTagName("body")[0];
 
   let target: string = "";
 
-  if (html.classList.contains(colours.d)) {
-    target = colours.w;
-    html.className = colours.l;
-    SetLocal(colours.l)
+  if (html.classList.contains(config.darkMode)) {
+    target = config.lightColour;
+    html.className = config.lightMode;
+    SetLocal(config.lightMode)
   } else {
-    target = colours.b;
-    html.className = colours.d;
-    SetLocal(colours.d)
+    target = config.darkColour;
+    html.className = config.darkMode;
+    SetLocal(config.darkMode)
   }
   
   toggleBody(bod, target);
@@ -29,8 +29,9 @@ const toggleBody = (bod: HTMLElement, target: string) => {
 }
 
 const CheckLocal = () => {
+  const fallback = config.darkMode;
   const savedTheme =  localStorage.getItem("theme");
-  return savedTheme ? savedTheme : "dark";
+  return savedTheme ? savedTheme : fallback;
 }
 
 const SetLocal = (theme: string) => {
@@ -42,12 +43,12 @@ const html = document.documentElement;
 const bod = document.getElementsByTagName("body")[0];
 
     let target: string = "";
-    if (setting === colours.d) {
-      target = colours.b;
+    if (setting === config.darkMode) {
+      target = config.darkColour;
     }
 
-    if (setting === colours.l) {
-      target = colours.w;
+    if (setting === config.lightMode) {
+      target = config.lightColour;
     }
 
     bod.style.backgroundColor = target;

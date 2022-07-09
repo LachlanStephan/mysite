@@ -31,7 +31,7 @@ export const ProjectCard: FC<Props> = (Props) => {
   return (
     <div
       onClick={() => Props.showInfo(getReadme(Props.name))}
-      className="cursor-pointer transition ease-in hover:delay-100 hover:bg-black hover:text-white w-4/5 p-2 m-l-2 rounded-2 border-l-2 border-gray-300 flex flex-col my-4 dark:hover:bg-white dark:hover:text-black rounded-sm justify-between"
+      className="cursor-pointer w-4/5 my-2 m-l-2 rounded-lg border-gray-300 flex flex-col justify-between"
     >
     <div>
       Repo: {Props.name}

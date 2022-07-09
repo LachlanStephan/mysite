@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-      <main className="overflow-hidden dark:text-gray-100 p-4 w-full 2xl:w-4/5 text-black">
+      <main className="overflow-hidden dark:text-gray-100 p-4 w-full md:w-4/5 xl:w-3/5 text-black">
         <Header />
         {children}
         <Footer />
