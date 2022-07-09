@@ -65,7 +65,7 @@ export const ProjStuff: FC = () => {
 	}, []);
 
 	return (
-		<div className="w-full">
+		<div className="w-full grid justify-center gap-1 auto-rows grid-cols-3">
 			{showInfo ? <Info data={infoData} closeModal={closeModal} /> : null}
 
 			{loading ? (

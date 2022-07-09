@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavConfig } from "./navConfig";
-import ToggleMode from "../hooks/darkmode";
+import ToggleMode from "../utils/darkmode";
 import { FaRegLightbulb } from "react-icons/fa";
 import headIcon from "../public/headIcon.png";
 
@@ -37,9 +37,9 @@ export const Header: FC = () => {
 
   return (
     <>
-      <header className="text-md min-h-20 dark:bg-black bg-white border-b-2 py-2 flex items-center sticky top-0 w-full overflow-hidden">
+      <header className="text-md min-h-20 dark:bg-black bg-white border-b-2 py-2 flex items-center sticky top-0 overflow-hidden">
         {speak ? (
-          <span className="w-2 overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
+          <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
             {str}
           </span>
         ) : null}
