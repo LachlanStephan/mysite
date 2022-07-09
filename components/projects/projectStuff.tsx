@@ -22,7 +22,6 @@ export const ProjStuff: FC = () => {
 	const owner = "LachlanStephan";
 	const [project, setProject] = useState<ProjRes[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
-	const [err, setErr] = useState<boolean>(false);
 
 	const [showInfo, setShowInfo] = useState<boolean>(false);
 	const [infoData, setInfoData] = useState<any>([]);
@@ -65,7 +64,7 @@ export const ProjStuff: FC = () => {
 	}, []);
 
 	return (
-		<div className="w-full grid justify-center gap-1 auto-rows grid-cols-2 md:grid-cols-3">
+		<div className="w-full grid justify-center gap-1 auto-rows grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 			{showInfo ? <Info data={infoData} closeModal={closeModal} /> : null}
 
 			{loading ? (

@@ -5,6 +5,7 @@ import { CommitChart } from "../components/commitChart";
 import { Interests } from "../components/interests";
 import { About } from "../components/about";
 import Head from "next/head";
+import Layout from "../components/layout";
 
 // interface textStuff {
 // title: string;
@@ -24,10 +25,9 @@ export const Home: FC = () => {
   // {textsList}
 
   return (
-    <>
+    <Layout>
       <Head>
         <title>Home - Lachlan Stephan</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <About
         name="Lachlan Stephan"
@@ -35,6 +35,6 @@ export const Home: FC = () => {
       />
       <Interests title="Current interests" />
       <CommitChart />
-    </>
+    </Layout>
   );
 };

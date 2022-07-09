@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from 'next'
 import "../styles/globals.css";
+import { SetMode, CheckLocal } from "../utils/darkmode";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -12,14 +13,10 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-const setLightMode = () => {
-    const html = document.documentElement;
-    html.className = "light";
-}
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
    useEffect(() => {
-    setLightMode()
+    SetMode(CheckLocal());
   }, [])
  // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
