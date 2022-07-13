@@ -33,7 +33,7 @@ export const Home: FC = () => {
         name="Lachlan Stephan"
         desc="Junior Software Dev - trying to be a somewhat decent developer..."
       />
-5     <Interests title="Current interests" />
+      <Interests title="Current interests" />
       <CommitChart />
     </Layout>
   );
