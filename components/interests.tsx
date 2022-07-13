@@ -15,7 +15,7 @@ export const Interests: FC<Props> = (Props) => {
 	const table = content.map((int, i) => {
 		return (
 			<div className="mb-4" key={i}>
-				<h4>{int.interest}:</h4>
+				<p className="font-semibold">{int.interest}:</p>
 				<p>{int.why}</p> 
 			</div>
 		);

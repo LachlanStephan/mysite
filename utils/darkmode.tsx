@@ -1,5 +1,5 @@
 const config = {
-  lightColour: "#fffff4",
+  lightColour: "#ffefd5",
   darkColour: "#191a1a",
   lightMode: "light",
   darkMode: "dark",

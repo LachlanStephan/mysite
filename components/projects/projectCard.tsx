@@ -31,7 +31,7 @@ export const ProjectCard: FC<Props> = (Props) => {
   return (
     <div
       onClick={() => Props.showInfo(getReadme(Props.name))}
-      className="cursor-pointer w-4/5 my-2 m-l-2 rounded-lg border-gray-300 flex flex-col justify-between"
+      className="border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-gray-400 flex flex-col justify-between"
     >
     <div>
       Repo: {Props.name}
