@@ -15,15 +15,15 @@ export const BlogHeader: FC<Props> = (Props) => {
         <title>{Props.headMeta} - Lachlan Stephan</title>
       </Head>
       <header className="my-4">
-        <p className="my-2">
-          <strong>Date: </strong>
-          {Props.date}
-        </p>
+        <h1>{Props.title}</h1>
         <p className="my-2">
           <strong>Author: </strong>
           {Props.author}
         </p>
-        <h1>{Props.title}</h1>
+        <p className="my-2">
+          <strong>Date: </strong>
+          {Props.date}
+        </p>
       </header>
     </>
   );

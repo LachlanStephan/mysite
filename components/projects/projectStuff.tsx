@@ -50,6 +50,7 @@ export const ProjStuff: FC = () => {
 		setLoading(false);
 	};
 
+  // add loader for showing read me -
 	const showInfoModal = async (data: any) => {
 		setInfoData(await data);
 		setShowInfo(true);
