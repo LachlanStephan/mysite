@@ -5,6 +5,7 @@ import { NavConfig } from "./navConfig";
 import { ToggleMode } from "../utils/darkmode";
 import { FaRegLightbulb } from "react-icons/fa";
 import headIcon from "../public/headIcon.png";
+import { theme } from "../theme.js";
 
 interface config {
   href: string;
@@ -14,6 +15,8 @@ interface config {
 export const Header: FC = () => {
   const [speak, setSpeak] = useState(false);
   const str = "Hello!";
+  const bgLight = theme.light.background;
+  const bgDark = theme.dark.background;
 
   const toggleColour = () => {
     ToggleMode();
@@ -35,8 +38,15 @@ export const Header: FC = () => {
     );
   });
 
+  // this probably needs some love
+  const headerStyles = ():string => {
+    const dark = "dark:bg-" + "[" + bgDark + "]";
+    const light = "bg-" +  "[" + bgLight + "]";
+    return "sticky top-0 text-md min-h-20 py-4 drop-shadow-sm flex justify-between items-center" + " "  + light + " " + dark;
+  }
+
   return (
-    <header className="text-md min-h-20 mb-8 py-2 flex justify-between items-center">
+    <header className={headerStyles()}>
       <div className="flex items-center">
         {speak ? (
           <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">

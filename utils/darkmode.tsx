@@ -1,24 +1,20 @@
-const config = {
-  lightColour: "#ffefd5",
-  darkColour: "#191a1a",
-  lightMode: "light",
-  darkMode: "dark",
-}
+import { theme } from "../theme.js";
 
+// Probably need to get rid of this and integrate something with tailwind 
 const ToggleMode = () => {
 const html = document.documentElement;
 const bod = document.getElementsByTagName("body")[0];
 
   let target: string = "";
 
-  if (html.classList.contains(config.darkMode)) {
-    target = config.lightColour;
-    html.className = config.lightMode;
-    SetLocal(config.lightMode)
+  if (html.classList.contains(theme.dark.name)) {
+    target = theme.light.background;
+    html.className = theme.light.name;
+    SetLocal(theme.light.name)
   } else {
-    target = config.darkColour;
-    html.className = config.darkMode;
-    SetLocal(config.darkMode)
+    target = theme.dark.background;
+    html.className = theme.dark.name;
+    SetLocal(theme.dark.name);
   }
   
   toggleBody(bod, target);
@@ -29,7 +25,7 @@ const toggleBody = (bod: HTMLElement, target: string) => {
 }
 
 const CheckLocal = () => {
-  const fallback = config.darkMode;
+  const fallback = theme.dark.name;
   const savedTheme =  localStorage.getItem("theme");
   return savedTheme ? savedTheme : fallback;
 }
@@ -43,12 +39,12 @@ const html = document.documentElement;
 const bod = document.getElementsByTagName("body")[0];
 
     let target: string = "";
-    if (setting === config.darkMode) {
-      target = config.darkColour;
+    if (setting === theme.dark.name) {
+      target = theme.dark.background;
     }
 
-    if (setting === config.lightMode) {
-      target = config.lightColour;
+    if (setting === theme.light.name) {
+      target = theme.light.background;
     }
 
     bod.style.backgroundColor = target;
