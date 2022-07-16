@@ -10,7 +10,7 @@ const Blogs: FC = () => {
 		return (
 			<React.Fragment key={i}>
 				<Link href={v.link}>
-					<a>{v.title}</a>
+					<a className="mb-4 ml-0 pl-0">{v.title}</a>
 				</Link>
 			</React.Fragment>
 		);

@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 export const Footer: FC<Props> = (Props) => {

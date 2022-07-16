@@ -9,6 +9,6 @@ export const theme = {
     background: "#191a1a",
   },
   accent: {
-    colour: "",
+    colour: "#ffc0cb",
   }
 }

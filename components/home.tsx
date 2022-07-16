@@ -29,12 +29,14 @@ export const Home: FC = () => {
       <Head>
         <title>Home - Lachlan Stephan</title>
       </Head>
-      <About
-        name="Lachlan Stephan"
-        desc="Junior Software Dev - trying to be a somewhat decent developer..."
-      />
-      <Interests title="Current interests" />
-      <CommitChart />
+      <div className="overflow-auto">
+        <About
+          name="Lachlan Stephan"
+          desc="Junior Software Dev - trying to be a somewhat decent developer..."
+        />
+        <Interests title="Current interests" />
+        <CommitChart />
+      </div>
     </Layout>
   );
 };
