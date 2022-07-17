@@ -6,7 +6,7 @@ export const theme = {
   },
   dark: {
     name: "dark",
-    background: "#191a1a",
+    background: "#003554",
   },
   accent: {
     colour: "#ffc0cb",

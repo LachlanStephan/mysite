@@ -1,8 +1,8 @@
 import { FC } from "react";
 // import { Texts } from "../components/texts";
 // import { textContent } from "../components/textsContent";
-import { CommitChart } from "../components/commitChart";
-import { Interests } from "../components/interests";
+import { CommitChart } from "../components/commits/commitChart";
+import { Interests } from "../components/interests/interests";
 import { About } from "../components/about";
 import Head from "next/head";
 import Layout from "../components/layout";

@@ -6,6 +6,17 @@ import Head from "next/head";
 import { Config } from "../components/blog/config";
 
 const Blogs: FC = () => {
+  const sortTags = (tag: string) => {
+    let tags = tag.split(" ");
+    console.log(tags);
+    return tags.map((val, i) => {
+      <>
+        <div></div>
+      </>
+    });
+  }
+// <p>{sortTags(v.tags)}</p>
+
 	const links = Config.map((v, i) => {
 		return (
 			<React.Fragment key={i}>
