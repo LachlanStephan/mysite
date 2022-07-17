@@ -60,7 +60,7 @@ export const CommitBoard: FC<Props> = (Props) => {
   const getBgColour = (count: number):string => {
     switch(true) {
       case count === 0:
-        return "bg-gray-700"
+        return "bg-gray-600"
       case count <= 2:
         return "bg-green-300"
       case count <= 4:
@@ -68,7 +68,7 @@ export const CommitBoard: FC<Props> = (Props) => {
       case count >= 6:
         return "bg-green-500"
       default:
-       return "bg-gray-700"
+       return ""
     }
   }
 
