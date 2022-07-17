@@ -40,18 +40,18 @@ html {
 
 .heading_one {
 	font-weight: bold;
-	font-size: x-large;
+	font-size: 2em;
 }
 .heading_two {
 	font-weight: bold;
-	font-size: large;
+	font-size: 1.5em;
 }
 .heading_three {
 	font-weight: bold;
-	font-size: medium;
+	font-size: 1.17em;
 }
 .heading_four {
-	color: rgb(41 37 36);
+  font-size: 1em;
 	font-weight: bold;
 }
 .links {

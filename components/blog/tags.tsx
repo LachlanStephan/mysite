@@ -9,7 +9,7 @@ const Tag: FC<Props> = (Props) => {
   return (
     <div className="flex"> {tags.map((val, i) => {
         return (
-          <div className="border-2 rounded-md p-1 mr-1 mt-4 text-sm capitalize border-gray-500" key={i}>
+          <div className="border-2 rounded-md p-1 mr-1 mt-4 text-sm capitalize border-accent_grey" key={i}>
             {val}
           </div>
         );

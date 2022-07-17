@@ -13,7 +13,7 @@ interface Props {
 }
 
 // TODO:
-// should do err handling on the fetched data - failed || empty
+// add loader for readme
 
 export const Info: FC<Props> = (Props) => {
   const data = Props;
@@ -21,7 +21,7 @@ export const Info: FC<Props> = (Props) => {
     <>
       <div className="flex justify-center items-start overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
         <div className="p-4 w-full max-w-2xl h-full md:h-auto">
-          <div className="bg-[#ffefd5] dark:bg-[#191a1a] border-2 rounded-lg shadow border-gray-400">
+          <div className="bg-light_background dark:bg-dark_background  border-2 rounded-lg shadow border-accent_grey">
             <div className="flex justify-between items-start p-4 t">
               <h3 className="text-xl font-semibold">
                 {data.data.name}

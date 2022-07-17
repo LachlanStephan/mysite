@@ -15,14 +15,14 @@ export const Interests: FC<Props> = (Props) => {
 	const table = content.map((int, i) => {
 		return (
 			<div className="mb-4" key={i}>
-				<p className="font-semibold">{int.interest}:</p>
+				<h3>{int.interest}:</h3>
 				<p>{int.why}</p> 
 			</div>
 		);
 	});
 	return (
 		<section>
-			<h2 className="text-lg font-bold">{Props.title}</h2>
+			<h2>{Props.title}</h2>
 			<div className="grid grid-gap-1 grid-cols-1 grid-rows-auto">
 				{table}
 			</div>

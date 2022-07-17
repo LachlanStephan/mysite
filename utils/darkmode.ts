@@ -1,4 +1,10 @@
-import { theme } from "../theme.js";
+import { theme } from "../tailwind.config.js";
+
+const colours = theme.extend.colors;
+const class_name = {
+  dark: "dark",
+  light: "light",
+}
 
 // Probably need to get rid of this and integrate something with tailwind 
 const ToggleMode = () => {
@@ -7,14 +13,14 @@ const bod = document.getElementsByTagName("body")[0];
 
   let target: string = "";
 
-  if (html.classList.contains(theme.dark.name)) {
-    target = theme.light.background;
-    html.className = theme.light.name;
-    SetLocal(theme.light.name)
+  if (html.classList.contains(class_name.dark)) {
+    target = colours.light_background;
+    html.className = class_name.light;
+    SetLocal(class_name.light)
   } else {
-    target = theme.dark.background;
-    html.className = theme.dark.name;
-    SetLocal(theme.dark.name);
+    target = colours.dark_background;
+    html.className = class_name.dark;
+    SetLocal(class_name.dark);
   }
   
   toggleBody(bod, target);
@@ -25,7 +31,7 @@ const toggleBody = (bod: HTMLElement, target: string) => {
 }
 
 const CheckLocal = () => {
-  const fallback = theme.dark.name;
+  const fallback = class_name.dark;
   const savedTheme =  localStorage.getItem("theme");
   return savedTheme ? savedTheme : fallback;
 }
@@ -35,16 +41,16 @@ const SetLocal = (theme: string) => {
 }
 
 const SetMode = (setting: string) => {
-const html = document.documentElement;
-const bod = document.getElementsByTagName("body")[0];
+    const html = document.documentElement;
+    const bod = document.getElementsByTagName("body")[0];
 
     let target: string = "";
-    if (setting === theme.dark.name) {
-      target = theme.dark.background;
+    if (setting === class_name.dark) {
+      target = colours.dark_background;
     }
 
-    if (setting === theme.light.name) {
-      target = theme.light.background;
+    if (setting === class_name.light) {
+      target = colours.light_background;
     }
 
     bod.style.backgroundColor = target;

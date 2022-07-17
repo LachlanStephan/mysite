@@ -12,7 +12,7 @@ const Blogs: FC = () => {
       <React.Fragment key={i}>
         <Tags tags={v.tags} />
         <Link href={v.link}>
-          <a className="mb-8 ml-0">{v.title}</a>
+          <a className="text-lg mb-8 ml-0">{v.title}</a>
         </Link>
       </React.Fragment>
     );

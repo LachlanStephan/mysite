@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavConfig } from "./navConfig";
@@ -13,7 +13,7 @@ interface config {
 
 export const Header: FC = () => {
   const [speak, setSpeak] = useState(false);
-  const str = "Hello!";
+  const str = "Hi!";
 
   const toggleColour = () => {
     ToggleMode();
@@ -36,7 +36,7 @@ export const Header: FC = () => {
   });
 
   return (
-    <header className="bg-inherit sticky top-0 text-md min-h-20 py-4 flex justify-between items-center">
+    <header className="bg-light_background dark:bg-dark_background sticky top-0 text-md min-h-20 py-4 flex justify-between items-center">
       <div className="flex items-center">
         {speak ? (
           <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
@@ -55,7 +55,7 @@ export const Header: FC = () => {
         {links}
       </div>
       <span
-        className="h-8 w-8 ml-2 hover:border-2 border-gray-400 rounded-md transistion active:translate-y-1 duration-300 flex justify-center items-center cursor-pointer"
+        className="h-8 w-8 ml-2 hover:border-2 border-accent_grey rounded-md transistion active:translate-y-1 duration-300 flex justify-center items-center cursor-pointer"
         onClick={toggleColour}
       >
         <FaRegLightbulb />

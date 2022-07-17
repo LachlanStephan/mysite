@@ -1,7 +1,6 @@
 import { FC } from "react";
-import { FaExternalLinkSquareAlt, FaInfoCircle } from "react-icons/fa";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import { Octokit } from "@octokit/core";
-import { theme } from "../../theme.js";
 
 interface Props {
   html_url: string;
@@ -32,7 +31,7 @@ export const ProjectCard: FC<Props> = (Props) => {
   return (
     <div
       onClick={() => Props.showInfo(getReadme(Props.name))}
-      className="border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-gray-400 flex flex-col justify-between hover:opacity-60"
+      className="border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-accent_grey flex flex-col justify-between hover:opacity-60"
     >
     <div>
       Repo: {Props.name}
