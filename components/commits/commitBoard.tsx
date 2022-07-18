@@ -57,36 +57,42 @@ export const CommitBoard: FC<Props> = (Props) => {
     board.push(c);
   }
 
-  const getBgColour = (count: number):string => {
-    switch(true) {
+  const getBgColour = (count: number): string => {
+    switch (true) {
       case count === 0:
-        return "bg-gray-600"
+        return "bg-gray-600";
       case count <= 2:
-        return "bg-green-300"
+        return "bg-green-200";
       case count <= 4:
-        return "bg-green-400"
-      case count >= 6:
-        return "bg-green-500"
+        return "bg-green-300";
+      case count <= 6:
+        return "bg-green-400";
+      case count > 6:
+        return "bg-green-500";
       default:
-       return ""
+        return "";
     }
-  }
+  };
 
   const getClass = (count: number): string => {
-    return "cursor-default group relative w-3 h-3 rounded-sm" + " " + getBgColour(count);
+    return (
+      "cursor-default group relative w-3 h-3 rounded-sm" +
+      " " +
+      getBgColour(count)
+    );
   };
-board
+  board;
   return (
     <>
       <h2>Github: Last 30 days</h2>
       <section className="grid gap-px grid-flow-col grid-cols-auto grid-rows-6 h-auto w-auto">
         {board.map((v: any, i: number) => {
           return (
-              <div id={v.date} key={i} className={getClass(v.count)}>
-                <div className="dark:bg-gray-700 dark:text-gray-200 w-32 border-2 bg-gray-200 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
-                  {v.count} contributions on {v.date}
-                </div>
+            <div id={v.date} key={i} className={getClass(v.count)}>
+              <div className="dark:bg-gray-700 dark:text-gray-200 w-32 border-2 bg-gray-200 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
+                {v.count} contributions on {v.date}
               </div>
+            </div>
           );
         })}
       </section>
