@@ -3,6 +3,7 @@ import { Octokit } from "@octokit/core";
 import { Config } from "./config";
 import { ProjectCard } from "./projectCard";
 import { Info } from "./info";
+import Loader from "../loader";
 
 interface ProjConfig {
 	repo: string;
@@ -69,7 +70,7 @@ export const ProjStuff: FC = () => {
 			{showInfo ? <Info data={infoData} closeModal={closeModal} /> : null}
 
 			{loading ? (
-				<div>Loading...</div>
+				<Loader loading_text="Loading..." />
 			) : (
 				project.map((p: ProjRes, i: number) => {
 					return (

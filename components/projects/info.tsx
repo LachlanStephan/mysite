@@ -12,9 +12,6 @@ interface Props {
   data: Data;
 }
 
-// TODO:
-// add loader for readme
-
 export const Info: FC<Props> = (Props) => {
   const data = Props;
   return (
