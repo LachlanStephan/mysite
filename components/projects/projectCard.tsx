@@ -36,11 +36,13 @@ export const ProjectCard: FC<Props> = (Props) => {
   return (
     <>
       {loading ? (
-        <Loader loading_text="Loading..." />
+        <span className="h-[10rem] p-4 my-2 m-l-2">
+          <Loader loading_text="Loading..." />
+        </span>
       ) : (
         <div
           onClick={() => Props.showInfo(getReadme(Props.name))}
-          className="border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-accent_grey flex flex-col justify-between hover:opacity-60"
+          className="min-h-[10rem] border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-accent_grey flex flex-col justify-between hover:opacity-60"
         >
           <div>
             Repo: {Props.name}
