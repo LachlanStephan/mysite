@@ -1,0 +1,56 @@
+import Layout from "../../components/layout.js";
+import { Footer }  from "../../components/blog/footer";
+import { BlogHeader }  from "../../components/blog/blogHeader";
+
+<Layout>
+
+<BlogHeader
+  title="Learning better languages"
+  date=""
+  author="Lachlan Stephan"
+  headMeta="Learning better languages"
+/>
+
+This is a bit of hot topic but it really shouldn't be.
+
+<br />
+
+The languages I am most familiar with are Typescript, Javascript and PHP. Two of these are loosely typed and one is not (hopefully).
+
+<br />
+
+At work I've used a lot vanilla JS & PHP... And so have others. The code base is quite large (~10yr project) and so I have know been exposed to what a lot of loosely typed code looks like. My conclusion so far is how is there even an argument for using these languages in anything important.
+
+<br />
+
+Fistly, I know that with good practices and some tlc a decently *clean* codebase can be written in JS or PHP. However, most companies or people don't have this luxury. There are small teams moving quickly, inexperienced devs (me) and a boatload of other things that could contribute to this.
+
+<br />
+
+The problem is for most cases it feels like the large and messy codebase is almost inevitable. One day you open your editor to fix a bug, the bug lives within a ~70 line fucntion that takes several params (all without types) and you need to do something like... 
+
+<br />
+
+``` 
+  console.log([
+    "potenital prob 1", param1,
+    "potenital prob 2", param2,
+    "potenital prob 3", param3,
+    "potenital prob 4", param4,
+    "potenital prob 5", param5,
+  ]);
+
+``` 
+<br />
+
+I'll also quickly mention that to see this console.log you might have to go through several annoying steps to execute the code. And yes I know this is obviously some poor code - but god damn if this isn't the world we live in.
+
+<br />
+
+So when you finally find the bug, it's because param1 is typically an array of strings (string[]) but in this case it was just a string. There is some code in the function that calls splice on the array when a condition is met. Ahhh crap...
+
+
+  
+<Footer />
+
+</Layout>
