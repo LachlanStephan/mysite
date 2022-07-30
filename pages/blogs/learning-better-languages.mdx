@@ -32,7 +32,13 @@ The problem is for most cases it feels like the large and messy codebase is almo
 <br />
 
 ``` 
-function demo(param1, param2, param3, param4, param5) {
+function demo(
+  param1, 
+  param2, 
+  param3,   
+  param4, 
+  param5
+) {
   console.log([
     "potenital prob 1", param1,
     "potenital prob 2", param2,
@@ -41,8 +47,7 @@ function demo(param1, param2, param3, param4, param5) {
     "potenital prob 5", param5,
   ]);
   // code 
-}
-
+} 
 ``` 
 <br />
 
@@ -58,8 +63,33 @@ So if this was .ts instead - in this very cherry picked example, we never would 
 
 <br />
 
-What if the code is all working correctly, param1 is only ever passed string[] and there is no bug. Lets say there is a new dev in still in their onbaording and one of the very first tickets they are assigned is to go into this function and //cont
+What if the code is all working correctly, param1 is only ever passed string[] and there is no bug. Lets say there is a new dev in still in their onbaording and one of the very first tickets they are assigned is to go into this code and add some new functionality. 
 
+<br />
+
+The new dev needs to go in and add a users last name initial to the end of the firstname on the client side of stuff.
+
+<br />
+
+They head into the code and after some digging around find said function. Currently with no idea of what any of these parms mean or do. They are using console.log on all of them trying to figure out how to execute the statement.
+
+<br />
+
+You could find out via the network tab or checking the api controller that sends the data but that probably isn't your first thought and shouldn't need to be done for something like this. 
+
+<br />
+
+Now imagine we are in .ts land... The new dev finds the correct file, maybe they find the interface first - with a complete list of all properties. Maybe they find the function first and using the lsp can type 'param1.' nd see all the suggestions.
+
+<br /> 
+
+Maybe the also find param1: any[]. Unlucky.
+
+<br /> 
+
+I know this is a rather basic example but it does causes page breaking bugs in prod and also just an creates annoying dev experience. 
+
+<br />
   
 <Footer />
 
