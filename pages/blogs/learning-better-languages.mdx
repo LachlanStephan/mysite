@@ -6,7 +6,7 @@ import { BlogHeader }  from "../../components/blog/blogHeader";
 
 <BlogHeader
   title="Learning better languages"
-  date=""
+  date="30/07/2022"
   author="Lachlan Stephan"
   headMeta="Learning better languages"
 />
@@ -49,6 +49,7 @@ function demo(
   // code 
 } 
 ``` 
+
 <br />
 
 I'll also quickly mention that to see this console.log you might have to go through several annoying steps to execute the code. And yes I know this is obviously some poor code - but god damn if this isn't the world we live in.
@@ -79,18 +80,90 @@ You could find out via the network tab or checking the api controller that sends
 
 <br />
 
-Now imagine we are in .ts land... The new dev finds the correct file, maybe they find the interface first - with a complete list of all properties. Maybe they find the function first and using the lsp can type 'param1.' nd see all the suggestions.
+Now imagine we are in .ts land... The new dev finds the correct file, maybe they find the interface first - with a complete list of all properties. Maybe they find the function first and using the lsp can type 'param1.' and see all the suggestions.
 
 <br /> 
 
-Maybe the also find param1: any[]. Unlucky.
+Maybe they also find param1: any[]. Unlucky.
 
 <br /> 
 
-I know this is a rather basic example but it does causes page breaking bugs in prod and also just an creates annoying dev experience. 
+I know this is a rather basic example but it does causes breaking bugs in prod and also just an creates annoying dev experience. 
+
+<br />
+
+Not knowing types is starting to become such a strange concept for me. Being unable to know what type specific methods I can and can not run on a value is just silly, and why until runtime to find out.
+
+<br />
+
+Moving on from Typescript and the land of "const some_var: any". I'm currently learning Rust and really enjoying it, however slow this process may be.
+
+<br />
+
+I am very new to this language and definitely am nowhere near competent. Even still, so ealry into the learning I can see what all the fuss is about. Currently I have not had Rust code compile and not work, I also have only had one or two times where the lsp has not picked up something that would not allow compilation.
+
+<br />
+
+The language is so strict but in such a refreshing way - You will never be confused about types or what is allowed and what isn't. I also cannot help but to think this must reduce technical debt.
+
+<br />
+
+For a very basic example we have something like this: 
+
+<br />
+
+``` 
+const addNumbers(value_one, value_two) {
+  return value_two + value_one;
+}
+
+```
+
+<br />
+
+The problem here is you might do this:
+
+<br />
+
+```
+const val = 5;
+const other_val = "10";
+addNumbers(val, other_val);
+```
+
+<br />
+
+Now this might be accidental because the server sent the value 10 as a string for whatever reason. But the language says "all good, lovely code there mate"... And now you have returned "510" instead of 15.
+
+<br />
+
+If this were Golang or Rust we would not have been able to make such an annoying error. 
+
+<br />
+
+```
+fn addNumbers(value_one: i32, value_two: i32) -> i32 {
+  return value_one + value_two;
+}
+
+let val = 5;
+let other_val = "10";
+
+addNumbers(val, other_val); // mismatched types - expected i32 and found str
+```
 
 <br />
   
+To summarise I'm having a blast with types and learning Rust - I am struggling to see why so many people/projects are choosing to use weakly typed languages. 
+
+<br />
+
+I know speed is likely the determining factor (developer speed, definitely not language speed) but boy does that truth flip on its head later into the project.
+
+<br />
+
+In saying that I am big fan of JS and PHP - they have lead the way for everything web, but it may be time we look to some alternatives. 
+
 <Footer />
 
 </Layout>
