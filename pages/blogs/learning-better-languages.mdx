@@ -19,7 +19,7 @@ The languages I am most familiar with are Typescript, Javascript and PHP. Two of
 
 <br />
 
-At work I've used a lot vanilla JS & PHP... And so have others. The code base is quite large (~10yr project) and so I have know been exposed to what a lot of loosely typed code looks like. My conclusion so far is how is there even an argument for using these languages in anything important.
+At work I've used a lot vanilla JS & PHP... And so have others. The code base is quite large (~10yr project) and so I have know been exposed to what a lot of loosely typed code looks like. My conclusion so far is - how do these languages even get selected for professional projects that will exist for multiple years.
 
 <br />
 
@@ -32,6 +32,7 @@ The problem is for most cases it feels like the large and messy codebase is almo
 <br />
 
 ``` 
+function demo(param1, param2, param3, param4, param5) {
   console.log([
     "potenital prob 1", param1,
     "potenital prob 2", param2,
@@ -39,6 +40,8 @@ The problem is for most cases it feels like the large and messy codebase is almo
     "potenital prob 4", param4,
     "potenital prob 5", param5,
   ]);
+  // code 
+}
 
 ``` 
 <br />
@@ -47,8 +50,15 @@ I'll also quickly mention that to see this console.log you might have to go thro
 
 <br />
 
-So when you finally find the bug, it's because param1 is typically an array of strings (string[]) but in this case it was just a string. There is some code in the function that calls splice on the array when a condition is met. Ahhh crap...
+So when you finally find the bug, it's because param1 is typically an array of strings (string[]) but in this case it was just a string. There is some code in the function that calls .splice() on the array when a condition is met. Ahhh crap...
 
+<br />
+
+So if this was .ts instead - in this very cherry picked example, we never would even run the faulty code. Lets continue with the example.
+
+<br />
+
+What if the code is all working correctly, param1 is only ever passed string[] and there is no bug. Lets say there is a new dev in still in their onbaording and one of the very first tickets they are assigned is to go into this function and //cont
 
   
 <Footer />
