@@ -5,6 +5,7 @@ import Loader from "../loader";
 
 interface Props {
   html_url: string;
+  homepage: string;
   language: string;
   desc: string;
   name: string;
@@ -30,7 +31,7 @@ export const ProjectCard: FC<Props> = (Props) => {
     });
     const res = await req.data;
     setLoading(false);
-    return await res;
+    return res;
   };
 
   return (
@@ -41,7 +42,7 @@ export const ProjectCard: FC<Props> = (Props) => {
         </span>
       ) : (
         <div
-          onClick={() => Props.showInfo(getReadme(Props.name))}
+          onClick={() => Props.showInfo(getReadme(Props.name), Props.homepage)}
           className="min-h-[10rem] border-2 rounded-md p-4 cursor-pointer w-full md:w-4/5 my-2 m-l-2 rounded-lg border-accent_grey flex flex-col justify-between hover:opacity-60"
         >
           <div>
