@@ -1,0 +1,85 @@
+import Layout from "../../components/layout.js";
+import { Footer }  from "../../components/blog/footer";
+import { BlogHeader }  from "../../components/blog/blogHeader";
+
+<Layout>
+
+<BlogHeader
+  title="Learning a better language"
+  date="05/08/2022"
+  author="Lachlan Stephan"
+  headMeta="Learning a better language"
+/>
+
+I'm starting to care about types.
+
+<br />
+
+Languages that I currently use are high level and loosley typed.
+
+<br />
+
+I originally thought this was an amazing thing. It allows for such fast development and to really focus on the business logic.
+
+<br />
+
+After working with these languages in a non-trivial way for a ltitle while now (TS, JS, PHP). I'm definitely changing my mind.
+
+<br />
+
+It really seems that against everyones best intentions, technical debt will be accrued so quickly using these languages. Typically it is a small team that needs to go quick and does not have the time for strict coding styles/reviews.
+
+<br />
+
+There is something just inherently wrong with being able to dynamically re-assign variables to different types. 
+
+<br />
+
+So many functions/scripts that declare uninitialised variables at the top and then proceed to mutate them multiple times. I feel like this just destroys the readability. 
+
+<br />
+
+I think it would also be nice to have the language help out a bit - I also do a lot of work Typescript and using this is feels a little better.
+
+<br />
+
+I can create things like interfaces and variable/return types. The problem is you can also assign *"any"* and dip out of the type system altogether.
+
+<br />
+
+So about a ~ month or two ago I decided to start learning Rust. This language is hard by the way... But so very rewarding.
+
+<br />
+
+Something that has really pushed me into feeling this way about types is how many times you have to "run the lap". When I'm writing some relatively complex PHP controller (for me that means it's really quite simple) and the language just lets you write code that is blatantly wrong and will absolutely fail the second it runs.
+
+<br />
+
+A overly simple example:
+```
+$test = "some string";
+
+$test = $test * 2;
+
+echo $test;
+
+```
+<br />
+
+This is kinda like late in the afternoon and my brain is tired stuff. But I would love for the language to not allow such obviously wrong code.
+
+<br />
+
+As I start to write more Rust (slow going atm) it can be a frustrating time. But in the end I don't have an insane amount of annoying run time errors. If the language lets me write it and the compiler accepts it, it feels like there's almost a 100% chance it works. 
+
+<br />
+
+Overall I feel like learning Rust is making me a much better developer, even with only having written very small amounts so far. Ownership and strict types really set some good practices in place for how to write code. I can aleady see my Typescript improving and the way I approach a problem changing.
+
+<br />
+
+Hopefully this time next year I will be a confident user of Rust who has a much better grasp on types and memory management.
+
+<Footer />
+
+</Layout>

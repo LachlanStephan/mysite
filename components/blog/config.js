@@ -1,7 +1,7 @@
 export const Config = [
 	{
-		title: "Learning better languages",
-		link: "blogs/learning-better-languages",
+		title: "Learning a better language",
+		link: "blogs/learning-a-better-language",
     tags: "opinion technical",
 	},
 	{

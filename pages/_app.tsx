@@ -14,7 +14,6 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
    useEffect(() => {
     SetMode(CheckLocal());
