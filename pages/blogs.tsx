@@ -24,7 +24,7 @@ const Blogs: FC = () => {
         <title>Blogs - Lachlan Stephan</title>
       </Head>
       <section>
-        <Header title="Blogs" />
+        <Header title="This is a collection of writings and thoughts" />
         <aside className="flex flex-col">{links}</aside>
       </section>
     </Layout>

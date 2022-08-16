@@ -32,7 +32,7 @@ export const Home: FC = () => {
       <div className="overflow-hidden">
         <About
           name="Lachlan Stephan"
-          desc="Junior Software Dev - trying to be a somewhat decent developer..."
+          desc="Trying to be a decent developer."
         />
         <Interests title="Current interests" />
         <CommitChart />
