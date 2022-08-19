@@ -1,5 +1,10 @@
 export const Config = [
 	{
+		title: "Quality vs speed",
+		link: "blogs/quality-vs-speed",
+    tags: "opinion technical rant",
+	},
+	{
 		title: "Learning a better language",
 		link: "blogs/learning-a-better-language",
     tags: "opinion technical",
