@@ -1,23 +1,12 @@
 import { FC, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { NavConfig } from "./navConfig";
-import { ToggleMode } from "../utils/darkmode";
-import { FaRegLightbulb } from "react-icons/fa";
+import { Nav } from "./nav";
 import headIcon from "../public/headIcon.png";
-
-interface config {
-  href: string;
-  title: string;
-}
+import { ThemeToggle } from "./theme-toggle";
 
 export const Header: FC = () => {
   const [speak, setSpeak] = useState(false);
   const str = "Hi!";
-
-  const toggleColour = () => {
-    ToggleMode();
-  };
 
   const sayHi = () => {
     setSpeak(true);
@@ -26,17 +15,8 @@ export const Header: FC = () => {
     }, 5000);
   };
 
-  const conf: config[] = NavConfig;
-  const links = conf.map((link, i) => {
-    return (
-      <Link key={i} href={link.href}>
-        <a className="mr-2">{link.title}</a>
-      </Link>
-    );
-  });
-
   return (
-    <header className="bg-light_background dark:bg-dark_background sticky top-0 text-md min-h-20 py-4 flex justify-between items-center">
+    <header className="bg-light_background dark:bg-dark_background text-md min-h-20 py-4 flex justify-between items-center w-full">
       <div className="flex items-center">
         {speak ? (
           <span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
@@ -51,15 +31,9 @@ export const Header: FC = () => {
           width={40}
           height={40}
         />
-
-        {links}
+      <Nav />
       </div>
-      <span
-        className="h-8 w-8 ml-2 hover:border-2 border-accent_grey rounded-md transistion active:translate-y-1 duration-300 flex justify-center items-center cursor-pointer"
-        onClick={toggleColour}
-      >
-        <FaRegLightbulb />
-      </span>
+      <ThemeToggle />
     </header>
   );
 };
