@@ -16,11 +16,8 @@
 # Roadmap
 ##  Build rest api to serve the site 
 - Select language (Rust or Golang)
-<br />
 - Select db (Likely MySql)
-<br />
 - Select hosting - PlanetScale or Linode (Down the track - host myself on raspberry pi)
-<br />
 - Create admin login for simple crud actions 
 
 ### Api planning
