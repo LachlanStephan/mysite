@@ -1,14 +1,14 @@
 import Layout from "../../components/layout.js";
-import { Footer }  from "../../components/blog/footer";
-import { BlogHeader }  from "../../components/blog/blogHeader";
+import {BlogFooter} from "../../components/blog/blogFooter";
+import {BlogHeader} from "../../components/blog/blogHeader";
 
 <Layout>
 
 <BlogHeader
-  title="Learning a better language"
-  date="05/08/2022"
-  author="Lachlan Stephan"
-  headMeta="Learning a better language"
+	title="Learning a better language"
+	date="05/08/2022"
+	author="Lachlan Stephan"
+	headMeta="Learning a better language"
 />
 
 I'm starting to care about types.
@@ -31,11 +31,11 @@ It really seems that against everyones best intentions, technical debt will be a
 
 <br />
 
-There is something just inherently wrong with being able to dynamically re-assign variables to different types. 
+There is something just inherently wrong with being able to dynamically re-assign variables to different types.
 
 <br />
 
-So many functions/scripts that declare uninitialised variables at the top and then proceed to mutate them multiple times. I feel like this just destroys the readability. 
+So many functions/scripts that declare uninitialised variables at the top and then proceed to mutate them multiple times. I feel like this just destroys the readability.
 
 <br />
 
@@ -43,7 +43,7 @@ I think it would also be nice to have the language help out a bit - I also do a 
 
 <br />
 
-I can create things like interfaces and variable/return types. The problem is you can also assign *"any"* and dip out of the type system altogether.
+I can create things like interfaces and variable/return types. The problem is you can also assign _"any"_ and dip out of the type system altogether.
 
 <br />
 
@@ -56,6 +56,7 @@ Something that has really pushed me into feeling this way about types is how man
 <br />
 
 An overly simple example:
+
 ```
 $test = "some string";
 
@@ -64,13 +65,14 @@ $test = $test * 2;
 echo $test;
 
 ```
+
 <br />
 
 This is kinda like late in the afternoon and my brain is tired stuff. But I would love for the language to not allow such obviously wrong code.
 
 <br />
 
-As I start to write more Rust (slow going atm) it can be a frustrating time. But in the end I don't have an insane amount of annoying run time errors. If the language lets me write it and the compiler accepts it, it feels like there's almost a 100% chance it works. 
+As I start to write more Rust (slow going atm) it can be a frustrating time. But in the end I don't have an insane amount of annoying run time errors. If the language lets me write it and the compiler accepts it, it feels like there's almost a 100% chance it works.
 
 <br />
 
@@ -80,6 +82,6 @@ Overall I feel like learning Rust is making me a much better developer, even wit
 
 Hopefully this time next year I will be a confident user of Rust who has a much better grasp on types and memory management.
 
-<Footer />
+<BlogFooter />
 
 </Layout>

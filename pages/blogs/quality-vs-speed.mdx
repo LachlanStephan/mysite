@@ -1,14 +1,14 @@
 import Layout from "../../components/layout.js";
-import { Footer }  from "../../components/blog/footer";
-import { BlogHeader }  from "../../components/blog/blogHeader";
+import {BlogFooter} from "../../components/blog/blogFooter";
+import {BlogHeader} from "../../components/blog/blogHeader";
 
 <Layout>
 
 <BlogHeader
-  title="Quality vs speed"
-  date="20/08/2022"
-  author="Lachlan Stephan"
-  headMeta="Quality vs speed"
+	title="Quality vs speed"
+	date="20/08/2022"
+	author="Lachlan Stephan"
+	headMeta="Quality vs speed"
 />
 
 For basically my entire career (about 1.4yrs at this point) I have struggled with balancing this - delivering something that is actually decent versus shipping as quick as possible.
@@ -23,11 +23,11 @@ I know the answer to this topic/debate is some kind of balance and as your skill
 
 <br />
 
-So currently my experience relates to a small startup that is in the "do or die" phase. And in this environment it is really hard to argure that we should slow down and value the code quality over speed (my current stance). 
+So currently my experience relates to a small startup that is in the "do or die" phase. And in this environment it is really hard to argure that we should slow down and value the code quality over speed (my current stance).
 
-<br /> 
+<br />{" "}
 
-I have this stance for a few reasons, some based off experience and others that are more specific to me. But the main reason is that I'm a junior dev who has had to deal with quite a lot of technical debt. 
+I have this stance for a few reasons, some based off experience and others that are more specific to me. But the main reason is that I'm a junior dev who has had to deal with quite a lot of technical debt.
 
 <br />
 
@@ -35,22 +35,23 @@ This could be a lot less debt than I think it is, but either way it is a massive
 
 <br />
 
-For example an app may have a messaging section that is used in one place. This section is very small/simple, is currently repeated twice and looks something like this - *example will be in the context of a frontend framework (Angular/React pseudocode)*.
+For example an app may have a messaging section that is used in one place. This section is very small/simple, is currently repeated twice and looks something like this - _example will be in the context of a frontend framework (Angular/React pseudocode)_.
 
 <br />
 
-``` 
+```
 <label>Enter message here</label>
 <textarea placeholder="your message"></textarea>
 <button onClick={sendMessage()}>Send</button>
 ```
-<br />
-
-Now this could easily and should be its own component. But in the name of haste the developer without much thought just creates it as above. Lets say this page (parent-component.html) is shared between the user types (customer and admin). 
 
 <br />
 
-So we have something like this 
+Now this could easily and should be its own component. But in the name of haste the developer without much thought just creates it as above. Lets say this page (parent-component.html) is shared between the user types (customer and admin).
+
+<br />
+
+So we have something like this
 
 <br />
 
@@ -82,12 +83,12 @@ In the app there are now four of the sections across two different pages with ev
 
 <br />
 
-We could have this instead 
+We could have this instead
 
 <br />
 
 ```
-<MessageBox 
+<MessageBox
   label="some geat label"
   placeholder="enter text here"
   sendMessage={sendMessage}
@@ -98,14 +99,13 @@ We could have this instead
 
 And we just call it wherever we want it... But at the time the dev didn't know that so many would be needed and the feature was a high priority.
 
-
 <br />
 
 In comes a junior dev and is given the simple task of updating the styling of the message boxes. Now they have to do something like, find all the occurances and hope they are similar. The layout could be different for each one, they could be coupled with elements and classes that are not on the other pages and when you make a change that fixes one of the message boxes, you find out it broke the layout on two of the others.
 
 <br />
 
-Now the junior dev has spent ~4hrs trying to complete the *"simple"* styling ticket and is now calling in the more experienced dev who originally wrote the message boxe code for help.
+Now the junior dev has spent ~4hrs trying to complete the _"simple"_ styling ticket and is now calling in the more experienced dev who originally wrote the message boxe code for help.
 
 <br />
 
@@ -117,11 +117,12 @@ What is especially funny is that I feel like in most cases this won't even cause
 
 <br />
 
-I think my point in the end is that quality will come at the cost of speed, but only at the beginning. Allowing technical debt in the name of delivering quickly is surely a fools argument. For as the project matures, it will become harder to maintain and adding *"simple"* features will now be anything but simple.
+I think my point in the end is that quality will come at the cost of speed, but only at the beginning. Allowing technical debt in the name of delivering quickly is surely a fools argument. For as the project matures, it will become harder to maintain and adding _"simple"_ features will now be anything but simple.
 
 <br />
 
 I too have written my fair share of instant legacy code, but I swear I have the best intentions.
-<Footer />
+
+<BlogFooter />
 
 </Layout>
