@@ -12,7 +12,7 @@ export const Header: FC = () => {
 		setSpeak(true);
 		setTimeout(() => {
 			setSpeak(false);
-		}, 5000);
+		}, 1500);
 	};
 
 	return (

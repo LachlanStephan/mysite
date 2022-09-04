@@ -27,7 +27,7 @@ const MobileHeader: FC = () => {
     <>
       <header className="sticky flex flex-col bg-light_background dark:bg-dark_background flex py-4 w-full">
         <div className="flex justify-between">
-          <button className="" onClick={toggleMenu}>
+          <button aria-label={"mobile menu"} className="" onClick={toggleMenu}>
             {showMenu ? <FaWindowClose /> : <FaBars />}
           </button>
           <ThemeToggle />
