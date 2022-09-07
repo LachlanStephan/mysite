@@ -11,17 +11,56 @@
 
 # Todo
 - Find more performant way to fetch projects from GitHub
-- Improve code and folder/file structure 
 
 # Roadmap
 ##  Build rest api to serve the site 
-- Select language (Rust or Golang)
+- Select language (Golang is likely)
 - Select db (Likely MySql)
 - Select hosting - PlanetScale or Linode (Down the track - host myself on raspberry pi)
 - Create admin login for simple crud actions 
 
-### Api planning
-> TBD
+## Api/db planning
+### Schema 
+|     | user                  |
+|-----|-----------------------|
+| PK  | int user_id           |
+|     | varchar(255) username |
+|     | varchar(255) password |
+|     | tinyint isAdmin       |
+|     | timestamp created_at  |
+|     | timestamp updated_at  |
 
+|     | blogs                |
+|-----|----------------------|
+| PK  | int blog_id          |
+|     | varchar(255) title   |
+|     | varchar(255) author  |
+|     | longtext content     |
+|     | timestamp created_at |
+|     | timestamp updated_at |
 
+|     | tags                     |
+|-----|--------------------------|
+| PK  | int tag_id               |
+| FK  | int blog_id              |
+|     | varchar(255) tag_name    |
+|     | varchar(255) hex_code    |
+|     | varchar(255) description |
+|     | timestamp created_at     |
+|     | timestamp updated_at     |
 
+|     | texts                |
+|-----|----------------------|
+| PK  | int text_id          |
+| FK  | int text_tpe         |
+|     | varchar(255) title   |
+|     | varchar(255) text    |
+|     | timestamp created_at |
+|     | timestamp updated_at |
+
+|     | text_type            |
+|-----|----------------------|
+| PK  | int text_type_id     |
+|     | varchar(255) type    |
+|     | timestamp created_at |
+|     | timestamp updated_at |
