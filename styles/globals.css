@@ -27,7 +27,7 @@
 }
 @tailwind components;
 @tailwind utilities;
-/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
 
 html {
@@ -36,8 +36,8 @@ html {
 
 body,
 html {
-	/* font-family: "Ubuntu Mono", monospace; */
-	font-family: "Fira Code", monospace;
+	font-family: "Ubuntu Mono", monospace;
+	/* font-family: "Fira Code", monospace; */
 	margin: 0 auto;
 	width: 100%;
 	padding: 0;
@@ -47,10 +47,6 @@ html {
 }
 
 * {
-	font-size: 20px;
-}
-
-code {
 	font-size: 18px;
 }
 

@@ -4,15 +4,25 @@ import {Nav} from "./nav";
 import headIcon from "../public/headIcon.png";
 import {ThemeToggle} from "./theme-toggle";
 
+interface SpeakSettings {
+	show: boolean;
+	text: string;
+	timeLimit: number;
+}
+
 export const Header: FC = () => {
-	const [speak, setSpeak] = useState(false);
-	const str = "Hi!";
+	const settings: SpeakSettings = {
+		show: false,
+		text: "Hi!",
+		timeLimit: 2000,
+	};
+	const [speak, setSpeak] = useState(settings.show);
 
 	const sayHi = () => {
 		setSpeak(true);
 		setTimeout(() => {
 			setSpeak(false);
-		}, 1500);
+		}, settings.timeLimit);
 	};
 
 	return (
@@ -20,7 +30,7 @@ export const Header: FC = () => {
 			<div className="flex items-center">
 				{speak ? (
 					<span className="overflow-auto text-[#ffc0cb] overflow-hidden whitespace-nowrap animate-typing">
-						{str}
+						{settings.text}
 					</span>
 				) : null}
 				<Image

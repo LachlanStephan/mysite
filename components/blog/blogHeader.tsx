@@ -26,7 +26,7 @@ export const BlogHeader: FC<Props> = (Props) => {
 					<strong>Date: </strong>
 					{Props.date}
 				</p>
-				<Link href="/blogs">
+				<Link href="/writing">
 					<a>{back}</a>
 				</Link>
 			</header>
