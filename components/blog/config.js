@@ -1,4 +1,9 @@
 export const Config = [
+	// {
+	// 	title: "Work, life and other things",
+	// 	link: "/writing/work-life-and-other-things",
+	// 	tags: "opinion commentary",
+	// },
 	{
 		title: "Quality vs speed",
 		link: "/writing/quality-vs-speed",
