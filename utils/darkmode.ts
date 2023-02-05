@@ -7,7 +7,7 @@ const class_name = {
 }
 
 // Probably need to get rid of this and integrate something with tailwind 
-const ToggleMode = () => {
+const ToggleMode = (): void => {
 const html = document.documentElement;
 const bod = document.getElementsByTagName("body")[0];
 
@@ -26,21 +26,21 @@ const bod = document.getElementsByTagName("body")[0];
   toggleBody(bod, target);
 };
 
-const toggleBody = (bod: HTMLElement, target: string) => {
+const toggleBody = (bod: HTMLElement, target: string): void => {
   bod.style.backgroundColor = target;
 }
 
-const CheckLocal = () => {
+const CheckLocal = (): string => {
   const fallback = class_name.dark;
   const savedTheme =  localStorage.getItem("theme");
   return savedTheme ? savedTheme : fallback;
 }
 
-const SetLocal = (theme: string) => {
+const SetLocal = (theme: string): void => {
   localStorage.setItem("theme", theme);
 }
 
-const SetMode = (setting: string) => {
+const SetMode = (setting: string): void => {
     const html = document.documentElement;
     const bod = document.getElementsByTagName("body")[0];
 
