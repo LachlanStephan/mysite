@@ -4,9 +4,6 @@
 
 This site is an outlet for me to express opinions, thoughts and stories.
 
-## Tech
+## Contributing
 
-- Next.js
-- Typescript
-- Tailwind CSS
-- Deployed to Netlify
+Feel free to make PR's for fixing/adding to this site. From typos to entirely new blogs/articles

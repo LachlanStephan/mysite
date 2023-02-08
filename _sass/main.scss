@@ -1,0 +1,39 @@
+* {
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    width: 50%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: large;
+}
+
+.nav_item {
+    text-decoration: none;
+}
+
+.nav_item:hover {
+    color: red;
+}
+
+.current_link {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        width: unset;
+        margin: unset;
+    }
+}
