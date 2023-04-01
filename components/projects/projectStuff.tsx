@@ -11,7 +11,7 @@ interface ProjConfig {
 
 interface ProjRes {
 	html_url: string;
-  homepage: string;
+	homepage: string;
 	language: string;
 	description: string;
 	name: string;
@@ -26,7 +26,7 @@ export const ProjStuff: FC = () => {
 	const [loading, setLoading] = useState<boolean>(false);
 
 	const [showInfo, setShowInfo] = useState<boolean>(false);
-  const [homepage, setHomepage] = useState<string>("");
+	const [homepage, setHomepage] = useState<string>("");
 	const [infoData, setInfoData] = useState<any>([]);
 
 	const octokit = new Octokit({
@@ -54,7 +54,7 @@ export const ProjStuff: FC = () => {
 	};
 
 	const showInfoModal = async (data: any, homepage: string) => {
-    setHomepage(homepage);
+		setHomepage(homepage);
 		setInfoData(await data);
 		setShowInfo(true);
 	};
@@ -69,7 +69,13 @@ export const ProjStuff: FC = () => {
 
 	return (
 		<div className="w-full grid justify-center gap-1 auto-rows grid-cols-1 md:grid-cols-2">
-			{showInfo ? <Info data={infoData} homepage={homepage} closeModal={closeModal} /> : null}
+			{showInfo ? (
+				<Info
+					data={infoData}
+					homepage={homepage}
+					closeModal={closeModal}
+				/>
+			) : null}
 
 			{loading ? (
 				<Loader loading_text="Loading..." />
@@ -83,7 +89,7 @@ export const ProjStuff: FC = () => {
 							language={p.language}
 							desc={p.description}
 							html_url={p.html_url}
-              homepage={p.homepage}
+							homepage={p.homepage}
 							id={p.id}
 						/>
 					);

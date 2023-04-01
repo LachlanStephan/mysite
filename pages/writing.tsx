@@ -1,9 +1,9 @@
-import React, {FC} from "react";
+import React, { FC, useEffect } from "react";
 import Layout from "../components/layout";
-import {Header} from "../components/blog/header";
+import { Header } from "../components/blog/header";
 import Link from "next/link";
 import Head from "next/head";
-import {Config} from "../components/blog/config";
+import { Config } from "../components/blog/config";
 import Tags from "../components/blog/tags";
 
 const Blogs: FC = () => {
@@ -17,6 +17,18 @@ const Blogs: FC = () => {
 			</React.Fragment>
 		);
 	});
+
+	const getBlogs = async () => {
+		const req = await fetch("http://localhost:8080/blog", {
+			method: "GET",
+		});
+		const res = req.json();
+		console.log(res);
+	};
+
+	useEffect(() => {
+		getBlogs();
+	}, []);
 
 	return (
 		<Layout>
