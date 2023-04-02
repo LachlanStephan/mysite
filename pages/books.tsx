@@ -11,8 +11,11 @@ const Reading = () => {
 			</Head>
 
 			<section>
-				<h1>Reading</h1>
-				<h2>TBD</h2>
+				<h1>Books</h1>
+				<h2>
+					This is a list of books I've read where I have either had
+					some thoughts, wanted to review, or both.{" "}
+				</h2>
 			</section>
 		</Layout>
 	);

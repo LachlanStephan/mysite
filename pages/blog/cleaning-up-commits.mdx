@@ -17,15 +17,11 @@ import { BlogHeader } from "../../components/blog/blogHeader";
 
 We are working on a feature/bug - we have quite a few 'wip' commits on the branch and/or some other useless commit message.
 
-<br />
-
 We would really to like to have some descriptive messages for the reviewer.
 
 ## Proposed solution
 
 `git rebase -i "HEAD~N"`
-
-<br />
 
 This will have to be done in the command line I believe, you may need some familiarity with vim unless your default is set to something else.
 
@@ -40,27 +36,19 @@ new section added
 more content
 ```
 
-<br />
-
 We want:
 
 ```text
 new content for rebase blog added
 ```
 
-<br />
-
 All of these commits relate to the same thing - we want to squash the last three and rename the first.
-
-<br />
 
 ### Fixing it
 
 ```text
 git rebase -i "HEAD~4"
 ```
-
-<br />
 
 Now the default editor will open and present the commits to you:
 
@@ -71,11 +59,7 @@ pick _commitNumber_ new section added
 pick _commitNumber_ more content
 ```
 
-<br />
-
 Here we have a few options to pick from. We are only using `reword` and `squash` for this simple example.
-
-<br />
 
 Commands:
 
@@ -85,15 +69,9 @@ Commands:
 -   s, squash
 -   f, fixup
 
-<br />
-
 To fix our problem we want to edit the above to look like:
 
-<br />
-
 **Note:** We do not actually edit the messages here.
-
-<br />
 
 ```text
 reword _commitNumber_ blog -wip
@@ -102,15 +80,9 @@ squash _commitNumber_ new section added
 squash _commitNumber_ more content
 ```
 
-<br />
-
 Now we save and close. The rebase will open a new window again this time asking for the edits.
 
-<br />
-
 We will give the `reword` commit our new message and in this case leave the others. Save, close and at this point the interactive rebase should be complete.
-
-<br />
 
 ### Updating the remote to reflect
 

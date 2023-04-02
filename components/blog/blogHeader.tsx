@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import {FC} from "react";
+import { FC } from "react";
 
 interface Props {
 	title: string;
@@ -26,7 +26,7 @@ export const BlogHeader: FC<Props> = (Props) => {
 					<strong>Date: </strong>
 					{Props.date}
 				</p>
-				<Link href="/writing">
+				<Link href="/blog">
 					<a>{back}</a>
 				</Link>
 			</header>
