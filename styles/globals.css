@@ -104,6 +104,7 @@ h6 {
 }
 .links {
 	background: linear-gradient(to bottom, pink 0%, pink 100%);
+	color: var(--text);
 	background-position: 0 100%;
 	background-repeat: repeat-x;
 	background-size: 4px 4px;

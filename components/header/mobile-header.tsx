@@ -24,7 +24,7 @@ const MobileHeader: FC = () => {
 
 	return (
 		<>
-			<header className="sticky flex flex-col bg-light_background dark:bg-dark_background flex py-4 w-full">
+			<header className="sticky flex flex-col flex py-4 w-full">
 				<div className="flex justify-between">
 					<button
 						aria-label={"mobile menu"}

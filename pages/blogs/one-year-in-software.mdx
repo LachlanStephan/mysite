@@ -1,13 +1,14 @@
 import Layout from "../../components/layout.js";
-import { BlogFooter } from "../../components/blog/blogFooter";
-import { BlogHeader } from "../../components/blog/blogHeader";
+import { PostFooter } from "../../components/posts/utils/post-footer";
+import { PostHeader } from "../../components/posts/utils/post-header";
 
 <Layout>
-<BlogHeader
-  title="One year in software"
-  date="16/07/2022"
-  author="Lachlan Stephan"
-  headMeta="One year in software"
+<PostHeader
+    title="One year in software"
+    date="16/07/2022"
+    author="Lachlan Stephan"
+    headMeta="One year in software"
+    backLink="blogs"
 />
 
 I've just recently hit the one year mark of being a professional software developer.
@@ -44,5 +45,5 @@ Currently I do not have any method for getting this balance right. I just try to
 
 In closing, after a year I want to be a more empathetic software developer. But mostly I just want to be a good software developer... Think I'll need some patience.
 
-<BlogFooter />
+<PostFooter isBlog={true} title="TLDR: Being good at something is hard..." text=" " />
 </Layout>

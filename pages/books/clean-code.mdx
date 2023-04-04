@@ -1,3 +1,17 @@
+import Layout from "../../components/layout.js";
+import { PostFooter } from "../../components/posts/utils/post-footer";
+import { PostHeader } from "../../components/posts/utils/post-header";
+
+<Layout>
+
+<PostHeader
+	title="Clean Code - Robert C Martin"
+	date="20/08/2022"
+	author="Lachlan Stephan"
+	headMeta="Quality vs speed"
+	backLink="books"
+/>
+
 # Some thoughts
 
 At the time of reading this book I have ~1.5 years as a software developer, so there are definitely things in here that I did not fully _get_. However, I think there was still a lot of value to be had.
@@ -21,3 +35,7 @@ My only criticism and I think this is more on me than on the author but some of 
 I think in hindsight the large examples are a good thing because now I can go back and reference them and learn more from them as I keep progressing.
 
 Still recommend the book and am very glad to have read it.
+
+<PostFooter isBook={true} />
+
+</Layout>

@@ -1,14 +1,15 @@
 import Layout from "../../components/layout.js";
-import { BlogFooter } from "../../components/blog/blogFooter";
-import { BlogHeader } from "../../components/blog/blogHeader";
+import { PostFooter } from "../../components/posts/utils/post-footer";
+import { PostHeader } from "../../components/posts/utils/post-header";
 
 <Layout>
 
-<BlogHeader
+<PostHeader
 	title="The making of this site"
 	date="21/06/2022"
 	author="Lachlan Stephan"
 	headMeta="Making this site"
+	backLink="blogs"
 />
 
 This is the 3rd time I've rebuilt this site...
@@ -70,6 +71,10 @@ I think I'm optimistic about this one.
 
 {" "}
 
-<BlogFooter />
+<PostFooter
+	title="TLDR: A lot of time likely wasted..."
+	isBlog={true}
+	text=" "
+/>
 
 </Layout>

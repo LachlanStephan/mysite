@@ -1,14 +1,15 @@
 import Layout from "../../components/layout.js";
-import { BlogFooter } from "../../components/blog/blogFooter";
-import { BlogHeader } from "../../components/blog/blogHeader";
+import { PostFooter } from "../../components/posts/utils/post-footer";
+import { PostHeader } from "../../components/posts/utils/post-header";
 
 <Layout>
 
-<BlogHeader
+<PostHeader
 	title="The making of this site"
 	date="21/06/2022"
 	author="Lachlan Stephan"
 	headMeta="Making this site"
+	backLink="blogs"
 />
 
 # This will cover cleaning up the commit history for a remote branch using interactive rebase
@@ -88,6 +89,6 @@ We will give the `reword` commit our new message and in this case leave the othe
 
 This part is quite straight forward with one gotcha. If you are the only one working on this branch you should be fine to run `git push --force`. However, if you are not the only contributor you will want to run `git push --force-with-lease` as this will preserve any new commits added to the remote.
 
-<BlogFooter />
+<PostFooter isBlog={true} title="And that should do it..." />
 
 </Layout>

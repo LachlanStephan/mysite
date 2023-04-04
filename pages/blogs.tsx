@@ -1,10 +1,10 @@
 import React, { FC, useEffect } from "react";
 import Layout from "../components/layout";
-import { Header } from "../components/blog/header";
+import { Header } from "../components/posts/utils/header";
 import Link from "next/link";
 import Head from "next/head";
-import { Config } from "../components/blog/config";
-import Tags from "../components/blog/tags";
+import { Config } from "../components/posts/blogs/config";
+import Tags from "../components/posts/utils/tags";
 
 const Blogs: FC = () => {
 	const links = Config.map((v, i) => {

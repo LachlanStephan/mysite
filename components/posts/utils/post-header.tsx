@@ -7,9 +7,10 @@ interface Props {
 	date: string;
 	author: string;
 	headMeta: string;
+	backLink: string;
 }
 
-export const BlogHeader: FC<Props> = (Props) => {
+export const PostHeader: FC<Props> = (Props) => {
 	const back = "<- Back";
 	return (
 		<>
@@ -26,7 +27,7 @@ export const BlogHeader: FC<Props> = (Props) => {
 					<strong>Date: </strong>
 					{Props.date}
 				</p>
-				<Link href="/blog">
+				<Link href={"/" + Props.backLink}>
 					<a>{back}</a>
 				</Link>
 			</header>
