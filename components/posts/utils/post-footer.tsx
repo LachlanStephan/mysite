@@ -28,7 +28,7 @@ export const PostFooter: FC<Props> = (Props) => {
 		<>
 			<h3>{Props.title}</h3>
 			<p>{getText()}</p>
-			<a className="ml-0" href={link} target="_blank">
+			<a className="ml-0" href={link} target="_blank" rel="noreferrer">
 				Repo
 			</a>
 		</>

@@ -65,7 +65,7 @@ export const ProjStuff: FC = () => {
 
 	useEffect(() => {
 		setProjectData();
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<div className="w-full grid justify-center gap-1 auto-rows grid-cols-1 md:grid-cols-2">
