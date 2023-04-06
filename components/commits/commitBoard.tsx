@@ -1,5 +1,5 @@
-import {FC} from "react";
-import {format} from "date-fns";
+import { FC } from "react";
+import { format } from "date-fns";
 
 interface Props {
 	eventsTotal: any[];
@@ -89,7 +89,7 @@ export const CommitBoard: FC<Props> = (Props) => {
 				{board.map((v: any, i: number) => {
 					return (
 						<div id={v.date} key={i} className={getClass(v.count)}>
-							<div className="dark:bg-gray-700 dark:text-gray-200 w-32 border-2 bg-gray-200 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
+							<div className="w-32 border-2 bg-gray-400 z-10 top-[-40px] h-auto absolute invisible group-hover:visible text-xs">
 								{v.count} contributions on {v.date}
 							</div>
 						</div>

@@ -14,9 +14,9 @@ export const Interests: FC<Props> = (Props) => {
 	const content: InterestConfig[] = InterestsContent;
 	const table = content.map((int, i) => {
 		return (
-			<div className="mb-4" key={i}>
+			<div className="mb-2" key={i}>
 				<h3>{int.interest}:</h3>
-				<p>{int.why}</p> 
+				<p>{int.why}</p>
 			</div>
 		);
 	});

@@ -1,10 +1,10 @@
 export const InterestsContent = [
 	{
-		interest: "Golang",
-		why: "I think Go has an amazing simplicity about it. It's rather minimalist and easy to read whilst having a strict type system and a great level of performance. I believe Go will become a widely sought after skill and using it will make me a better programmer.",
+		interest: "Rust",
+		why: "I want to learn a lower level language and am interested in functional programming - I feel like this ticks both boxes. It also appears to be an amazing thing to learn according to 99% of the internet",
 	},
 	{
-		interest: "Design patterns",
-		why: "I love code architecture and want to be more knowledgeable in this area. Solving problems with a common pattern that helps to achieve long term maintainability and readability is something I want to be great at.",
+		interest: "Testing Code",
+		why: "This seems like a weird one but I'm starting to understand why code coverage and good tests are the key to decent software - so I want to be good at this.",
 	},
 ];
