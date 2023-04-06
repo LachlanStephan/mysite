@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Layout from "../components/layout";
 import { Header } from "../components/posts/utils/header";
 import Link from "next/link";
@@ -17,18 +17,6 @@ const Blogs: FC = () => {
 			</React.Fragment>
 		);
 	});
-
-	const getBlogs = async () => {
-		const req = await fetch("http://localhost:8080/blog", {
-			method: "GET",
-		});
-		const res = req.json();
-		console.log(res);
-	};
-
-	useEffect(() => {
-		getBlogs();
-	}, []);
 
 	return (
 		<Layout>
