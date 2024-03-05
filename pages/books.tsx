@@ -21,11 +21,11 @@ const Reading = () => {
 	return (
 		<Layout>
 			<Head>
-				<title>Reading - Lachlan Stephan</title>
+				<title>Books - Lachlan Stephan</title>
 			</Head>
 
 			<section>
-				<Header title="A list of books where I have either had some thoughts, wanted to review, or both." />
+				<Header title="A list of books where I have either had some thoughts, wanted to review, or both" />
 			</section>
 			<aside className="flex flex-col">{links}</aside>
 		</Layout>

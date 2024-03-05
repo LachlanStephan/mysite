@@ -11,8 +11,4 @@ export const NavConfig = [
 		href: "/books",
 		title: "Books",
 	},
-	{
-		href: "/projects",
-		title: "Projects",
-	},
 ];

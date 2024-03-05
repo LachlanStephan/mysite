@@ -1,33 +1,43 @@
 @tailwind base;
+
 @layer base {
 	header {
 		@apply header_bg;
 	}
+
 	h1 {
 		@apply heading_one;
 	}
+
 	h2 {
 		@apply heading_two;
 	}
+
 	h3 {
 		@apply heading_three;
 	}
+
 	h4 {
 		@apply heading_four;
 	}
+
 	a {
 		@apply links;
 	}
+
 	section {
 		@apply sections;
 	}
+
 	#__next {
 		@apply center;
 	}
+
 	pre {
 		@apply code_block;
 	}
 }
+
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
@@ -38,13 +48,13 @@
 }
 
 :root {
-	--background: #ffefd5;
+	--background: #fffff2;
 	--text: #2c3539;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #344152;
+		--background: #242f36;
 		--text: #fffada;
 	}
 }
@@ -55,8 +65,8 @@ html {
 
 body,
 html {
-	font-family: "Ubuntu Mono", monospace;
-	/* font-family: "Fira Code", monospace; */
+	/* font-family: "Ubuntu Mono", monospace; */
+	font-family: "Fira Code", monospace;
 	margin: 0 auto;
 	width: 100%;
 	padding: 0;
@@ -86,22 +96,27 @@ h6 {
 .header_bg {
 	background-color: var(--background);
 }
+
 .heading_one {
 	font-weight: bold;
 	font-size: 2em;
 }
+
 .heading_two {
 	font-weight: bold;
 	font-size: 1.5em;
 }
+
 .heading_three {
 	font-weight: bold;
 	font-size: 1.17em;
 }
+
 .heading_four {
 	font-size: 1em;
 	font-weight: bold;
 }
+
 .links {
 	background: linear-gradient(to bottom, pink 0%, pink 100%);
 	color: var(--text);
@@ -114,27 +129,33 @@ h6 {
 	text-decoration: none;
 	transition: background-size 0.2s;
 }
+
 .links:hover {
 	background-size: 4px 50px;
 }
+
 a:hover {
 	color: black !important;
 }
+
 .sections {
 	margin: 1rem 0;
 	max-width: 100%;
 }
+
 .center {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 .code_block {
 	padding: 1rem;
 	border: 2px solid black;
 	border-radius: 5px;
 	white-space: pre-wrap;
 }
+
 .modal_wrapper {
 	background-color: var(--background);
 	color: var(--text);

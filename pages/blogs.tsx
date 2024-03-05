@@ -21,10 +21,10 @@ const Blogs: FC = () => {
 	return (
 		<Layout>
 			<Head>
-				<title>Writing - Lachlan Stephan</title>
+				<title>Blogs - Lachlan Stephan</title>
 			</Head>
 			<section>
-				<Header title="This is a collection of short writings. This is used as an outlet and is just thoughts to paper" />
+				<Header title="Some ramblings in the from of blog posts" />
 				<aside className="flex flex-col">{links}</aside>
 			</section>
 		</Layout>

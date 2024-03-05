@@ -23,7 +23,7 @@ export const Interests: FC<Props> = (Props) => {
 	return (
 		<section>
 			<h2>{Props.title}</h2>
-			<div className="grid grid-gap-1 grid-cols-1 grid-rows-auto">
+			<div className="grid grid-cols-1 grid-rows-auto">
 				{table}
 			</div>
 		</section>

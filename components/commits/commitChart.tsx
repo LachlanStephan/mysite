@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from "react";
 import { Octokit } from "@octokit/core";
 import { CommitBoard } from "./commitBoard";
 
-// add interface for resp
 interface eventData {
 	actor: {};
 	created_at: string;

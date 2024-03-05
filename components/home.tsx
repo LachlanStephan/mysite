@@ -12,11 +12,8 @@ export const Home: FC = () => {
 				<title>Home - Lachlan Stephan</title>
 			</Head>
 			<div className="overflow-hidden">
-				<About
-					name="Lachlan Stephan"
-					sub_title="I am primarily a backend dev who loves sports, video games and programming."
-				/>
-				<Interests title="Current interests" />
+				<About name="Lachlan Stephan" sub_title="This site is just a fun/personal outlet - I use to it to try different technologies and will occasionally write about stuff" />
+				<Interests title="Currently interested in" />
 				<CommitChart />
 			</div>
 		</Layout>

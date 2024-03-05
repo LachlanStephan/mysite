@@ -7,12 +7,12 @@ export const Config = [
 	{
 		title: "Quality vs speed",
 		link: "/blogs/quality-vs-speed",
-		tags: "opinion technical rant",
+		tags: "opinion, technical rant",
 	},
 	{
 		title: "One year in software",
 		link: "/blogs/one-year-in-software",
-		tags: "opinion story",
+		tags: "opinion, story",
 	},
 	{
 		title: "The making of this site",
